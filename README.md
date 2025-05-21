@@ -13,11 +13,11 @@ npm install @littlehorse-enterprises/ui
 Make sure to import the CSS file in your main entry point as this has the required styles for the components to work.
 
 ```tsx
-import '@littlehorse-enterprises/ui/dist/index.css'
+import '@littlehorse-enterprises/ui/ui.css'
 ```
 
 ```tsx
-import { Button } from '@littlehorse-enterprises/ui'
+import { Button } from '@littlehorse-enterprises/ui/button'
 
 export default function App() {
   return (
