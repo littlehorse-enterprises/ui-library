@@ -1,4 +1,4 @@
-import { Button } from "@littlehorse-enterprises/ui/button";
+import { Button } from "@littlehorse-enterprises/ui-library/button";
 import { Section } from "../App";
 
 export default function ButtonSection() {

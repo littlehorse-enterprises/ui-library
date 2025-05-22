@@ -1,15 +1,15 @@
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@littlehorse-enterprises/ui/alert-dialog";
-import { Button } from "@littlehorse-enterprises/ui/button";
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+} from "@littlehorse-enterprises/ui-library/alert-dialog";
+import { Button } from "@littlehorse-enterprises/ui-library/button";
 import { Section } from "../App";
 
 export default function AlertDialogSection() {

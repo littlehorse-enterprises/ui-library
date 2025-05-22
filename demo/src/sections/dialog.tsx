@@ -1,5 +1,5 @@
-import { Button } from "@littlehorse-enterprises/ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@littlehorse-enterprises/ui/dialog";
+import { Button } from "@littlehorse-enterprises/ui-library/button";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@littlehorse-enterprises/ui-library/dialog";
 import { Section } from "../App";
 
 export default function DialogSection() {

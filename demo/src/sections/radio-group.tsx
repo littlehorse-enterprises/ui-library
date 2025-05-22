@@ -1,5 +1,5 @@
-import { Label } from "@littlehorse-enterprises/ui/label";
-import { RadioGroup, RadioGroupItem } from "@littlehorse-enterprises/ui/radio-group";
+import { Label } from "@littlehorse-enterprises/ui-library/label";
+import { RadioGroup, RadioGroupItem } from "@littlehorse-enterprises/ui-library/radio-group";
 import { Section } from "../App";
 
 export default function RadioGroupSection() {

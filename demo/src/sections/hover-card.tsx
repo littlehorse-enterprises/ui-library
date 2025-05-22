@@ -1,4 +1,4 @@
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@littlehorse-enterprises/ui/hover-card";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@littlehorse-enterprises/ui-library/hover-card";
 import { Section } from "../App";
 
 export default function HoverCardSection() {

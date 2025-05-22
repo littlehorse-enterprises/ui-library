@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@littlehorse-enterprises/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@littlehorse-enterprises/ui-library/card";
 import { Section } from "../App";
 
 export default function CardSection() {

@@ -1,4 +1,4 @@
-import { Input } from "@littlehorse-enterprises/ui/input";
+import { Input } from "@littlehorse-enterprises/ui-library/input";
 import { Section } from "../App";
 
 export default function InputSection() {

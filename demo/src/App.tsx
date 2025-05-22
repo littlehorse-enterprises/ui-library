@@ -1,4 +1,4 @@
-import { Toaster } from "@littlehorse-enterprises/ui/sonner";
+import { Toaster } from "@littlehorse-enterprises/ui-library/sonner";
 import AccordionSection from "./sections/accordion";
 import AlertSection from "./sections/alert";
 import AlertDialogSection from "./sections/alert-dialog";

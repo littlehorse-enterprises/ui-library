@@ -1,5 +1,5 @@
-import { Button } from "@littlehorse-enterprises/ui/button";
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@littlehorse-enterprises/ui/sheet";
+import { Button } from "@littlehorse-enterprises/ui-library/button";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@littlehorse-enterprises/ui-library/sheet";
 import { Section } from "../App";
 
 export default function SheetSection() {

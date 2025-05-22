@@ -1,4 +1,4 @@
-import { ContextMenu, ContextMenuContent, ContextMenuItem, ContextMenuTrigger } from "@littlehorse-enterprises/ui/context-menu";
+import { ContextMenu, ContextMenuContent, ContextMenuItem, ContextMenuTrigger } from "@littlehorse-enterprises/ui-library/context-menu";
 import { Section } from "../App";
 
 export default function ContextMenuSection() {

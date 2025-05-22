@@ -1,4 +1,4 @@
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@littlehorse-enterprises/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@littlehorse-enterprises/ui-library/navigation-menu";
 import { Section } from "../App";
 
 export default function NavigationMenuSection() {

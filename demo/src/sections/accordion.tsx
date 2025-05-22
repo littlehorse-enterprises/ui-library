@@ -3,7 +3,7 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "@littlehorse-enterprises/ui/accordion";
+} from "@littlehorse-enterprises/ui-library/accordion";
 import { Section } from "../App";
 
 export default function AccordionSection() {

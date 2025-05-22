@@ -1,4 +1,4 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@littlehorse-enterprises/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@littlehorse-enterprises/ui-library/tabs";
 import { Section } from "../App";
 
 export default function TabsSection() {

@@ -1,5 +1,5 @@
-import { Button } from "@littlehorse-enterprises/ui/button";
-import { toast } from "@littlehorse-enterprises/ui/sonner";
+import { Button } from "@littlehorse-enterprises/ui-library/button";
+import { toast } from "@littlehorse-enterprises/ui-library/sonner";
 import { Section } from "../App";
 
 export default function SonnerSection() {

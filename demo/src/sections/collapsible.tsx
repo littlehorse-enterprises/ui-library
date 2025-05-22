@@ -1,9 +1,9 @@
-import { Button } from "@littlehorse-enterprises/ui/button";
+import { Button } from "@littlehorse-enterprises/ui-library/button";
 import {
     Collapsible,
     CollapsibleContent,
     CollapsibleTrigger
-} from "@littlehorse-enterprises/ui/collapsible";
+} from "@littlehorse-enterprises/ui-library/collapsible";
 import { Section } from "../App";
 
 export default function CollapsibleSection() {

@@ -1,4 +1,4 @@
-import { Switch } from "@littlehorse-enterprises/ui/switch";
+import { Switch } from "@littlehorse-enterprises/ui-library/switch";
 import { Section } from "../App";
 
 export default function SwitchSection() {

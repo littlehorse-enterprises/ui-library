@@ -1,5 +1,5 @@
 {
-  "name": "@littlehorse-enterprises/ui",
+  "name": "@littlehorse-enterprises/ui-library",
   "description": "LittleHorse's UI component library",
   "license": "AGPL-3.0-only",
   "version": "0.0.0",
@@ -272,7 +272,7 @@
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.3.0",
     "vaul": "^1.1.2",
-    "zod": "^3.25.17"
+    "zod": "^3.25.20"
   },
   "peerDependencies": {
     "react": "^18.0",

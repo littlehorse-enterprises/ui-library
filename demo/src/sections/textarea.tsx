@@ -1,4 +1,4 @@
-import { Textarea } from "@littlehorse-enterprises/ui/textarea";
+import { Textarea } from "@littlehorse-enterprises/ui-library/textarea";
 import { Section } from "../App";
 
 export default function TextareaSection() {

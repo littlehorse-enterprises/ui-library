@@ -1,4 +1,4 @@
-import { AspectRatio } from "@littlehorse-enterprises/ui/aspect-ratio";
+import { AspectRatio } from "@littlehorse-enterprises/ui-library/aspect-ratio";
 import { Section } from "../App";
 
 export default function AspectRatioSection() {

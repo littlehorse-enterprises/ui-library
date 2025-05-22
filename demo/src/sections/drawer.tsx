@@ -1,5 +1,5 @@
-import { Button } from "@littlehorse-enterprises/ui/button";
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@littlehorse-enterprises/ui/drawer";
+import { Button } from "@littlehorse-enterprises/ui-library/button";
+import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@littlehorse-enterprises/ui-library/drawer";
 import { Section } from "../App";
 
 export default function DrawerSection() {

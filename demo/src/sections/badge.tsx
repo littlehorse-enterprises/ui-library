@@ -1,4 +1,4 @@
-import { Badge } from "@littlehorse-enterprises/ui/badge";
+import { Badge } from "@littlehorse-enterprises/ui-library/badge";
 import { Section } from "../App";
 
 export default function BadgeSection() {

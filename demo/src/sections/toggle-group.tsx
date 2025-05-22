@@ -1,4 +1,4 @@
-import { ToggleGroup, ToggleGroupItem } from "@littlehorse-enterprises/ui/toggle-group";
+import { ToggleGroup, ToggleGroupItem } from "@littlehorse-enterprises/ui-library/toggle-group";
 import { Section } from "../App";
 
 export default function ToggleGroupSection() {

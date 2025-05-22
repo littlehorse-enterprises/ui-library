@@ -4,7 +4,7 @@ import {
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from "@littlehorse-enterprises/ui/carousel";
+} from "@littlehorse-enterprises/ui-library/carousel";
 import { Section } from "../App";
 
 export default function CarouselSection() {

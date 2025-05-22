@@ -1,5 +1,5 @@
-import { Button } from "@littlehorse-enterprises/ui/button";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@littlehorse-enterprises/ui/tooltip";
+import { Button } from "@littlehorse-enterprises/ui-library/button";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@littlehorse-enterprises/ui-library/tooltip";
 import { Section } from "../App";
 
 export default function TooltipSection() {

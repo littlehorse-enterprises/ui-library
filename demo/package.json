@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@littlehorse-enterprises/ui": "file://../",
+    "@littlehorse-enterprises/ui-library": "file://../",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

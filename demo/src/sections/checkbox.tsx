@@ -1,4 +1,4 @@
-import { Checkbox } from "@littlehorse-enterprises/ui";
+import { Checkbox } from "@littlehorse-enterprises/ui-library";
 import { Section } from "../App";
 
 export default function CheckboxSection() {

@@ -5,7 +5,7 @@ LittleHorse's UI component library built with shadcn/ui.
 ## Installation
 
 ```bash
-npm install @littlehorse-enterprises/ui
+npm install @littlehorse-enterprises/ui-library
 ```
 
 ## Usage
@@ -13,11 +13,11 @@ npm install @littlehorse-enterprises/ui
 Make sure to import the CSS file in your main entry point as this has the required styles for the components to work.
 
 ```tsx
-import '@littlehorse-enterprises/ui/ui.css'
+import '@littlehorse-enterprises/ui-library/ui.css'
 ```
 
 ```tsx
-import { Button } from '@littlehorse-enterprises/ui/button'
+import { Button } from '@littlehorse-enterprises/ui-library/button'
 
 export default function App() {
   return (

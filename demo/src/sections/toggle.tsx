@@ -1,4 +1,4 @@
-import { Toggle } from "@littlehorse-enterprises/ui/toggle";
+import { Toggle } from "@littlehorse-enterprises/ui-library/toggle";
 import { Section } from "../App";
 
 export default function ToggleSection() {
