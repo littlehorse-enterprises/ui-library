@@ -16,7 +16,7 @@ const exports = {
     "import": "./dist/index.js",
     "require": "./dist/index.js"
   },
-  "./ui.css": "./dist/ui.css"
+  "./index.css": "./dist/index.css"
 };
 
 // Add each component to exports

@@ -16,6 +16,7 @@ export default defineConfig({
         'src/**/*.{test,spec}.{js,jsx,ts,tsx}',
         'src/**/*.d.ts',
         'src/**/index.{js,ts}',
+        'src/**/*.stories.{js,jsx,ts,tsx}',
       ],
     },
     typecheck: {
