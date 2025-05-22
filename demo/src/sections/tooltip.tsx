@@ -1,9 +1,10 @@
-import { Button, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@littlehorse-enterprises/ui";
+import { Button } from "@littlehorse-enterprises/ui/button";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@littlehorse-enterprises/ui/tooltip";
 import { Section } from "../App";
 
 export default function TooltipSection() {
   return (
-    <Section>
+    <Section> 
       <h2 className="text-2xl font-semibold mb-4">Tooltip</h2>
       <div className="space-y-4">
         <TooltipProvider>

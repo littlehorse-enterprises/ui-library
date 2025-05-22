@@ -49,11 +49,6 @@
       "import": "./dist/button/index.js",
       "require": "./dist/button/index.js"
     },
-    "./calendar": {
-      "types": "./dist/calendar/index.d.ts",
-      "import": "./dist/calendar/index.js",
-      "require": "./dist/calendar/index.js"
-    },
     "./card": {
       "types": "./dist/card/index.d.ts",
       "import": "./dist/card/index.js",
@@ -73,11 +68,6 @@
       "types": "./dist/collapsible/index.d.ts",
       "import": "./dist/collapsible/index.js",
       "require": "./dist/collapsible/index.js"
-    },
-    "./combobox": {
-      "types": "./dist/combobox/index.d.ts",
-      "import": "./dist/combobox/index.js",
-      "require": "./dist/combobox/index.js"
     },
     "./command": {
       "types": "./dist/command/index.d.ts",
@@ -133,11 +123,6 @@
       "types": "./dist/menubar/index.d.ts",
       "import": "./dist/menubar/index.js",
       "require": "./dist/menubar/index.js"
-    },
-    "./multi-select": {
-      "types": "./dist/multi-select/index.d.ts",
-      "import": "./dist/multi-select/index.js",
-      "require": "./dist/multi-select/index.js"
     },
     "./navigation-menu": {
       "types": "./dist/navigation-menu/index.d.ts",
@@ -278,12 +263,10 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
-    "date-fns": "^4.1.0",
     "embla-carousel-react": "^8.6.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.511.0",
     "next-themes": "^0.4.6",
-    "react-day-picker": "^9.7.0",
     "react-hook-form": "^7.56.4",
     "react-resizable-panels": "^3.0.2",
     "sonner": "^2.0.3",

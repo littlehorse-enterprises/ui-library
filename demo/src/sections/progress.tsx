@@ -1,4 +1,4 @@
-import { Progress } from "@littlehorse-enterprises/ui";
+import { Progress } from "@littlehorse-enterprises/ui/progress";
 import { Section } from "../App";
 
 export default function ProgressSection() {

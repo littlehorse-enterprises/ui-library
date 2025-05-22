@@ -1,4 +1,5 @@
-import { Button, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@littlehorse-enterprises/ui";
+import { Button } from "@littlehorse-enterprises/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@littlehorse-enterprises/ui/dropdown-menu";
 import { Section } from "../App";
 
 export default function DropdownMenuSection() {

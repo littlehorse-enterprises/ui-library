@@ -1,4 +1,4 @@
-import { Separator } from "@littlehorse-enterprises/ui";
+import { Separator } from "@littlehorse-enterprises/ui/separator";
 import { Section } from "../App";
 
 export default function SeparatorSection() {

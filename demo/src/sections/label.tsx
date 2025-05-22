@@ -1,4 +1,4 @@
-import { Label } from "@littlehorse-enterprises/ui";
+import { Label } from "@littlehorse-enterprises/ui/label";
 import { Section } from "../App";
 
 export default function LabelSection() {

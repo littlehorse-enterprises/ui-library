@@ -1,4 +1,4 @@
-import { InputOTP, InputOTPGroup, InputOTPSlot } from "@littlehorse-enterprises/ui";
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@littlehorse-enterprises/ui/input-otp";
 import { Section } from "../App";
 
 export default function InputOTPSection() {

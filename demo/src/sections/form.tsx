@@ -1,4 +1,6 @@
-import { Button, Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, Input } from "@littlehorse-enterprises/ui";
+import { Button } from "@littlehorse-enterprises/ui/button";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@littlehorse-enterprises/ui/form";
+import { Input } from "@littlehorse-enterprises/ui/input";
 import { useForm } from "react-hook-form";
 import { Section } from "../App";
 

@@ -1,4 +1,4 @@
-import { Alert, AlertDescription, AlertTitle } from "@littlehorse-enterprises/ui";
+import { Alert, AlertDescription, AlertTitle } from "@littlehorse-enterprises/ui/alert";
 import { Section } from "../App";
 
 export default function AlertSection() {

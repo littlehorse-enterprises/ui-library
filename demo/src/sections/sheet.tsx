@@ -1,11 +1,5 @@
-import {
-    Button, Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger
-} from "@littlehorse-enterprises/ui";
+import { Button } from "@littlehorse-enterprises/ui/button";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@littlehorse-enterprises/ui/sheet";
 import { Section } from "../App";
 
 export default function SheetSection() {

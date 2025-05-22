@@ -1,4 +1,4 @@
-import '@littlehorse-enterprises/ui/dist/index.css'
+import '@littlehorse-enterprises/ui/ui.css'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'

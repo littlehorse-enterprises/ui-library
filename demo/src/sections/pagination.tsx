@@ -1,4 +1,4 @@
-import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@littlehorse-enterprises/ui";
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@littlehorse-enterprises/ui/pagination";
 import { Section } from "../App";
 
 export default function PaginationSection() {

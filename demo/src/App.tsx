@@ -1,15 +1,13 @@
-import { Toaster } from "@littlehorse-enterprises/ui";
+import { Toaster } from "@littlehorse-enterprises/ui/sonner";
 import AccordionSection from "./sections/accordion";
 import AlertSection from "./sections/alert";
 import AlertDialogSection from "./sections/alert-dialog";
 import AspectRatioSection from "./sections/aspect-ratio";
 import BadgeSection from "./sections/badge";
 import ButtonSection from "./sections/button";
-import CalendarSection from "./sections/calendar";
 import CardSection from "./sections/card";
 import CarouselSection from "./sections/carousel";
 import CollapsibleSection from "./sections/collapsible";
-import ComboboxSection from "./sections/combobox";
 import CommandSection from "./sections/command";
 import ContextMenuSection from "./sections/context-menu";
 import DialogSection from "./sections/dialog";
@@ -21,7 +19,6 @@ import InputSection from "./sections/input";
 import InputOTPSection from "./sections/input-otp";
 import LabelSection from "./sections/label";
 import MenubarSection from "./sections/menubar";
-import MultiSelectSection from "./sections/multi-select";
 import NavigationMenuSection from "./sections/navigation-menu";
 import PaginationSection from "./sections/pagination";
 import PopoverSection from "./sections/popover";
@@ -57,11 +54,9 @@ export default function App() {
           <AspectRatioSection />
           <BadgeSection />
           <ButtonSection />
-          <CalendarSection />
           <CarouselSection />
           <CardSection />
           <CollapsibleSection />
-          <ComboboxSection />
           <CommandSection />
           <ContextMenuSection />
           <DialogSection />
@@ -73,7 +68,6 @@ export default function App() {
           <InputOTPSection />
           <LabelSection />
           <MenubarSection />
-          <MultiSelectSection />
           <NavigationMenuSection />
           <PaginationSection />
           <PopoverSection />

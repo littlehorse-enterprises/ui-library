@@ -1,5 +1,5 @@
-import { Button } from "@littlehorse-enterprises/ui";
-import { Popover, PopoverContent, PopoverTrigger } from "@littlehorse-enterprises/ui";
+import { Button } from "@littlehorse-enterprises/ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "@littlehorse-enterprises/ui/popover";
 import { Section } from "../App";
 
 export default function PopoverSection() {

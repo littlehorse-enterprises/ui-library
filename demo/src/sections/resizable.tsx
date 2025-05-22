@@ -1,4 +1,4 @@
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@littlehorse-enterprises/ui";
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@littlehorse-enterprises/ui/resizable";
 import { Section } from "../App";
 
 export default function ResizableSection() {

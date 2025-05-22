@@ -1,4 +1,4 @@
-import { Skeleton } from "@littlehorse-enterprises/ui";
+import { Skeleton } from "@littlehorse-enterprises/ui/skeleton";
 import { Section } from "../App";
 
 export default function SkeletonSection() {

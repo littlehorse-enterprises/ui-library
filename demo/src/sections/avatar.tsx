@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@littlehorse-enterprises/ui";
+import { Avatar, AvatarFallback, AvatarImage } from "@littlehorse-enterprises/ui/avatar";
 import { Section } from "../App";
 
 export default function AvatarSection() {

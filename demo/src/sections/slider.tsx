@@ -1,4 +1,4 @@
-import { Slider } from "@littlehorse-enterprises/ui";
+import { Slider } from "@littlehorse-enterprises/ui/slider";
 import { Section } from "../App";
 
 export default function SliderSection() {

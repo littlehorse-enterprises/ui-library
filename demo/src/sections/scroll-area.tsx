@@ -1,4 +1,4 @@
-import { ScrollArea } from "@littlehorse-enterprises/ui";
+import { ScrollArea } from "@littlehorse-enterprises/ui/scroll-area";
 import { Section } from "../App";
 
 export default function ScrollAreaSection() {

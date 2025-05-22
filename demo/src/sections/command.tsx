@@ -1,4 +1,4 @@
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@littlehorse-enterprises/ui";
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@littlehorse-enterprises/ui/command";
 import { Section } from "../App";
 
 export default function CommandSection() {

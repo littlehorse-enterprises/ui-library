@@ -1,4 +1,4 @@
-import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from "@littlehorse-enterprises/ui";
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from "@littlehorse-enterprises/ui/menubar";
 import { Section } from "../App";
 
 export default function MenubarSection() {
