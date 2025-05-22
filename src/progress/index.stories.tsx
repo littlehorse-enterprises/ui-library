@@ -84,21 +84,21 @@ export const WithCustomColors: Story = {
         <span className="text-sm font-medium">Blue</span>
         <Progress
           value={33}
-          className="bg-blue-100 bg-blue-500"
+          className="bg-blue-500"
         />
       </div>
       <div className="space-y-2">
         <span className="text-sm font-medium">Green</span>
         <Progress
           value={33}
-          className="bg-green-100 bg-green-500"
+          className="bg-green-500"
         />
       </div>
       <div className="space-y-2">
         <span className="text-sm font-medium">Red</span>
         <Progress
           value={33}
-          className="bg-red-100 bg-red-500"
+          className="bg-red-500"
         />
       </div>
     </div>
