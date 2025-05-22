@@ -13,7 +13,7 @@ npm install @littlehorse-enterprises/ui-library
 Make sure to import the CSS file in your main entry point as this has the required styles for the components to work.
 
 ```tsx
-import '@littlehorse-enterprises/ui-library/ui.css'
+import '@littlehorse-enterprises/ui-library/index.css'
 ```
 
 ```tsx

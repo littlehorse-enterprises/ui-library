@@ -52,10 +52,8 @@ export default defineConfig({
     lib: {
       entry: entries,
       formats: ["es"],
-      fileName: (format, entryName) => {
-        if (entryName === 'index') {
-          return 'index.js';
-        }
+      fileName: (_, entryName) => {
+        if (entryName === 'index') return 'index.js';
         return `${entryName}/index.js`;
       },
     },
@@ -164,7 +162,7 @@ export default defineConfig({
         exports: 'named',
         chunkFileNames: 'lib/[name].js',
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'style.css') return 'ui.css';
+          if (assetInfo.names[0] === 'ui-library.css') return 'index.css';
           return '[name][extname]';
         },
         manualChunks: (id) => {
