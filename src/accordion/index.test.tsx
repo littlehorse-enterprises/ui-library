@@ -1,4 +1,3 @@
-import '@testing-library/jest-dom'
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './index'

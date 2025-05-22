@@ -51,6 +51,15 @@ const config: Linter.Config[] = [
         version: 'detect'
       }
     }
+  },
+  {
+    files: ['**/*.test.{ts,tsx,js,jsx}'],
+    languageOptions: {
+      globals: {
+        ...globals.vitest,
+        ...globals.jest,
+      },
+    },
   }
 ];
 

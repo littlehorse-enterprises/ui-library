@@ -7,7 +7,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
-    setupFiles: ['./jest.setup.js'],
+    setupFiles: ['./vitest.setup.ts'],
     include: ['src/**/*.{test,spec}.{js,mjs,cjs2,ts,mts,cts,jsx,tsx}'],
     coverage: {
       reporter: ['text', 'json', 'html'],
@@ -18,10 +18,13 @@ export default defineConfig({
         'src/**/index.{js,ts}',
       ],
     },
+    typecheck: {
+      tsconfig: './tsconfig.test.json'
+    }
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
-}) 
+})
