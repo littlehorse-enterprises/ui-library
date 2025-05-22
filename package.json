@@ -13,7 +13,7 @@
       "import": "./dist/index.js",
       "require": "./dist/index.js"
     },
-    "./ui.css": "./dist/ui.css",
+    "./index.css": "./dist/index.css",
     "./accordion": {
       "types": "./dist/accordion/index.d.ts",
       "import": "./dist/accordion/index.js",

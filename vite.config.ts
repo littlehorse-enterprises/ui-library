@@ -29,6 +29,12 @@ export default defineConfig({
     tailwindcss(),
     dts({
       include: ["src/**/*"],
+      exclude: [
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx",
+        "src/**/*.stories.ts",
+        "src/**/*.stories.tsx",
+      ],
       outDir: "dist",
       insertTypesEntry: true,
     }),
@@ -50,7 +56,11 @@ export default defineConfig({
 
   build: {
     lib: {
-      entry: entries,
+      entry: Object.fromEntries(
+        Object.entries(entries).filter(([, filePath]) =>
+          !/\.(test|stories)\.tsx?$/.test(filePath)
+        )
+      ),
       formats: ["es"],
       fileName: (_, entryName) => {
         if (entryName === 'index') return 'index.js';
