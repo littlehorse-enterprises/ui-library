@@ -4,7 +4,18 @@ import { Switch } from "."
 const meta: Meta<typeof Switch> = {
   title: "Components/Switch",
   component: Switch,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    checked: {
+      control: 'boolean',
+    },
+    disabled: {
+      control: 'boolean',
+    },
+  },
 }
 
 export default meta

@@ -6,7 +6,18 @@ import { Button } from "../button"
 const meta: Meta<typeof Tooltip> = {
   title: "Components/Tooltip",
   component: Tooltip,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    delayDuration: {
+      control: 'number',
+    },
+    open: {
+      control: 'boolean',
+    },
+  },
 }
 
 export default meta

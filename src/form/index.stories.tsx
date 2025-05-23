@@ -3,13 +3,13 @@ import type { Meta, StoryObj } from "@storybook/react"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import {
-    Form,
-    FormControl,
-    FormDescription,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage,
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
 } from "."
 import { Button } from "../button"
 import { Checkbox } from "../checkbox"
@@ -21,6 +21,9 @@ import { Textarea } from "../textarea"
 const meta: Meta<typeof Form> = {
   title: "Components/Form",
   component: Form,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
 }
 

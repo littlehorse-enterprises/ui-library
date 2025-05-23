@@ -4,7 +4,31 @@ import { Slider } from "."
 const meta: Meta<typeof Slider> = {
   title: "Components/Slider",
   component: Slider,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    defaultValue: {
+      control: { type: 'array' },
+    },
+    min: {
+      control: 'number',
+    },
+    max: {
+      control: 'number',
+    },
+    step: {
+      control: 'number',
+    },
+    disabled: {
+      control: 'boolean',
+    },
+    orientation: {
+      control: 'select',
+      options: ['horizontal', 'vertical'],
+    },
+  },
 }
 
 export default meta

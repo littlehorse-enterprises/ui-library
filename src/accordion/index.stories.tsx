@@ -9,7 +9,19 @@ import {
 const meta: Meta<typeof Accordion> = {
   title: "Components/Accordion",
   component: Accordion,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    type: {
+      control: 'select',
+      options: ['single', 'multiple'],
+    },
+    collapsible: {
+      control: 'boolean',
+    },
+  },
 }
 
 export default meta

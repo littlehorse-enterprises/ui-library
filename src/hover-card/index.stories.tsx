@@ -11,7 +11,21 @@ import { Button } from "../button"
 const meta: Meta<typeof HoverCard> = {
   title: "Components/Hover Card",
   component: HoverCard,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    openDelay: {
+      control: 'number',
+    },
+    closeDelay: {
+      control: 'number',
+    },
+    open: {
+      control: 'boolean',
+    },
+  },
 }
 
 export default meta

@@ -1,19 +1,28 @@
+import { cn } from "@/lib/utils"
 import type { Meta, StoryObj } from "@storybook/react"
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+    navigationMenuTriggerStyle,
 } from "."
-import { cn } from "@/lib/utils"
 
 const meta: Meta<typeof NavigationMenu> = {
   title: "Components/Navigation Menu",
   component: NavigationMenu,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    orientation: {
+      control: 'select',
+      options: ['horizontal', 'vertical'],
+    },
+  },
 }
 
 export default meta

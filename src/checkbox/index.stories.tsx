@@ -4,7 +4,19 @@ import { Checkbox } from "."
 const meta: Meta<typeof Checkbox> = {
   title: "Components/Checkbox",
   component: Checkbox,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    disabled: {
+      control: 'boolean',
+    },
+    checked: {
+      control: 'select',
+      options: [true, false, 'indeterminate'],
+    },
+  },
 }
 
 export default meta

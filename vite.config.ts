@@ -63,7 +63,7 @@ export default defineConfig({
       ),
       formats: ["es"],
       fileName: (_, entryName) => {
-        if (entryName === 'index') return 'index.js';
+        if (entryName === 'index') return "index.js";
         return `${entryName}/index.js`;
       },
     },

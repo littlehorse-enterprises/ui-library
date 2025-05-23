@@ -4,7 +4,19 @@ import { Separator } from "."
 const meta: Meta<typeof Separator> = {
   title: "Components/Separator",
   component: Separator,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    orientation: {
+      control: 'select',
+      options: ['horizontal', 'vertical'],
+    },
+    decorative: {
+      control: 'boolean',
+    },
+  },
 }
 
 export default meta

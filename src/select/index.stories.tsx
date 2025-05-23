@@ -12,7 +12,18 @@ import {
 const meta: Meta<typeof Select> = {
   title: "Components/Select",
   component: Select,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    defaultValue: {
+      control: 'text',
+    },
+    disabled: {
+      control: 'boolean',
+    },
+  },
 }
 
 export default meta

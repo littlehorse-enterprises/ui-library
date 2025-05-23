@@ -14,6 +14,9 @@ import { Button } from "../button"
 const meta: Meta<typeof Drawer> = {
   title: "Components/Drawer",
   component: Drawer,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
 }
 

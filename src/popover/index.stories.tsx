@@ -9,7 +9,18 @@ import { Button } from "../button"
 const meta: Meta<typeof Popover> = {
   title: "Components/Popover",
   component: Popover,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    modal: {
+      control: 'boolean',
+    },
+    open: {
+      control: 'boolean',
+    },
+  },
 }
 
 export default meta

@@ -1,4 +1,3 @@
-import { Button } from "../button"
 import type { Meta, StoryObj } from "@storybook/react"
 import {
     Card,
@@ -8,10 +7,14 @@ import {
     CardHeader,
     CardTitle,
 } from "."
+import { Button } from "../button"
 
 const meta: Meta<typeof Card> = {
   title: "Components/Card",
   component: Card,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
 }
 

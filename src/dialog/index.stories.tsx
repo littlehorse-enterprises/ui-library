@@ -1,4 +1,3 @@
-import { Button } from "../button"
 import type { Meta, StoryObj } from "@storybook/react"
 import {
     Dialog,
@@ -9,10 +8,14 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "."
+import { Button } from "../button"
 
 const meta: Meta<typeof Dialog> = {
   title: "Components/Dialog",
   component: Dialog,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
 }
 

@@ -4,7 +4,16 @@ import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "."
 const meta: Meta<typeof ResizablePanelGroup> = {
   title: "Components/Resizable",
   component: ResizablePanelGroup,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    direction: {
+      control: 'select',
+      options: ['horizontal', 'vertical'],
+    },
+  },
 }
 
 export default meta

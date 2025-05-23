@@ -4,7 +4,16 @@ import { Alert, AlertDescription, AlertTitle } from "."
 const meta: Meta<typeof Alert> = {
   title: "Components/Alert",
   component: Alert,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['default', 'destructive'],
+    },
+  },
 }
 
 export default meta

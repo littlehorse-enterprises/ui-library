@@ -5,7 +5,23 @@ import { Toggle } from "."
 const meta: Meta<typeof Toggle> = {
   title: "Components/Toggle",
   component: Toggle,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['default', 'outline'],
+    },
+    size: {
+      control: 'select',
+      options: ['default', 'sm', 'lg'],
+    },
+    disabled: {
+      control: 'boolean',
+    },
+  },
 }
 
 export default meta

@@ -5,6 +5,9 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "."
 const meta: Meta<typeof Collapsible> = {
   title: "Components/Collapsible",
   component: Collapsible,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
 }
 

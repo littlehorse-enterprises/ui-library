@@ -4,7 +4,21 @@ import { Textarea } from "."
 const meta: Meta<typeof Textarea> = {
   title: "Components/Textarea",
   component: Textarea,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    placeholder: {
+      control: 'text',
+    },
+    disabled: {
+      control: 'boolean',
+    },
+    rows: {
+      control: 'number',
+    },
+  },
 }
 
 export default meta

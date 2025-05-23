@@ -5,14 +5,23 @@ import {
     SheetDescription,
     SheetHeader,
     SheetTitle,
-    SheetTrigger,
+    SheetTrigger
 } from "."
 import { Button } from "../button"
 
 const meta: Meta<typeof Sheet> = {
   title: "Components/Sheet",
   component: Sheet,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    side: {
+      control: 'select',
+      options: ['top', 'bottom', 'left', 'right'],
+    },
+  },
 }
 
 export default meta

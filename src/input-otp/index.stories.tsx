@@ -9,7 +9,18 @@ import {
 const meta: Meta<typeof InputOTP> = {
   title: "Components/Input OTP",
   component: InputOTP,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    maxLength: {
+      control: 'number',
+    },
+    disabled: {
+      control: 'boolean',
+    },
+  },
 }
 
 export default meta

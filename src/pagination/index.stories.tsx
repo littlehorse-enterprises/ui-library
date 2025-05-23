@@ -12,6 +12,9 @@ import {
 const meta: Meta<typeof Pagination> = {
   title: "Components/Pagination",
   component: Pagination,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
 }
 

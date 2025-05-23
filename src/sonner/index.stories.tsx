@@ -4,6 +4,9 @@ import { Toaster, toast } from "."
 const meta: Meta<typeof Toaster> = {
   title: "Components/Toaster",
   component: Toaster,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
 }
 

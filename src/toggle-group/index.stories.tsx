@@ -5,7 +5,27 @@ import { ToggleGroup, ToggleGroupItem } from "."
 const meta: Meta<typeof ToggleGroup> = {
   title: "Components/Toggle Group",
   component: ToggleGroup,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    type: {
+      control: 'select',
+      options: ['single', 'multiple'],
+    },
+    variant: {
+      control: 'select',
+      options: ['default', 'outline'],
+    },
+    size: {
+      control: 'select',
+      options: ['default', 'sm', 'lg'],
+    },
+    disabled: {
+      control: 'boolean',
+    },
+  },
 }
 
 export default meta

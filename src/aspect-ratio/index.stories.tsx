@@ -4,6 +4,9 @@ import { AspectRatio } from "."
 const meta: Meta<typeof AspectRatio> = {
   title: "Components/AspectRatio",
   component: AspectRatio,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
 }
 

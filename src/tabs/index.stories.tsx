@@ -4,7 +4,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "."
 const meta: Meta<typeof Tabs> = {
   title: "Components/Tabs",
   component: Tabs,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ["autodocs"],
+  argTypes: {
+    defaultValue: {
+      control: 'text',
+    },
+    orientation: {
+      control: 'select',
+      options: ['horizontal', 'vertical'],
+    },
+  },
 }
 
 export default meta
