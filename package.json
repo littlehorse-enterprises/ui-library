@@ -15,8 +15,7 @@
     "lint:fix": "eslint --fix",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "test:ui": "vitest --ui",
-    "prepare": "husky"
+    "test:ui": "vitest --ui"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",

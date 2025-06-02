@@ -34,6 +34,10 @@ export default function App() {
 # Install dependencies
 npm install
 
+# Set up Git hooks with Husky
+npx husky install
+# It is going to say the command is deprecated, but husky says we can ignore that because we are a library with consumers not an app. So we don't want to do postinstall script that would effect consumers of the library.
+
 # Start development server
 npm run dev
 
