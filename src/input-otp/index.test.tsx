@@ -1,8 +1,18 @@
 import { render } from '@testing-library/react'
-import { describe, expect, it } from 'vitest'
+import { afterEach, beforeAll, describe, expect, it } from 'vitest'
 import { InputOTP, InputOTPGroup, InputOTPSlot } from './index'
 
 describe('InputOTP', () => {
+  beforeAll(() => {
+    // Mock timers before any tests run
+    vi.useFakeTimers()
+  })
+
+  afterEach(() => {
+    // Clean up any remaining timeouts
+    vi.clearAllTimers()
+  })
+
   it('renders the correct number of slot divs', () => {
     const { container } = render(
       <InputOTP maxLength={4}>
