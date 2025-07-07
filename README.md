@@ -2,7 +2,7 @@
 
 LittleHorse's UI component library built with shadcn/ui.
 This is for internal use of all LittleHorse frontend projects.
-This repo contains reusable "building block" components that each project can use to maintain a consistent and synchronized UX/UI.
+This repo contains reusable "building block" components that each project can use to maintain a consistent and synchronized UI/UX.
 It is build on top of the foundation of [shadcn](https://ui.shadcn.com/docs/components).
 
 ## Installation
