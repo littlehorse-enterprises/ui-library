@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Download, Heart } from 'lucide-react';
-import { Button } from './index';
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Download, Heart } from 'lucide-react'
+import { Button } from './index'
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
@@ -22,16 +22,16 @@ const meta: Meta<typeof Button> = {
       control: 'boolean',
     },
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof Button>;
+export default meta
+type Story = StoryObj<typeof Button>
 
 export const Default: Story = {
   args: {
     children: 'Button',
   },
-};
+}
 
 export const Variants: Story = {
   render: () => (
@@ -44,7 +44,7 @@ export const Variants: Story = {
       <Button variant="link">Link</Button>
     </div>
   ),
-};
+}
 
 export const Sizes: Story = {
   render: () => (
@@ -57,7 +57,7 @@ export const Sizes: Story = {
       </Button>
     </div>
   ),
-};
+}
 
 export const WithIcons: Story = {
   render: () => (
@@ -75,20 +75,18 @@ export const WithIcons: Story = {
       </Button>
     </div>
   ),
-};
+}
 
 export const Loading: Story = {
   render: () => (
     <div className="flex flex-wrap gap-4">
-      <Button loading>
-        Loading
-      </Button>
+      <Button loading>Loading</Button>
       <Button variant="outline" loading>
         Loading
       </Button>
     </div>
   ),
-};
+}
 
 export const Disabled: Story = {
   render: () => (
@@ -102,4 +100,4 @@ export const Disabled: Story = {
       </Button>
     </div>
   ),
-}; 
+}
