@@ -23,11 +23,7 @@ import '@littlehorse-enterprises/ui-library/index.css'
 import { Button } from '@littlehorse-enterprises/ui-library/button'
 
 export default function App() {
-  return (
-    <Button variant="default">
-      Click me
-    </Button>
-  )
+  return <Button variant="default">Click me</Button>
 }
 ```
 

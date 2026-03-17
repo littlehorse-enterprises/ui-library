@@ -20,8 +20,8 @@ export default defineConfig({
       ],
     },
     typecheck: {
-      tsconfig: './tsconfig.test.json'
-    }
+      tsconfig: './tsconfig.test.json',
+    },
   },
   resolve: {
     alias: {
