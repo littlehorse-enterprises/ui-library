@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Avatar, AvatarFallback, AvatarImage } from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Avatar, AvatarFallback, AvatarImage } from '.'
 
 const meta: Meta<typeof Avatar> = {
-  title: "Components/Avatar",
+  title: 'Components/Avatar',
   component: Avatar,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -51,7 +51,7 @@ export const WithCustomSize: Story = {
 
 export const WithCustomBorder: Story = {
   render: () => (
-    <Avatar className="border-2 border-primary">
+    <Avatar className="border-primary border-2">
       <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
       <AvatarFallback>CN</AvatarFallback>
     </Avatar>
@@ -62,9 +62,7 @@ export const WithCustomBackground: Story = {
   render: () => (
     <Avatar>
       <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-      <AvatarFallback className="bg-gradient-to-br from-purple-500 to-pink-500 text-white">
-        CN
-      </AvatarFallback>
+      <AvatarFallback className="bg-gradient-to-br from-purple-500 to-pink-500 text-white">CN</AvatarFallback>
     </Avatar>
   ),
 }
@@ -76,7 +74,7 @@ export const WithStatus: Story = {
         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
-      <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-green-500 ring-2 ring-white" />
+      <span className="absolute right-0 bottom-0 h-3 w-3 rounded-full bg-green-500 ring-2 ring-white" />
     </div>
   ),
 }
@@ -105,14 +103,14 @@ export const WithGroup: Story = {
 
 export const WithTooltip: Story = {
   render: () => (
-    <div className="relative group">
+    <div className="group relative">
       <Avatar>
         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
-      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity">
+      <div className="absolute bottom-full left-1/2 mb-2 -translate-x-1/2 rounded bg-black px-2 py-1 text-sm text-white opacity-0 transition-opacity group-hover:opacity-100">
         @shadcn
       </div>
     </div>
   ),
-} 
+}

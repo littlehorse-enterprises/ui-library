@@ -55,4 +55,4 @@ describe('Avatar', () => {
     )
     expect(screen.getByText('TA')).toHaveClass('custom-fallback')
   })
-}) 
+})
