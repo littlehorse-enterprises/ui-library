@@ -19,6 +19,6 @@
     },
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
-  "include": ["src"],
+  "include": ["src", "vite.config.ts", "vite-plugin-eslint.d.ts"],
   "exclude": ["node_modules", "dist"]
 }
