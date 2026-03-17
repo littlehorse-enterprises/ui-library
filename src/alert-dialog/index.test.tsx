@@ -1,15 +1,15 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import {
-	AlertDialog,
-	AlertDialogAction,
-	AlertDialogCancel,
-	AlertDialogContent,
-	AlertDialogDescription,
-	AlertDialogFooter,
-	AlertDialogHeader,
-	AlertDialogTitle,
-	AlertDialogTrigger,
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
 } from './index'
 
 describe('AlertDialog', () => {
@@ -48,13 +48,13 @@ describe('AlertDialog', () => {
         </AlertDialogContent>
       </AlertDialog>
     )
-    
+
     const trigger = screen.getByText('Open Alert')
     fireEvent.click(trigger)
-    
+
     expect(screen.getByText('Alert Title')).toBeInTheDocument()
     expect(screen.getByText('Alert Description')).toBeInTheDocument()
     expect(screen.getByText('Cancel')).toBeInTheDocument()
     expect(screen.getByText('Continue')).toBeInTheDocument()
   })
-}) 
+})
