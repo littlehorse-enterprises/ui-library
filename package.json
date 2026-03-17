@@ -288,11 +288,6 @@
       "import": "./dist/slider/index.js",
       "require": "./dist/slider/index.js"
     },
-    "./sonner": {
-      "types": "./dist/sonner/index.d.ts",
-      "import": "./dist/sonner/index.js",
-      "require": "./dist/sonner/index.js"
-    },
     "./switch": {
       "types": "./dist/switch/index.d.ts",
       "import": "./dist/switch/index.js",
