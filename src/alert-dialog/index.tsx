@@ -105,11 +105,11 @@ type ConfirmDialogConfig = {
   validationLabel?: string
 }
 
-interface ConfirmDialogProps extends ConfirmDialogConfig {
+type ConfirmDialogProps = ConfirmDialogConfig & {
   open: boolean
   // eslint-disable-next-line no-unused-vars
-  onOpenChange(open: boolean): void
-  onConfirm(): void
+  onOpenChange: (open: boolean) => void
+  onConfirm: () => void
 }
 
 function ConfirmDialog({
