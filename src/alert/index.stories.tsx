@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Alert, AlertDescription, AlertTitle } from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Alert, AlertDescription, AlertTitle } from '.'
 
 const meta: Meta<typeof Alert> = {
-  title: "Components/Alert",
+  title: 'Components/Alert',
   component: Alert,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       control: 'select',
@@ -23,9 +23,7 @@ export const Default: Story = {
   render: () => (
     <Alert>
       <AlertTitle>Heads up!</AlertTitle>
-      <AlertDescription>
-        You can add components and dependencies to your app using the cli.
-      </AlertDescription>
+      <AlertDescription>You can add components and dependencies to your app using the cli.</AlertDescription>
     </Alert>
   ),
 }
@@ -34,9 +32,7 @@ export const Destructive: Story = {
   render: () => (
     <Alert variant="destructive">
       <AlertTitle>Error</AlertTitle>
-      <AlertDescription>
-        Your session has expired. Please log in again.
-      </AlertDescription>
+      <AlertDescription>Your session has expired. Please log in again.</AlertDescription>
     </Alert>
   ),
 }
@@ -58,20 +54,16 @@ export const WithIcon: Story = {
         <path d="m9 12 2 2 4-4" />
       </svg>
       <AlertTitle>Success!</AlertTitle>
-      <AlertDescription>
-        Your changes have been saved successfully.
-      </AlertDescription>
+      <AlertDescription>Your changes have been saved successfully.</AlertDescription>
     </Alert>
   ),
 }
 
 export const WithCustomStyling: Story = {
   render: () => (
-    <Alert className="bg-blue-50 border-blue-200 text-blue-800">
+    <Alert className="border-blue-200 bg-blue-50 text-blue-800">
       <AlertTitle className="text-blue-800">Information</AlertTitle>
-      <AlertDescription className="text-blue-700">
-        This is a custom styled alert with blue colors.
-      </AlertDescription>
+      <AlertDescription className="text-blue-700">This is a custom styled alert with blue colors.</AlertDescription>
     </Alert>
   ),
 }
@@ -81,8 +73,7 @@ export const WithLongContent: Story = {
     <Alert>
       <AlertTitle>Important Update</AlertTitle>
       <AlertDescription>
-        We've made some significant changes to our platform. Please review the
-        following updates carefully:
+        We've made some significant changes to our platform. Please review the following updates carefully:
         <ul className="mt-2 list-disc pl-4">
           <li>New feature: Dark mode support</li>
           <li>Improved performance and stability</li>
@@ -97,17 +88,10 @@ export const WithAction: Story = {
   render: () => (
     <Alert>
       <AlertTitle>New Version Available</AlertTitle>
-      <AlertDescription>
-        A new version of the application is available. Would you like to update
-        now?
-      </AlertDescription>
+      <AlertDescription>A new version of the application is available. Would you like to update now?</AlertDescription>
       <div className="mt-4 flex gap-2">
-        <button className="rounded-md bg-primary px-3 py-1 text-sm text-primary-foreground">
-          Update Now
-        </button>
-        <button className="rounded-md border px-3 py-1 text-sm">
-          Later
-        </button>
+        <button className="bg-primary text-primary-foreground rounded-md px-3 py-1 text-sm">Update Now</button>
+        <button className="rounded-md border px-3 py-1 text-sm">Later</button>
       </div>
     </Alert>
   ),
@@ -118,16 +102,12 @@ export const WithMultipleAlerts: Story = {
     <div className="space-y-4">
       <Alert>
         <AlertTitle>System Status</AlertTitle>
-        <AlertDescription>
-          All systems are operating normally.
-        </AlertDescription>
+        <AlertDescription>All systems are operating normally.</AlertDescription>
       </Alert>
       <Alert variant="destructive">
         <AlertTitle>Warning</AlertTitle>
-        <AlertDescription>
-          Your storage is almost full. Please free up some space.
-        </AlertDescription>
+        <AlertDescription>Your storage is almost full. Please free up some space.</AlertDescription>
       </Alert>
     </div>
   ),
-} 
+}

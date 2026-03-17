@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import {
   AlertDialog,
@@ -9,6 +10,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
+  ConfirmDialog,
+  useConfirmDialog,
 } from '.'
 import { Button } from '../button'
 
@@ -160,4 +163,93 @@ export const WithIcon: Story = {
       </AlertDialogContent>
     </AlertDialog>
   ),
+}
+
+export const Confirm: Story = {
+  render: () => {
+    const [open, setOpen] = useState(false)
+    return (
+      <>
+        <Button onClick={() => setOpen(true)}>Open Confirm Dialog</Button>
+        <ConfirmDialog
+          open={open}
+          onOpenChange={setOpen}
+          onConfirm={() => setOpen(false)}
+          title="Are you sure?"
+          description="This action cannot be undone."
+        />
+      </>
+    )
+  },
+}
+
+export const ConfirmDestructive: Story = {
+  render: () => {
+    const [open, setOpen] = useState(false)
+    return (
+      <>
+        <Button variant="destructive" onClick={() => setOpen(true)}>
+          Delete Item
+        </Button>
+        <ConfirmDialog
+          open={open}
+          onOpenChange={setOpen}
+          onConfirm={() => setOpen(false)}
+          title="Delete Item"
+          description="Are you sure you want to delete this item? This action cannot be undone."
+          confirmText="Delete"
+          variant="destructive"
+        />
+      </>
+    )
+  },
+}
+
+export const ConfirmWithValidation: Story = {
+  render: () => {
+    const [open, setOpen] = useState(false)
+    return (
+      <>
+        <Button variant="destructive" onClick={() => setOpen(true)}>
+          Rotate Credentials
+        </Button>
+        <ConfirmDialog
+          open={open}
+          onOpenChange={setOpen}
+          onConfirm={() => setOpen(false)}
+          title="Rotate Credentials"
+          description="This is a dangerous action. The current secret will be invalidated."
+          confirmText="Confirm"
+          variant="destructive"
+          requireValidation
+          validationText="my-client"
+          validationLabel="To confirm, type the client name below:"
+        />
+      </>
+    )
+  },
+}
+
+export const ConfirmWithHook: Story = {
+  render: () => {
+    const { confirm, dialogProps } = useConfirmDialog()
+    return (
+      <>
+        <Button
+          variant="destructive"
+          onClick={() =>
+            confirm(() => alert('Deleted!'), {
+              title: 'Delete Resource',
+              description: 'This will permanently delete the resource.',
+              confirmText: 'Delete',
+              variant: 'destructive',
+            })
+          }
+        >
+          Delete with Hook
+        </Button>
+        <ConfirmDialog {...dialogProps} />
+      </>
+    )
+  },
 }
