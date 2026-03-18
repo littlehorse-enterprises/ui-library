@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Check, X } from "lucide-react"
-import { Badge } from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Check, X } from 'lucide-react'
+import { Badge } from '.'
 
 const meta: Meta<typeof Badge> = {
-  title: "Components/Badge",
+  title: 'Components/Badge',
   component: Badge,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       control: 'select',
@@ -22,7 +22,7 @@ type Story = StoryObj<typeof Badge>
 
 export const Default: Story = {
   args: {
-    children: "Badge",
+    children: 'Badge',
   },
 }
 
@@ -82,4 +82,4 @@ export const CustomStyling: Story = {
       <Badge className="bg-purple-500 hover:bg-purple-600">Custom Purple</Badge>
     </div>
   ),
-} 
+}

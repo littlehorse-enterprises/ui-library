@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react'
 import {
-    Pagination,
-    PaginationContent,
-    PaginationEllipsis,
-    PaginationItem,
-    PaginationLink,
-    PaginationNext,
-    PaginationPrevious
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
 } from '.'
 describe('Pagination', () => {
   it('renders navigation and links', () => {
@@ -171,4 +171,4 @@ describe('Pagination', () => {
     expect(screen.getByText('3')).toHaveClass('rounded-none')
     expect(screen.getByLabelText('Go to next page')).toHaveClass('rounded-l-none')
   })
-}) 
+})

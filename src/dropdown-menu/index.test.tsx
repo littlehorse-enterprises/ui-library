@@ -26,4 +26,4 @@ describe('DropdownMenu', () => {
       expect(screen.getByText('Item 2')).toBeInTheDocument()
     })
   })
-}) 
+})

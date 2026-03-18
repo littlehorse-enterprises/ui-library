@@ -17,7 +17,7 @@ describe('AspectRatio', () => {
 
   it('renders with custom ratio', () => {
     render(
-      <AspectRatio ratio={4/3}>
+      <AspectRatio ratio={4 / 3}>
         <div>Content</div>
       </AspectRatio>
     )
@@ -33,4 +33,4 @@ describe('AspectRatio', () => {
     )
     expect(screen.getByText('Test Content')).toBeInTheDocument()
   })
-}) 
+})

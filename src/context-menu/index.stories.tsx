@@ -1,28 +1,28 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Check, ChevronRight, Circle } from "lucide-react"
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Check, ChevronRight, Circle } from 'lucide-react'
 import {
-    ContextMenu,
-    ContextMenuCheckboxItem,
-    ContextMenuContent,
-    ContextMenuItem,
-    ContextMenuLabel,
-    ContextMenuRadioGroup,
-    ContextMenuRadioItem,
-    ContextMenuSeparator,
-    ContextMenuShortcut,
-    ContextMenuSub,
-    ContextMenuSubContent,
-    ContextMenuSubTrigger,
-    ContextMenuTrigger,
-} from "."
+  ContextMenu,
+  ContextMenuCheckboxItem,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuLabel,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+  ContextMenuTrigger,
+} from '.'
 
 const meta: Meta<typeof ContextMenu> = {
-  title: "Components/Context Menu",
+  title: 'Components/Context Menu',
   component: ContextMenu,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -86,7 +86,7 @@ export const WithCustomStyling: Story = {
       <ContextMenuTrigger className="flex h-[150px] w-full items-center justify-center rounded-md border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
-      <ContextMenuContent className="w-64 bg-blue-50 border-blue-200">
+      <ContextMenuContent className="w-64 border-blue-200 bg-blue-50">
         <ContextMenuItem className="text-blue-800 hover:bg-blue-100">
           <Check className="mr-2 h-4 w-4" />
           Check Item
@@ -96,9 +96,7 @@ export const WithCustomStyling: Story = {
           Circle Item
         </ContextMenuItem>
         <ContextMenuSeparator className="bg-blue-200" />
-        <ContextMenuItem className="text-blue-800 hover:bg-blue-100">
-          Custom Item
-        </ContextMenuItem>
+        <ContextMenuItem className="text-blue-800 hover:bg-blue-100">Custom Item</ContextMenuItem>
       </ContextMenuContent>
     </ContextMenu>
   ),
@@ -163,23 +161,13 @@ export const WithCheckboxes: Story = {
       </ContextMenuTrigger>
       <ContextMenuContent className="w-64">
         <ContextMenuLabel>View Options</ContextMenuLabel>
-        <ContextMenuCheckboxItem checked>
-          Show Toolbar
-        </ContextMenuCheckboxItem>
-        <ContextMenuCheckboxItem checked>
-          Show Statusbar
-        </ContextMenuCheckboxItem>
-        <ContextMenuCheckboxItem>
-          Show Sidebar
-        </ContextMenuCheckboxItem>
+        <ContextMenuCheckboxItem checked>Show Toolbar</ContextMenuCheckboxItem>
+        <ContextMenuCheckboxItem checked>Show Statusbar</ContextMenuCheckboxItem>
+        <ContextMenuCheckboxItem>Show Sidebar</ContextMenuCheckboxItem>
         <ContextMenuSeparator />
         <ContextMenuLabel>Theme</ContextMenuLabel>
-        <ContextMenuCheckboxItem>
-          Dark Mode
-        </ContextMenuCheckboxItem>
-        <ContextMenuCheckboxItem>
-          Compact Mode
-        </ContextMenuCheckboxItem>
+        <ContextMenuCheckboxItem>Dark Mode</ContextMenuCheckboxItem>
+        <ContextMenuCheckboxItem>Compact Mode</ContextMenuCheckboxItem>
       </ContextMenuContent>
     </ContextMenu>
   ),
@@ -208,4 +196,4 @@ export const WithRadioGroups: Story = {
       </ContextMenuContent>
     </ContextMenu>
   ),
-} 
+}

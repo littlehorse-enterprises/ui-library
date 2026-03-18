@@ -1,24 +1,24 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Calculator, Calendar, CreditCard, Settings, Smile, User } from "lucide-react"
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Calculator, Calendar, CreditCard, Settings, Smile, User } from 'lucide-react'
 import {
-    Command,
-    CommandDialog,
-    CommandEmpty,
-    CommandGroup,
-    CommandInput,
-    CommandItem,
-    CommandList,
-    CommandSeparator,
-    CommandShortcut,
-} from "."
+  Command,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from '.'
 
 const meta: Meta<typeof Command> = {
-  title: "Components/Command",
+  title: 'Components/Command',
   component: Command,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -95,10 +95,7 @@ export const WithDialog: Story = {
 export const WithCustomStyling: Story = {
   render: () => (
     <Command className="rounded-lg border border-blue-200 bg-blue-50 shadow-md">
-      <CommandInput
-        placeholder="Type a command or search..."
-        className="border-blue-200"
-      />
+      <CommandInput placeholder="Type a command or search..." className="border-blue-200" />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Suggestions">
@@ -192,9 +189,9 @@ export const WithLoading: Story = {
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <div className="flex items-center justify-center py-6">
-          <div className="h-4 w-4 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+          <div className="border-primary h-4 w-4 animate-spin rounded-full border-2 border-t-transparent" />
         </div>
       </CommandList>
     </Command>
   ),
-} 
+}

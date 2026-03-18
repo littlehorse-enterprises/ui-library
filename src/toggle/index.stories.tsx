@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Bold, Italic, Underline } from "lucide-react"
-import { Toggle } from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Bold, Italic, Underline } from 'lucide-react'
+import { Toggle } from '.'
 
 const meta: Meta<typeof Toggle> = {
-  title: "Components/Toggle",
+  title: 'Components/Toggle',
   component: Toggle,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       control: 'select',
@@ -28,9 +28,7 @@ export default meta
 type Story = StoryObj<typeof Toggle>
 
 export const Default: Story = {
-  render: () => (
-    <Toggle>Toggle</Toggle>
-  ),
+  render: () => <Toggle>Toggle</Toggle>,
 }
 
 export const WithIcon: Story = {
@@ -91,4 +89,4 @@ export const Disabled: Story = {
       Disabled
     </Toggle>
   ),
-} 
+}

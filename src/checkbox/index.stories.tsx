@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Checkbox } from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Checkbox } from '.'
 
 const meta: Meta<typeof Checkbox> = {
-  title: "Components/Checkbox",
+  title: 'Components/Checkbox',
   component: Checkbox,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     disabled: {
       control: 'boolean',
@@ -28,7 +28,7 @@ export const Default: Story = {
       <Checkbox id="terms" />
       <label
         htmlFor="terms"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         Accept terms and conditions
       </label>
@@ -42,7 +42,7 @@ export const Checked: Story = {
       <Checkbox id="terms" defaultChecked />
       <label
         htmlFor="terms"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         Accept terms and conditions
       </label>
@@ -56,7 +56,7 @@ export const Disabled: Story = {
       <Checkbox id="terms" disabled />
       <label
         htmlFor="terms"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         Accept terms and conditions
       </label>
@@ -71,14 +71,12 @@ export const WithDescription: Story = {
         <Checkbox id="terms" />
         <label
           htmlFor="terms"
-          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         >
           Accept terms and conditions
         </label>
       </div>
-      <p className="text-sm text-muted-foreground">
-        You agree to our Terms of Service and Privacy Policy.
-      </p>
+      <p className="text-muted-foreground text-sm">You agree to our Terms of Service and Privacy Policy.</p>
     </div>
   ),
 }
@@ -86,14 +84,8 @@ export const WithDescription: Story = {
 export const WithCustomStyling: Story = {
   render: () => (
     <div className="flex items-center space-x-2">
-      <Checkbox
-        id="terms"
-        className="border-blue-500 data-[state=checked]:bg-blue-500"
-      />
-      <label
-        htmlFor="terms"
-        className="text-sm font-medium leading-none text-blue-500"
-      >
+      <Checkbox id="terms" className="border-blue-500 data-[state=checked]:bg-blue-500" />
+      <label htmlFor="terms" className="text-sm leading-none font-medium text-blue-500">
         Accept terms and conditions
       </label>
     </div>
@@ -108,28 +100,19 @@ export const WithForm: Story = {
         <div className="space-y-2">
           <div className="flex items-center space-x-2">
             <Checkbox id="email" />
-            <label
-              htmlFor="email"
-              className="text-sm font-medium leading-none"
-            >
+            <label htmlFor="email" className="text-sm leading-none font-medium">
               Email notifications
             </label>
           </div>
           <div className="flex items-center space-x-2">
             <Checkbox id="sms" />
-            <label
-              htmlFor="sms"
-              className="text-sm font-medium leading-none"
-            >
+            <label htmlFor="sms" className="text-sm leading-none font-medium">
               SMS notifications
             </label>
           </div>
           <div className="flex items-center space-x-2">
             <Checkbox id="push" />
-            <label
-              htmlFor="push"
-              className="text-sm font-medium leading-none"
-            >
+            <label htmlFor="push" className="text-sm leading-none font-medium">
               Push notifications
             </label>
           </div>
@@ -145,7 +128,7 @@ export const WithIndeterminate: Story = {
       <Checkbox id="terms" checked="indeterminate" />
       <label
         htmlFor="terms"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         Accept terms and conditions
       </label>
@@ -159,11 +142,11 @@ export const WithRequired: Story = {
       <Checkbox id="terms" required />
       <label
         htmlFor="terms"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         Accept terms and conditions
         <span className="text-red-500">*</span>
       </label>
     </div>
   ),
-} 
+}

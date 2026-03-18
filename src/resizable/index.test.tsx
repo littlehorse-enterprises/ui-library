@@ -1,10 +1,6 @@
 import { render, screen } from '@testing-library/react'
 // import userEvent from '@testing-library/user-event' // Keep commented for now
-import {
-    ResizableHandle,
-    ResizablePanel,
-    ResizablePanelGroup,
-} from '.'
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '.'
 describe('Resizable', () => {
   it('renders horizontal panel group with handle', () => {
     render(
@@ -81,7 +77,7 @@ describe('Resizable', () => {
     render(
       <ResizablePanelGroup direction="horizontal" className="border-blue-200">
         <ResizablePanel defaultSize={25}>
-          <div className="flex h-full items-center justify-center p-6 bg-blue-50">
+          <div className="flex h-full items-center justify-center bg-blue-50 p-6">
             <span className="font-semibold text-blue-800">Sidebar</span>
           </div>
         </ResizablePanel>
@@ -101,4 +97,4 @@ describe('Resizable', () => {
 
   // Skipping drag tests for now due to headless environment complexities
   // it('allows resizing panels', async () => {})
-}) 
+})

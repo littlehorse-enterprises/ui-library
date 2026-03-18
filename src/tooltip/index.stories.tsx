@@ -1,15 +1,15 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { AlertCircle, HelpCircle, Info, Settings } from "lucide-react"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "."
-import { Button } from "../button"
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { AlertCircle, HelpCircle, Info, Settings } from 'lucide-react'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '.'
+import { Button } from '../button'
 
 const meta: Meta<typeof Tooltip> = {
-  title: "Components/Tooltip",
+  title: 'Components/Tooltip',
   component: Tooltip,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     delayDuration: {
       control: 'number',
@@ -61,11 +61,11 @@ export const WithCustomStyling: Story = {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button variant="outline" className="bg-blue-50 text-blue-600 hover:bg-blue-100">
-            <Settings className="h-4 w-4 mr-2" />
+            <Settings className="mr-2 h-4 w-4" />
             Settings
           </Button>
         </TooltipTrigger>
-        <TooltipContent className="bg-blue-50 text-blue-600 border-blue-200">
+        <TooltipContent className="border-blue-200 bg-blue-50 text-blue-600">
           <p>Customize your settings</p>
         </TooltipContent>
       </Tooltip>
@@ -79,7 +79,7 @@ export const WithLongContent: Story = {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button variant="outline">
-            <HelpCircle className="h-4 w-4 mr-2" />
+            <HelpCircle className="mr-2 h-4 w-4" />
             Help
           </Button>
         </TooltipTrigger>
@@ -98,7 +98,7 @@ export const WithMultipleTooltips: Story = {
         <Tooltip>
           <TooltipTrigger asChild>
             <Button variant="outline">
-              <Info className="h-4 w-4 mr-2" />
+              <Info className="mr-2 h-4 w-4" />
               Info
             </Button>
           </TooltipTrigger>
@@ -112,7 +112,7 @@ export const WithMultipleTooltips: Story = {
         <Tooltip>
           <TooltipTrigger asChild>
             <Button variant="outline">
-              <AlertCircle className="h-4 w-4 mr-2" />
+              <AlertCircle className="mr-2 h-4 w-4" />
               Warning
             </Button>
           </TooltipTrigger>
@@ -138,4 +138,4 @@ export const WithDelay: Story = {
       </Tooltip>
     </TooltipProvider>
   ),
-} 
+}
