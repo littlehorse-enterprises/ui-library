@@ -198,6 +198,11 @@
       "import": "./dist/dropdown-menu/index.js",
       "require": "./dist/dropdown-menu/index.js"
     },
+    "./error-alert": {
+      "types": "./dist/error-alert/index.d.ts",
+      "import": "./dist/error-alert/index.js",
+      "require": "./dist/error-alert/index.js"
+    },
     "./form": {
       "types": "./dist/form/index.d.ts",
       "import": "./dist/form/index.js",
@@ -287,6 +292,11 @@
       "types": "./dist/slider/index.d.ts",
       "import": "./dist/slider/index.js",
       "require": "./dist/slider/index.js"
+    },
+    "./success-alert": {
+      "types": "./dist/success-alert/index.d.ts",
+      "import": "./dist/success-alert/index.js",
+      "require": "./dist/success-alert/index.js"
     },
     "./switch": {
       "types": "./dist/switch/index.d.ts",
