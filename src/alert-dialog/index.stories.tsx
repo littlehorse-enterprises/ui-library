@@ -16,7 +16,7 @@ import {
 import { Button } from '../button'
 
 const meta: Meta<typeof AlertDialog> = {
-  title: 'Components/Alert Dialog',
+  title: 'Components/Dialogs/Alert Dialog',
   component: AlertDialog,
   parameters: {
     layout: 'centered',
