@@ -1,18 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import {
-    InputOTP,
-    InputOTPGroup,
-    InputOTPSeparator,
-    InputOTPSlot,
-} from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from '.'
 
 const meta: Meta<typeof InputOTP> = {
-  title: "Components/Input OTP",
+  title: 'Components/Input OTP',
   component: InputOTP,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     maxLength: {
       control: 'number',
@@ -61,31 +56,13 @@ export const WithCustomStyling: Story = {
   render: () => (
     <InputOTP maxLength={6}>
       <InputOTPGroup className="gap-2">
-        <InputOTPSlot
-          index={0}
-          className="border-blue-200 bg-blue-50 text-blue-800"
-        />
-        <InputOTPSlot
-          index={1}
-          className="border-blue-200 bg-blue-50 text-blue-800"
-        />
-        <InputOTPSlot
-          index={2}
-          className="border-blue-200 bg-blue-50 text-blue-800"
-        />
+        <InputOTPSlot index={0} className="border-blue-200 bg-blue-50 text-blue-800" />
+        <InputOTPSlot index={1} className="border-blue-200 bg-blue-50 text-blue-800" />
+        <InputOTPSlot index={2} className="border-blue-200 bg-blue-50 text-blue-800" />
         <InputOTPSeparator className="text-blue-400" />
-        <InputOTPSlot
-          index={3}
-          className="border-blue-200 bg-blue-50 text-blue-800"
-        />
-        <InputOTPSlot
-          index={4}
-          className="border-blue-200 bg-blue-50 text-blue-800"
-        />
-        <InputOTPSlot
-          index={5}
-          className="border-blue-200 bg-blue-50 text-blue-800"
-        />
+        <InputOTPSlot index={3} className="border-blue-200 bg-blue-50 text-blue-800" />
+        <InputOTPSlot index={4} className="border-blue-200 bg-blue-50 text-blue-800" />
+        <InputOTPSlot index={5} className="border-blue-200 bg-blue-50 text-blue-800" />
       </InputOTPGroup>
     </InputOTP>
   ),
@@ -135,4 +112,4 @@ export const Disabled: Story = {
       </InputOTPGroup>
     </InputOTP>
   ),
-} 
+}
