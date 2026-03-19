@@ -66,6 +66,7 @@
     "react-dom": "^19"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^10.3.1",
     "@storybook/addon-docs": "^10.3.0",
     "@storybook/addon-onboarding": "^10.3.0",
     "@storybook/addon-themes": "^10.3.0",
