@@ -1,20 +1,20 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Input } from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Input } from '.'
 
 const meta: Meta<typeof Input> = {
-  title: "Components/Input",
+  title: 'Components/Input',
   component: Input,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     type: {
-      control: "select",
-      options: ["text", "email", "password", "number", "tel", "url", "search"],
+      control: 'select',
+      options: ['text', 'email', 'password', 'number', 'tel', 'url', 'search'],
     },
     disabled: {
-      control: "boolean",
+      control: 'boolean',
     },
   },
 }
@@ -24,7 +24,7 @@ type Story = StoryObj<typeof Input>
 
 export const Default: Story = {
   args: {
-    placeholder: "Enter text here...",
+    placeholder: 'Enter text here...',
   },
 }
 
@@ -85,12 +85,7 @@ export const WithError: Story = {
   render: () => (
     <div className="grid w-full max-w-sm items-center gap-1.5">
       <label htmlFor="email">Email</label>
-      <Input
-        type="email"
-        id="email"
-        placeholder="Enter email"
-        className="border-red-500 focus-visible:ring-red-500"
-      />
+      <Input type="email" id="email" placeholder="Enter email" className="border-red-500 focus-visible:ring-red-500" />
       <p className="text-sm text-red-500">Please enter a valid email address.</p>
     </div>
   ),
@@ -101,7 +96,7 @@ export const WithIcon: Story = {
     <div className="grid w-full max-w-sm items-center gap-1.5">
       <div className="relative">
         <svg
-          className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
+          className="text-muted-foreground absolute top-2.5 left-2.5 h-4 w-4"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -113,11 +108,7 @@ export const WithIcon: Story = {
             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
           />
         </svg>
-        <Input
-          type="search"
-          placeholder="Search..."
-          className="pl-8"
-        />
+        <Input type="search" placeholder="Search..." className="pl-8" />
       </div>
     </div>
   ),
@@ -130,4 +121,4 @@ export const File: Story = {
       <Input type="file" id="file" />
     </div>
   ),
-} 
+}

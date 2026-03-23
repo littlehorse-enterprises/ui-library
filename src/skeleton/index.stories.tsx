@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Skeleton } from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Skeleton } from '.'
 
 const meta: Meta<typeof Skeleton> = {
-  title: "Components/Skeleton",
+  title: 'Components/Skeleton',
   component: Skeleton,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -115,4 +115,4 @@ export const CustomAnimation: Story = {
       <Skeleton className="h-4 w-[250px] animate-pulse [animation-delay:0.4s]" />
     </div>
   ),
-} 
+}

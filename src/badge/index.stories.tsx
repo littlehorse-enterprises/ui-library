@@ -12,7 +12,7 @@ const meta: Meta<typeof Badge> = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['default', 'secondary', 'destructive', 'outline'],
+      options: ['default', 'secondary', 'destructive', 'outline', 'ghost', 'link'],
     },
   },
 }
@@ -33,6 +33,8 @@ export const Variants: Story = {
       <Badge variant="secondary">Secondary</Badge>
       <Badge variant="destructive">Destructive</Badge>
       <Badge variant="outline">Outline</Badge>
+      <Badge variant="ghost">Ghost</Badge>
+      <Badge variant="link">Link</Badge>
     </div>
   ),
 }

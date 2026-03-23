@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { SuccessAlert } from '.'
 
 const meta: Meta<typeof SuccessAlert> = {
-  title: 'Components/SuccessAlert',
+  title: 'Components/Alerts/SuccessAlert',
   component: SuccessAlert,
   parameters: {
     layout: 'padded',

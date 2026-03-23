@@ -1,29 +1,29 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { ChevronRight } from "lucide-react"
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { ChevronRight } from 'lucide-react'
 import {
-    Menubar,
-    MenubarCheckboxItem,
-    MenubarContent,
-    MenubarItem,
-    MenubarLabel,
-    MenubarMenu,
-    MenubarRadioGroup,
-    MenubarRadioItem,
-    MenubarSeparator,
-    MenubarShortcut,
-    MenubarSub,
-    MenubarSubContent,
-    MenubarSubTrigger,
-    MenubarTrigger,
-} from "."
+  Menubar,
+  MenubarCheckboxItem,
+  MenubarContent,
+  MenubarItem,
+  MenubarLabel,
+  MenubarMenu,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarTrigger,
+} from '.'
 
 const meta: Meta<typeof Menubar> = {
-  title: "Components/Menubar",
+  title: 'Components/Menubar',
   component: Menubar,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -86,14 +86,10 @@ export const Default: Story = {
       <MenubarMenu>
         <MenubarTrigger>View</MenubarTrigger>
         <MenubarContent>
-          <MenubarCheckboxItem checked>
-            Show Toolbar
-          </MenubarCheckboxItem>
+          <MenubarCheckboxItem checked>Show Toolbar</MenubarCheckboxItem>
           <MenubarCheckboxItem>Show Statusbar</MenubarCheckboxItem>
           <MenubarSeparator />
-          <MenubarItem inset>
-            Enter Full Screen
-          </MenubarItem>
+          <MenubarItem inset>Enter Full Screen</MenubarItem>
         </MenubarContent>
       </MenubarMenu>
       <MenubarMenu>
@@ -118,12 +114,10 @@ export const Default: Story = {
 
 export const WithCustomStyling: Story = {
   render: () => (
-    <Menubar className="bg-blue-50 border-blue-200">
+    <Menubar className="border-blue-200 bg-blue-50">
       <MenubarMenu>
-        <MenubarTrigger className="text-blue-800 hover:bg-blue-100">
-          File
-        </MenubarTrigger>
-        <MenubarContent className="bg-blue-50 border-blue-200">
+        <MenubarTrigger className="text-blue-800 hover:bg-blue-100">File</MenubarTrigger>
+        <MenubarContent className="border-blue-200 bg-blue-50">
           <MenubarItem className="text-blue-800 hover:bg-blue-100">
             New Tab <MenubarShortcut>⌘T</MenubarShortcut>
           </MenubarItem>
@@ -137,10 +131,8 @@ export const WithCustomStyling: Story = {
         </MenubarContent>
       </MenubarMenu>
       <MenubarMenu>
-        <MenubarTrigger className="text-blue-800 hover:bg-blue-100">
-          Edit
-        </MenubarTrigger>
-        <MenubarContent className="bg-blue-50 border-blue-200">
+        <MenubarTrigger className="text-blue-800 hover:bg-blue-100">Edit</MenubarTrigger>
+        <MenubarContent className="border-blue-200 bg-blue-50">
           <MenubarItem className="text-blue-800 hover:bg-blue-100">
             Undo <MenubarShortcut>⌘Z</MenubarShortcut>
           </MenubarItem>
@@ -148,15 +140,9 @@ export const WithCustomStyling: Story = {
             Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
           </MenubarItem>
           <MenubarSeparator className="bg-blue-200" />
-          <MenubarItem className="text-blue-800 hover:bg-blue-100">
-            Cut
-          </MenubarItem>
-          <MenubarItem className="text-blue-800 hover:bg-blue-100">
-            Copy
-          </MenubarItem>
-          <MenubarItem className="text-blue-800 hover:bg-blue-100">
-            Paste
-          </MenubarItem>
+          <MenubarItem className="text-blue-800 hover:bg-blue-100">Cut</MenubarItem>
+          <MenubarItem className="text-blue-800 hover:bg-blue-100">Copy</MenubarItem>
+          <MenubarItem className="text-blue-800 hover:bg-blue-100">Paste</MenubarItem>
         </MenubarContent>
       </MenubarMenu>
     </Menubar>
@@ -206,23 +192,13 @@ export const WithCheckboxes: Story = {
       <MenubarMenu>
         <MenubarTrigger>View</MenubarTrigger>
         <MenubarContent>
-          <MenubarCheckboxItem checked>
-            Show Toolbar
-          </MenubarCheckboxItem>
-          <MenubarCheckboxItem checked>
-            Show Statusbar
-          </MenubarCheckboxItem>
-          <MenubarCheckboxItem>
-            Show Sidebar
-          </MenubarCheckboxItem>
+          <MenubarCheckboxItem checked>Show Toolbar</MenubarCheckboxItem>
+          <MenubarCheckboxItem checked>Show Statusbar</MenubarCheckboxItem>
+          <MenubarCheckboxItem>Show Sidebar</MenubarCheckboxItem>
           <MenubarSeparator />
           <MenubarLabel inset>Theme</MenubarLabel>
-          <MenubarCheckboxItem>
-            Dark Mode
-          </MenubarCheckboxItem>
-          <MenubarCheckboxItem>
-            Compact Mode
-          </MenubarCheckboxItem>
+          <MenubarCheckboxItem>Dark Mode</MenubarCheckboxItem>
+          <MenubarCheckboxItem>Compact Mode</MenubarCheckboxItem>
         </MenubarContent>
       </MenubarMenu>
     </Menubar>
@@ -252,4 +228,4 @@ export const WithRadioGroups: Story = {
       </MenubarMenu>
     </Menubar>
   ),
-} 
+}

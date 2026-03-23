@@ -80,10 +80,12 @@ describe('Popover', () => {
             Open Popover
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-80 bg-blue-50 border-blue-200">
+        <PopoverContent className="w-80 border-blue-200 bg-blue-50">
           <div className="text-blue-800">Profile Settings</div>
           <Button className="bg-blue-600 text-white hover:bg-blue-700">Save Changes</Button>
-          <Button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-100">Cancel</Button>
+          <Button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-100">
+            Cancel
+          </Button>
         </PopoverContent>
       </Popover>
     )
@@ -97,4 +99,4 @@ describe('Popover', () => {
       expect(screen.getByText('Cancel')).toHaveClass('text-blue-600')
     })
   })
-}) 
+})

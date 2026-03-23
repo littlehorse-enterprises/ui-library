@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { ErrorAlert } from '.'
 
 const meta: Meta<typeof ErrorAlert> = {
-  title: 'Components/ErrorAlert',
+  title: 'Components/Alerts/ErrorAlert',
   component: ErrorAlert,
   parameters: {
     layout: 'padded',

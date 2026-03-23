@@ -1,22 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "."
-import { Button } from "../button"
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '.'
+import { Button } from '../button'
 
 const meta: Meta<typeof Dialog> = {
-  title: "Components/Dialog",
+  title: 'Components/Dialogs/Dialog',
   component: Dialog,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -31,30 +23,20 @@ export const Default: Story = {
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Edit Profile</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DialogDescription>
+          <DialogDescription>Make changes to your profile here. Click save when you're done.</DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <label htmlFor="name" className="text-right">
               Name
             </label>
-            <input
-              id="name"
-              defaultValue="Pedro Duarte"
-              className="col-span-3"
-            />
+            <input id="name" defaultValue="Pedro Duarte" className="col-span-3" />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <label htmlFor="username" className="text-right">
               Username
             </label>
-            <input
-              id="username"
-              defaultValue="@peduarte"
-              className="col-span-3"
-            />
+            <input id="username" defaultValue="@peduarte" className="col-span-3" />
           </div>
         </div>
         <DialogFooter>
@@ -75,8 +57,8 @@ export const Alert: Story = {
         <DialogHeader>
           <DialogTitle>Are you sure?</DialogTitle>
           <DialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
+            This action cannot be undone. This will permanently delete your account and remove your data from our
+            servers.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
@@ -97,19 +79,12 @@ export const WithForm: Story = {
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Subscribe to Newsletter</DialogTitle>
-          <DialogDescription>
-            Enter your email below to receive our weekly newsletter.
-          </DialogDescription>
+          <DialogDescription>Enter your email below to receive our weekly newsletter.</DialogDescription>
         </DialogHeader>
         <form className="space-y-4">
           <div className="space-y-2">
             <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              type="email"
-              placeholder="m@example.com"
-              className="w-full"
-            />
+            <input id="email" type="email" placeholder="m@example.com" className="w-full" />
           </div>
           <div className="flex items-center space-x-2">
             <input type="checkbox" id="terms" />
@@ -135,15 +110,13 @@ export const WithImage: Story = {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Image Preview</DialogTitle>
-          <DialogDescription>
-            View the full size image here.
-          </DialogDescription>
+          <DialogDescription>View the full size image here.</DialogDescription>
         </DialogHeader>
         <div className="relative aspect-video">
           <img
             src="https://images.unsplash.com/photo-1522252234503-e356532cafd5"
             alt="Preview"
-            className="object-cover rounded-md"
+            className="rounded-md object-cover"
           />
         </div>
         <DialogFooter>
@@ -164,9 +137,7 @@ export const WithCustomWidth: Story = {
       <DialogContent className="sm:max-w-[800px]">
         <DialogHeader>
           <DialogTitle>Wide Dialog</DialogTitle>
-          <DialogDescription>
-            This dialog has a custom width to accommodate more content.
-          </DialogDescription>
+          <DialogDescription>This dialog has a custom width to accommodate more content.</DialogDescription>
         </DialogHeader>
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
@@ -184,4 +155,4 @@ export const WithCustomWidth: Story = {
       </DialogContent>
     </Dialog>
   ),
-} 
+}

@@ -1,21 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "."
-import { Button } from "../button"
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '.'
+import { Button } from '../button'
 
 const meta: Meta<typeof Card> = {
-  title: "Components/Card",
+  title: 'Components/Card',
   component: Card,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -94,7 +87,7 @@ export const Simple: Story = {
 
 export const Interactive: Story = {
   render: () => (
-    <Card className="w-[350px] hover:shadow-lg transition-shadow">
+    <Card className="w-[350px] transition-shadow hover:shadow-lg">
       <CardHeader>
         <CardTitle>Interactive Card</CardTitle>
         <CardDescription>Hover over me to see the effect.</CardDescription>
@@ -111,6 +104,25 @@ export const Interactive: Story = {
   ),
 }
 
+export const WithAction: Story = {
+  render: () => (
+    <Card className="w-[350px]">
+      <CardHeader>
+        <CardTitle>Project Settings</CardTitle>
+        <CardDescription>Manage your project configuration.</CardDescription>
+        <CardAction>
+          <Button variant="outline" size="sm">
+            Edit
+          </Button>
+        </CardAction>
+      </CardHeader>
+      <CardContent>
+        <p>Configure your project settings here.</p>
+      </CardContent>
+    </Card>
+  ),
+}
+
 export const WithStats: Story = {
   render: () => (
     <Card className="w-[350px]">
@@ -121,11 +133,11 @@ export const WithStats: Story = {
       <CardContent>
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-1">
-            <p className="text-sm text-muted-foreground">Total Users</p>
+            <p className="text-muted-foreground text-sm">Total Users</p>
             <p className="text-2xl font-bold">1,234</p>
           </div>
           <div className="space-y-1">
-            <p className="text-sm text-muted-foreground">Active Now</p>
+            <p className="text-muted-foreground text-sm">Active Now</p>
             <p className="text-2xl font-bold">42</p>
           </div>
         </div>
@@ -137,4 +149,4 @@ export const WithStats: Story = {
       </CardFooter>
     </Card>
   ),
-} 
+}

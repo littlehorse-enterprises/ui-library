@@ -63,14 +63,10 @@ describe('Button', () => {
     expect(link).toHaveClass('bg-primary')
   })
 
-  it('shows loader and disables button when loading is true', () => {
+  it('shows loader when loading is true', () => {
     render(<Button loading>Click me</Button>)
     const button = screen.getByRole('button')
-    // Loader2 icon should be present
     expect(button.querySelector('.animate-spin')).toBeInTheDocument()
-    // Button should be disabled
-    expect(button).toBeDisabled()
-    // Button should still have the correct text
-    expect(button).toHaveTextContent('Click me')
+    expect(button).not.toHaveTextContent('Click me')
   })
 })

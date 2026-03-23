@@ -1,19 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '.'
 
 const meta: Meta<typeof Carousel> = {
-  title: "Components/Carousel",
+  title: 'Components/Carousel',
   component: Carousel,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     orientation: {
       control: 'select',
@@ -32,7 +26,7 @@ export const Default: Story = {
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
-              <div className="flex aspect-square items-center justify-center rounded-lg bg-muted p-6">
+              <div className="bg-muted flex aspect-square items-center justify-center rounded-lg p-6">
                 <span className="text-3xl font-semibold">{index + 1}</span>
               </div>
             </div>
@@ -74,7 +68,7 @@ export const WithCustomControls: Story = {
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
-              <div className="flex aspect-square items-center justify-center rounded-lg bg-muted p-6">
+              <div className="bg-muted flex aspect-square items-center justify-center rounded-lg p-6">
                 <span className="text-3xl font-semibold">{index + 1}</span>
               </div>
             </div>
@@ -113,7 +107,7 @@ export const WithMultipleItems: Story = {
   render: () => (
     <Carousel
       opts={{
-        align: "start",
+        align: 'start',
       }}
       className="w-full"
     >
@@ -121,7 +115,7 @@ export const WithMultipleItems: Story = {
         {Array.from({ length: 10 }).map((_, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
             <div className="p-1">
-              <div className="flex aspect-square items-center justify-center rounded-lg bg-muted p-6">
+              <div className="bg-muted flex aspect-square items-center justify-center rounded-lg p-6">
                 <span className="text-3xl font-semibold">{index + 1}</span>
               </div>
             </div>
@@ -146,7 +140,7 @@ export const WithAutoPlay: Story = {
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
-              <div className="flex aspect-square items-center justify-center rounded-lg bg-muted p-6">
+              <div className="bg-muted flex aspect-square items-center justify-center rounded-lg p-6">
                 <span className="text-3xl font-semibold">{index + 1}</span>
               </div>
             </div>
@@ -166,7 +160,7 @@ export const WithDots: Story = {
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
-              <div className="flex aspect-square items-center justify-center rounded-lg bg-muted p-6">
+              <div className="bg-muted flex aspect-square items-center justify-center rounded-lg p-6">
                 <span className="text-3xl font-semibold">{index + 1}</span>
               </div>
             </div>
@@ -175,14 +169,11 @@ export const WithDots: Story = {
       </CarouselContent>
       <div className="flex items-center justify-center gap-2 pt-4">
         {Array.from({ length: 5 }).map((_, index) => (
-          <button
-            key={index}
-            className="h-2 w-2 rounded-full bg-muted-foreground/50"
-          />
+          <button key={index} className="bg-muted-foreground/50 h-2 w-2 rounded-full" />
         ))}
       </div>
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
   ),
-} 
+}

@@ -19,4 +19,4 @@ describe('Dialog', () => {
     expect(screen.getByText('Dialog Title')).toBeInTheDocument()
     expect(screen.getByText('Dialog Description')).toBeInTheDocument()
   })
-}) 
+})

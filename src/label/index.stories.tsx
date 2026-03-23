@@ -1,17 +1,17 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Label } from "."
-import { Checkbox } from "../checkbox"
-import { Input } from "../input"
-import { RadioGroup, RadioGroupItem } from "../radio-group"
-import { Textarea } from "../textarea"
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Label } from '.'
+import { Checkbox } from '../checkbox'
+import { Input } from '../input'
+import { RadioGroup, RadioGroupItem } from '../radio-group'
+import { Textarea } from '../textarea'
 
 const meta: Meta<typeof Label> = {
-  title: "Components/Label",
+  title: 'Components/Label',
   component: Label,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -60,11 +60,7 @@ export const WithTextarea: Story = {
   render: () => (
     <div className="space-y-2">
       <Label htmlFor="message">Message</Label>
-      <Textarea
-        id="message"
-        placeholder="Type your message here."
-        className="resize-none"
-      />
+      <Textarea id="message" placeholder="Type your message here." className="resize-none" />
     </div>
   ),
 }
@@ -73,10 +69,7 @@ export const WithCustomStyling: Story = {
   render: () => (
     <div className="space-y-4">
       <div className="space-y-2">
-        <Label
-          htmlFor="email"
-          className="text-blue-600 font-semibold text-base"
-        >
+        <Label htmlFor="email" className="text-base font-semibold text-blue-600">
           Email
         </Label>
         <Input
@@ -87,10 +80,7 @@ export const WithCustomStyling: Story = {
         />
       </div>
       <div className="space-y-2">
-        <Label
-          htmlFor="password"
-          className="text-blue-600 font-semibold text-base"
-        >
+        <Label htmlFor="password" className="text-base font-semibold text-blue-600">
           Password
         </Label>
         <Input
@@ -109,12 +99,7 @@ export const WithDisabledInput: Story = {
     <div className="space-y-4">
       <div className="space-y-2">
         <Label htmlFor="disabled-input">Disabled Input</Label>
-        <Input
-          id="disabled-input"
-          type="text"
-          placeholder="This input is disabled"
-          disabled
-        />
+        <Input id="disabled-input" type="text" placeholder="This input is disabled" disabled />
       </div>
       <div className="flex items-center space-x-2">
         <Checkbox id="disabled-checkbox" disabled />
@@ -131,21 +116,12 @@ export const WithRequired: Story = {
         <Label htmlFor="required-input">
           Required Input <span className="text-red-500">*</span>
         </Label>
-        <Input
-          id="required-input"
-          type="text"
-          placeholder="This field is required"
-          required
-        />
+        <Input id="required-input" type="text" placeholder="This field is required" required />
       </div>
       <div className="space-y-2">
         <Label htmlFor="optional-input">Optional Input</Label>
-        <Input
-          id="optional-input"
-          type="text"
-          placeholder="This field is optional"
-        />
+        <Input id="optional-input" type="text" placeholder="This field is optional" />
       </div>
     </div>
   ),
-} 
+}

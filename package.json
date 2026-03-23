@@ -153,6 +153,11 @@
       "import": "./dist/badge/index.js",
       "require": "./dist/badge/index.js"
     },
+    "./breadcrumb": {
+      "types": "./dist/breadcrumb/index.d.ts",
+      "import": "./dist/breadcrumb/index.js",
+      "require": "./dist/breadcrumb/index.js"
+    },
     "./button": {
       "types": "./dist/button/index.d.ts",
       "import": "./dist/button/index.js",

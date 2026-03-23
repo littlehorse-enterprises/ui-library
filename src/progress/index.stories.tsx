@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Progress } from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Progress } from '.'
 
 const meta: Meta<typeof Progress> = {
-  title: "Components/Progress",
+  title: 'Components/Progress',
   component: Progress,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     value: {
       control: { type: 'range', min: 0, max: 100, step: 1 },
@@ -27,7 +27,7 @@ export const WithLabel: Story = {
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <span className="text-sm font-medium">Progress</span>
-        <span className="text-sm text-muted-foreground">33%</span>
+        <span className="text-muted-foreground text-sm">33%</span>
       </div>
       <Progress value={33} />
     </div>
@@ -40,21 +40,21 @@ export const WithSteps: Story = {
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium">Step 1 of 3</span>
-          <span className="text-sm text-muted-foreground">33%</span>
+          <span className="text-muted-foreground text-sm">33%</span>
         </div>
         <Progress value={33} />
       </div>
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium">Step 2 of 3</span>
-          <span className="text-sm text-muted-foreground">66%</span>
+          <span className="text-muted-foreground text-sm">66%</span>
         </div>
         <Progress value={66} />
       </div>
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium">Step 3 of 3</span>
-          <span className="text-sm text-muted-foreground">100%</span>
+          <span className="text-muted-foreground text-sm">100%</span>
         </div>
         <Progress value={100} />
       </div>
@@ -90,24 +90,15 @@ export const WithCustomColors: Story = {
       </div>
       <div className="space-y-2">
         <span className="text-sm font-medium">Blue</span>
-        <Progress
-          value={33}
-          className="bg-blue-500"
-        />
+        <Progress value={33} className="bg-blue-500" />
       </div>
       <div className="space-y-2">
         <span className="text-sm font-medium">Green</span>
-        <Progress
-          value={33}
-          className="bg-green-500"
-        />
+        <Progress value={33} className="bg-green-500" />
       </div>
       <div className="space-y-2">
         <span className="text-sm font-medium">Red</span>
-        <Progress
-          value={33}
-          className="bg-red-500"
-        />
+        <Progress value={33} className="bg-red-500" />
       </div>
     </div>
   ),
@@ -119,7 +110,7 @@ export const WithAnimation: Story = {
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium">Loading...</span>
-          <span className="text-sm text-muted-foreground">33%</span>
+          <span className="text-muted-foreground text-sm">33%</span>
         </div>
         <Progress value={33} className="animate-pulse" />
       </div>
@@ -138,4 +129,4 @@ export const WithIndeterminate: Story = {
       </div>
     </div>
   ),
-} 
+}
