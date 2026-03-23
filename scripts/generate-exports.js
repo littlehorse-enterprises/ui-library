@@ -14,7 +14,8 @@ const exports = {
     import: './dist/index.js',
     require: './dist/index.js',
   },
-  './index.css': './dist/index.css',
+  // Source CSS (not compiled) so the consumer's Tailwind generates all needed utilities
+  './index.css': './src/index.css',
 }
 
 // Add each component to exports
