@@ -3,10 +3,11 @@
  * Tailwind build processes it. The @import 'tailwindcss' directive triggers
  * the consumer's PostCSS/Tailwind pipeline, which scans the consumer's own
  * source files and generates all needed utility classes (e.g. w-[19%], truncate).
- * A pre-compiled CSS would only contain utilities used by the library itself.
  */
 @import 'tailwindcss';
 @import 'tw-animate-css';
+
+@source '../dist'; /* Include the compiled CSS as source so that the consumer's Tailwind build can process it. */
 
 @custom-variant dark (&:is(.dark *));
 
