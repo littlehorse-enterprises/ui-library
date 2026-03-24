@@ -33,6 +33,24 @@ export default defineConfig({
     }),
     eslint(),
     {
+      name: 'preserve-use-client',
+      renderChunk(code, chunk) {
+        const moduleIds = Object.keys(chunk.modules)
+        const hasUseClient = moduleIds.some(id => {
+          try {
+            const content = fs.readFileSync(id, 'utf-8')
+            return content.startsWith("'use client'") || content.startsWith('"use client"')
+          } catch {
+            return false
+          }
+        })
+        if (hasUseClient) {
+          return { code: `'use client';\n${code}`, map: null }
+        }
+        return null
+      },
+    },
+    {
       name: 'cleanup-flat-dts',
       closeBundle() {
         // Remove flat .d.ts files
@@ -62,6 +80,8 @@ export default defineConfig({
       external: [
         'react',
         'react-dom',
+        'react/jsx-runtime',
+        'react/jsx-dev-runtime',
         '@radix-ui/react-slot',
         'class-variance-authority',
         '@radix-ui/react-dialog',
