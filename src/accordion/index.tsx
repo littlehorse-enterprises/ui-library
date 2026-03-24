@@ -55,7 +55,7 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        'group/accordion-trigger focus-visible:border-ring focus-visible:ring-ring/50 relative flex flex-1 items-center justify-between rounded-lg border border-transparent py-2.5 text-left text-sm font-medium transition-all outline-none hover:underline focus-visible:ring-3 disabled:pointer-events-none disabled:opacity-50',
+        'group/accordion-trigger focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:after:border-ring relative flex flex-1 items-center justify-between rounded-lg border border-transparent py-2.5 text-left text-sm font-medium outline-hidden transition-all hover:underline focus-visible:ring-3 disabled:pointer-events-none disabled:opacity-50',
         'group-data-[variant=bordered]/accordion:text-muted-foreground group-data-[variant=bordered]/accordion:px-4 group-data-[variant=bordered]/accordion:text-base group-data-[variant=bordered]/accordion:font-semibold group-data-[variant=bordered]/accordion:hover:decoration-1 group-data-[variant=bordered]/accordion:hover:underline-offset-2 group-data-[variant=bordered]/accordion:focus-visible:after:hidden',
         className
       )}
