@@ -1,13 +1,10 @@
 'use client'
 
 import * as React from 'react'
-import { useState, useEffect, useCallback, useRef } from 'react'
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
 
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '../button'
-import { Input } from '../input'
-import { Label } from '../label'
 
 const AlertDialog = AlertDialogPrimitive.Root
 
@@ -94,130 +91,6 @@ const AlertDialogCancel = React.forwardRef<
 ))
 AlertDialogCancel.displayName = AlertDialogPrimitive.Cancel.displayName
 
-type ConfirmDialogConfig = {
-  title?: string
-  description?: string
-  confirmText?: string
-  cancelText?: string
-  variant?: 'default' | 'destructive'
-  requireValidation?: boolean
-  validationText?: string
-  validationLabel?: string
-}
-
-type ConfirmDialogProps = ConfirmDialogConfig & {
-  open: boolean
-  // eslint-disable-next-line no-unused-vars
-  onOpenChange: (open: boolean) => void
-  onConfirm: () => void
-}
-
-function ConfirmDialog({
-  open,
-  onOpenChange,
-  onConfirm,
-  title = 'Are you sure?',
-  description = 'This action cannot be undone.',
-  confirmText = 'Continue',
-  cancelText = 'Cancel',
-  variant = 'default',
-  requireValidation,
-  validationText,
-  validationLabel,
-}: ConfirmDialogProps) {
-  const [inputValue, setInputValue] = useState('')
-
-  useEffect(() => {
-    if (!open) {
-      setInputValue('')
-    }
-  }, [open])
-
-  const isConfirmDisabled = requireValidation ? inputValue.trim() !== validationText : false
-
-  return (
-    <AlertDialog open={open} onOpenChange={onOpenChange}>
-      <AlertDialogContent>
-        <AlertDialogHeader>
-          <AlertDialogTitle>{title}</AlertDialogTitle>
-          <AlertDialogDescription>{description}</AlertDialogDescription>
-        </AlertDialogHeader>
-        {requireValidation && validationText && (
-          <div className="pb-4">
-            <Label htmlFor="validation-input">
-              {validationLabel || 'To confirm this action, type the following text:'}
-            </Label>
-            <p className="text-muted-foreground mt-2 mb-4 font-mono text-sm">{validationText}</p>
-            <Input
-              id="validation-input"
-              type="text"
-              value={inputValue}
-              onChange={e => setInputValue(e.target.value)}
-              placeholder="Type to confirm"
-              autoFocus
-            />
-          </div>
-        )}
-        <AlertDialogFooter>
-          <AlertDialogCancel>{cancelText}</AlertDialogCancel>
-          <AlertDialogAction
-            onClick={onConfirm}
-            disabled={isConfirmDisabled}
-            className={
-              variant === 'destructive'
-                ? 'bg-destructive text-destructive-foreground hover:bg-destructive/90'
-                : undefined
-            }
-          >
-            {confirmText}
-          </AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog>
-  )
-}
-
-function useConfirmDialog() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [config, setConfig] = useState<ConfirmDialogConfig>({})
-  const pendingActionRef = useRef<(() => void | Promise<void>) | null>(null)
-
-  const confirm = useCallback((action: () => void | Promise<void>, dialogConfig?: ConfirmDialogConfig) => {
-    pendingActionRef.current = action
-    setConfig(dialogConfig || {})
-    setIsOpen(true)
-  }, [])
-
-  const handleConfirm = useCallback(async () => {
-    if (pendingActionRef.current) {
-      await pendingActionRef.current()
-    }
-    setIsOpen(false)
-    pendingActionRef.current = null
-  }, [])
-
-  const handleCancel = useCallback(() => {
-    setIsOpen(false)
-    pendingActionRef.current = null
-  }, [])
-
-  const dialogProps: ConfirmDialogProps = {
-    open: isOpen,
-    onOpenChange: isDialogOpen => {
-      if (!isDialogOpen) {
-        handleCancel()
-      }
-    },
-    onConfirm: handleConfirm,
-    ...config,
-  }
-
-  return {
-    confirm,
-    dialogProps,
-  }
-}
-
 export {
   AlertDialog,
   AlertDialogPortal,
@@ -230,8 +103,4 @@ export {
   AlertDialogDescription,
   AlertDialogAction,
   AlertDialogCancel,
-  ConfirmDialog,
-  useConfirmDialog,
 }
-
-export type { ConfirmDialogProps }

@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -10,7 +10,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-  ConfirmDialog,
 } from './index'
 
 describe('AlertDialog', () => {
@@ -57,19 +56,5 @@ describe('AlertDialog', () => {
     expect(screen.getByText('Alert Description')).toBeInTheDocument()
     expect(screen.getByText('Cancel')).toBeInTheDocument()
     expect(screen.getByText('Continue')).toBeInTheDocument()
-  })
-
-  it('renders ConfirmDialog when open', () => {
-    render(
-      <ConfirmDialog
-        open={true}
-        onOpenChange={vi.fn()}
-        onConfirm={vi.fn()}
-        title="Test Title"
-        description="Test description"
-      />
-    )
-    expect(screen.getByText('Test Title')).toBeInTheDocument()
-    expect(screen.getByText('Test description')).toBeInTheDocument()
   })
 })
