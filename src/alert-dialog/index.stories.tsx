@@ -78,7 +78,7 @@ export const WithLongContent: Story = {
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>Terms and Conditions</AlertDialogTitle>
-          <AlertDialogDescription className="max-h-[200px] overflow-y-auto">
+          <AlertDialogDescription className="max-h-50 overflow-y-auto">
             <div className="space-y-4">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
