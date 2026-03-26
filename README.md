@@ -1,9 +1,6 @@
-# LittleHorse UI Component Library
+# LittleHorse UI Library
 
-LittleHorse's UI component library built with shadcn/ui.
-This is for internal use of all LittleHorse frontend projects.
-This repo contains reusable "building block" components that each project can use to maintain a consistent and synchronized UI/UX.
-It is built on top of the foundation of [shadcn](https://ui.shadcn.com/docs/components).
+Shared React component library for LittleHorse frontend projects, built on [shadcn/ui](https://ui.shadcn.com) and [Radix UI](https://www.radix-ui.com) primitives.
 
 ## Installation
 
@@ -13,11 +10,13 @@ npm install @littlehorse-enterprises/ui-library
 
 ## Usage
 
-Make sure to import the CSS file in your main entry point as this has the required styles for the components to work.
+Import the stylesheet in your app's entry point — it provides the required CSS variables and base styles:
 
 ```tsx
 import '@littlehorse-enterprises/ui-library/index.css'
 ```
+
+Then import components via deep imports:
 
 ```tsx
 import { Button } from '@littlehorse-enterprises/ui-library/button'
@@ -27,19 +26,51 @@ export default function App() {
 }
 ```
 
+Every component is exported as a separate entry point (e.g. `/button`, `/dialog`, `/form`)
+
 ## Development
 
 ```bash
-# Install dependencies
 npm install
 
-# Set up Git hooks with Husky
+# Set up Git hooks (ignore the deprecation warning — expected for libraries)
 npx husky install
-# It is going to say the command is deprecated, but husky says we can ignore that because we are a library with consumers not an app. So we don't want to do postinstall script that would effect consumers of the library.
 
-# Start development server
+# Start Storybook + Vite dev server
 npm run dev
-
-# Build library
-npm run build
 ```
+
+### Scripts
+
+| Command                 | Description                                       |
+| ----------------------- | ------------------------------------------------- |
+| `npm run dev`           | Start Storybook and Vite dev server concurrently  |
+| `npm run build`         | Build library and regenerate package.json exports |
+| `npm run lint`          | Run ESLint and Prettier checks                    |
+| `npm run lint:fix`      | Auto-fix lint and formatting issues               |
+| `npm run test`          | Run unit tests                                    |
+| `npm run test:coverage` | Run tests with coverage report                    |
+| `npm run test:ui`       | Run tests with Vitest UI dashboard                |
+
+The pre-commit hook runs lint, test, and build — all three must pass before committing.
+
+## Project Structure
+
+```
+src/
+  [component-name]/
+    index.tsx           # Component implementation
+    index.stories.tsx   # Storybook stories
+    index.test.tsx      # Vitest unit tests
+  lib/
+    utils.ts            # cn() utility (clsx + tailwind-merge)
+  index.css             # Theme tokens (OKLch CSS variables, light/dark)
+scripts/
+  generate-exports.js   # Auto-generates package.json exports after build
+```
+
+### Adding a Component
+
+1. Create `src/[component-name]/index.tsx`
+2. Add colocated `.stories.tsx` and `.test.tsx` files
+3. Run `npm run build` to register the new export in `package.json`
