@@ -11,11 +11,11 @@ function Table({ className, ref, ...props }: React.ComponentProps<'table'>) {
 }
 
 function TableHeader({ className, ref, ...props }: React.ComponentProps<'thead'>) {
-  return <thead data-slot="table-header" ref={ref} className={cn('[&_tr]:border-b', className)} {...props} />
+  return <thead data-slot="table-header" ref={ref} className={cn('**:tr:border-b', className)} {...props} />
 }
 
 function TableBody({ className, ref, ...props }: React.ComponentProps<'tbody'>) {
-  return <tbody data-slot="table-body" ref={ref} className={cn('[&_tr:last-child]:border-0', className)} {...props} />
+  return <tbody data-slot="table-body" ref={ref} className={cn('**:tr:last-child:border-0', className)} {...props} />
 }
 
 function TableFooter({ className, ref, ...props }: React.ComponentProps<'tfoot'>) {
@@ -23,7 +23,7 @@ function TableFooter({ className, ref, ...props }: React.ComponentProps<'tfoot'>
     <tfoot
       data-slot="table-footer"
       ref={ref}
-      className={cn('bg-muted/50 border-t font-medium last:[&>tr]:border-b-0', className)}
+      className={cn('bg-muted/50 last:>:tr:border-b-0 border-t font-medium', className)}
       {...props}
     />
   )
@@ -46,7 +46,7 @@ function TableHead({ className, ref, ...props }: React.ComponentProps<'th'>) {
       data-slot="table-head"
       ref={ref}
       className={cn(
-        'text-muted-foreground h-12 px-4 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0',
+        'text-muted-foreground h-12 px-4 text-left align-middle font-medium has-[[role=checkbox]]:pr-0',
         className
       )}
       {...props}
@@ -59,7 +59,7 @@ function TableCell({ className, ref, ...props }: React.ComponentProps<'td'>) {
     <td
       data-slot="table-cell"
       ref={ref}
-      className={cn('p-4 align-middle [&:has([role=checkbox])]:pr-0', className)}
+      className={cn('p-4 align-middle has-[[role=checkbox]]:pr-0', className)}
       {...props}
     />
   )
