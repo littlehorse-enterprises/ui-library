@@ -33,8 +33,13 @@ Every component is exported as a separate entry point (e.g. `/button`, `/dialog`
 ```bash
 npm install
 
-# Set up Git hooks (ignore the deprecation warning — expected for libraries)
-npx husky install
+# Install pre-commit (if not already installed)
+macOS:  brew install pre-commit
+Linux:  pip install pre-commit
+Windows: pip install pre-commit
+
+# Set up Git hooks
+pre-commit install --config .pre-commit-config-front.yaml
 
 # Start Storybook + Vite dev server
 npm run dev
@@ -52,7 +57,7 @@ npm run dev
 | `npm run test:coverage` | Run tests with coverage report                    |
 | `npm run test:ui`       | Run tests with Vitest UI dashboard                |
 
-The pre-commit hook runs lint, test, and build — all three must pass before committing.
+The pre-commit hook runs lint:fix, test, and build. Commit messages must follow the [Conventional Commits](https://www.conventionalcommits.org) format.
 
 ## Project Structure
 
