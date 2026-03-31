@@ -1,8 +1,19 @@
 {
   "name": "@littlehorse-enterprises/ui-library",
   "description": "LittleHorse's UI component library",
-  "license": "AGPL-3.0-only",
-  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/littlehorse-enterprises/ui-library.git"
+  },
+  "version": "1.0.5",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "dist",
+    "src/index.css"
+  ],
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
