@@ -74,7 +74,7 @@ describe('Label', () => {
 
   it('applies custom styling', () => {
     render(
-      <Label htmlFor="email" className="text-blue-600 font-semibold text-base">
+      <Label htmlFor="email" className="text-base font-semibold text-blue-600">
         Email
       </Label>
     )
@@ -107,4 +107,4 @@ describe('Label', () => {
     )
     expect(screen.getByTestId('required')).toHaveTextContent('*')
   })
-}) 
+})

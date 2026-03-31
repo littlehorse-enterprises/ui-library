@@ -24,13 +24,13 @@ describe('Accordion', () => {
         </AccordionItem>
       </Accordion>
     )
-    
+
     const trigger = screen.getByText('Section 1')
     // Find the content container by its text
     fireEvent.click(trigger)
     const content = screen.getByText('Content 1').parentElement?.parentElement
     expect(content).toHaveAttribute('data-state', 'open')
-    
+
     // Click to collapse
     fireEvent.click(trigger)
     await waitFor(() => {
@@ -47,8 +47,7 @@ describe('Accordion', () => {
         </AccordionItem>
       </Accordion>
     )
-    // AccordionItem has class border-b and custom-accordion
-    const accordionItem = screen.getByText('Section 1').closest('.border-b')
+    const accordionItem = screen.getByText('Section 1').closest('.custom-accordion')
     expect(accordionItem).toHaveClass('custom-accordion')
   })
-}) 
+})

@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { AlignCenter, AlignLeft, AlignRight, Bold, Italic, Underline } from "lucide-react"
-import { ToggleGroup, ToggleGroupItem } from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { AlignCenter, AlignLeft, AlignRight, Bold, Italic, Underline } from 'lucide-react'
+import { ToggleGroup, ToggleGroupItem } from '.'
 
 const meta: Meta<typeof ToggleGroup> = {
-  title: "Components/Toggle Group",
+  title: 'Components/Toggle Group',
   component: ToggleGroup,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     type: {
       control: 'select',
@@ -107,7 +107,10 @@ export const WithCustomStyling: Story = {
       <ToggleGroupItem value="italic" className="text-blue-600 data-[state=on]:bg-blue-600 data-[state=on]:text-white">
         <Italic className="h-4 w-4" />
       </ToggleGroupItem>
-      <ToggleGroupItem value="underline" className="text-blue-600 data-[state=on]:bg-blue-600 data-[state=on]:text-white">
+      <ToggleGroupItem
+        value="underline"
+        className="text-blue-600 data-[state=on]:bg-blue-600 data-[state=on]:text-white"
+      >
         <Underline className="h-4 w-4" />
       </ToggleGroupItem>
     </ToggleGroup>
@@ -168,4 +171,4 @@ export const Disabled: Story = {
       </ToggleGroupItem>
     </ToggleGroup>
   ),
-} 
+}

@@ -14,9 +14,7 @@ describe('Progress', () => {
   })
 
   it('renders with custom color', () => {
-    render(
-      <Progress value={33} className="bg-blue-100" />
-    )
+    render(<Progress value={33} className="bg-blue-100" />)
     const root = screen.getByRole('progressbar')
     expect(root).toHaveClass('bg-blue-100')
   })
@@ -33,4 +31,4 @@ describe('Progress', () => {
     // Should default to 0% (translateX(-100%))
     expect(indicator).toHaveStyle({ transform: 'translateX(-100%)' })
   })
-}) 
+})

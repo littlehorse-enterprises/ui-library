@@ -18,4 +18,4 @@ describe('Collapsible', () => {
     fireEvent.click(trigger)
     expect(content).not.toBeVisible()
   })
-}) 
+})

@@ -51,4 +51,4 @@ describe('Alert', () => {
     )
     expect(screen.getByText('Alert Description')).toHaveClass('custom-description')
   })
-}) 
+})

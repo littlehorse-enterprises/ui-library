@@ -22,4 +22,4 @@ describe('HoverCard', () => {
       expect(screen.getByText('Card Content')).toBeInTheDocument()
     })
   })
-}) 
+})

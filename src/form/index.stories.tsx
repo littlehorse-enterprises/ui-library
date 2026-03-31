@@ -1,30 +1,22 @@
-import { zodResolver } from "@hookform/resolvers/zod"
-import type { Meta, StoryObj } from "@storybook/react"
-import { useForm } from "react-hook-form"
-import * as z from "zod"
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "."
-import { Button } from "../button"
-import { Checkbox } from "../checkbox"
-import { Input } from "../input"
-import { RadioGroup, RadioGroupItem } from "../radio-group"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../select"
-import { Textarea } from "../textarea"
+import { zodResolver } from '@hookform/resolvers/zod'
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { useForm } from 'react-hook-form'
+import * as z from 'zod'
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '.'
+import { Button } from '../button'
+import { Checkbox } from '../checkbox'
+import { Input } from '../input'
+import { RadioGroup, RadioGroupItem } from '../radio-group'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../select'
+import { Textarea } from '../textarea'
 
 const meta: Meta<typeof Form> = {
-  title: "Components/Form",
+  title: 'Components/Form',
   component: Form,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -32,22 +24,22 @@ type Story = StoryObj<typeof Form>
 
 const formSchema = z.object({
   username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+    message: 'Username must be at least 2 characters.',
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: 'Please enter a valid email address.',
   }),
   password: z.string().min(8, {
-    message: "Password must be at least 8 characters.",
+    message: 'Password must be at least 8 characters.',
   }),
-  terms: z.boolean().refine((val) => val === true, {
-    message: "You must accept the terms and conditions.",
+  terms: z.boolean().refine(val => val === true, {
+    message: 'You must accept the terms and conditions.',
   }),
-  notifications: z.enum(["all", "important", "none"], {
-    required_error: "Please select a notification preference.",
+  notifications: z.enum(['all', 'important', 'none'], {
+    required_error: 'Please select a notification preference.',
   }),
   bio: z.string().max(160, {
-    message: "Bio must not be longer than 160 characters.",
+    message: 'Bio must not be longer than 160 characters.',
   }),
 })
 
@@ -56,12 +48,12 @@ export const Default: Story = {
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
       defaultValues: {
-        username: "",
-        email: "",
-        password: "",
+        username: '',
+        email: '',
+        password: '',
         terms: false,
-        notifications: "all",
-        bio: "",
+        notifications: 'all',
+        bio: '',
       },
     })
 
@@ -81,9 +73,7 @@ export const Default: Story = {
                 <FormControl>
                   <Input placeholder="shadcn" {...field} />
                 </FormControl>
-                <FormDescription>
-                  This is your public display name.
-                </FormDescription>
+                <FormDescription>This is your public display name.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -97,9 +87,7 @@ export const Default: Story = {
                 <FormControl>
                   <Input placeholder="shadcn@example.com" {...field} />
                 </FormControl>
-                <FormDescription>
-                  We'll never share your email with anyone else.
-                </FormDescription>
+                <FormDescription>We'll never share your email with anyone else.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -113,9 +101,7 @@ export const Default: Story = {
                 <FormControl>
                   <Input type="password" {...field} />
                 </FormControl>
-                <FormDescription>
-                  Must be at least 8 characters long.
-                </FormDescription>
+                <FormDescription>Must be at least 8 characters long.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -124,18 +110,13 @@ export const Default: Story = {
             control={form.control}
             name="terms"
             render={({ field }) => (
-              <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+              <FormItem className="flex flex-row items-start space-y-0 space-x-3">
                 <FormControl>
-                  <Checkbox
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                  />
+                  <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                 </FormControl>
                 <div className="space-y-1 leading-none">
                   <FormLabel>Accept terms and conditions</FormLabel>
-                  <FormDescription>
-                    You agree to our Terms of Service and Privacy Policy.
-                  </FormDescription>
+                  <FormDescription>You agree to our Terms of Service and Privacy Policy.</FormDescription>
                 </div>
               </FormItem>
             )}
@@ -152,23 +133,19 @@ export const Default: Story = {
                     defaultValue={field.value}
                     className="flex flex-col space-y-1"
                   >
-                    <FormItem className="flex items-center space-x-3 space-y-0">
+                    <FormItem className="flex items-center space-y-0 space-x-3">
                       <FormControl>
                         <RadioGroupItem value="all" />
                       </FormControl>
-                      <FormLabel className="font-normal">
-                        All notifications
-                      </FormLabel>
+                      <FormLabel className="font-normal">All notifications</FormLabel>
                     </FormItem>
-                    <FormItem className="flex items-center space-x-3 space-y-0">
+                    <FormItem className="flex items-center space-y-0 space-x-3">
                       <FormControl>
                         <RadioGroupItem value="important" />
                       </FormControl>
-                      <FormLabel className="font-normal">
-                        Important only
-                      </FormLabel>
+                      <FormLabel className="font-normal">Important only</FormLabel>
                     </FormItem>
-                    <FormItem className="flex items-center space-x-3 space-y-0">
+                    <FormItem className="flex items-center space-y-0 space-x-3">
                       <FormControl>
                         <RadioGroupItem value="none" />
                       </FormControl>
@@ -187,15 +164,9 @@ export const Default: Story = {
               <FormItem>
                 <FormLabel>Bio</FormLabel>
                 <FormControl>
-                  <Textarea
-                    placeholder="Tell us a little bit about yourself"
-                    className="resize-none"
-                    {...field}
-                  />
+                  <Textarea placeholder="Tell us a little bit about yourself" className="resize-none" {...field} />
                 </FormControl>
-                <FormDescription>
-                  You can @mention other users and organizations.
-                </FormDescription>
+                <FormDescription>You can @mention other users and organizations.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -212,12 +183,12 @@ export const WithValidation: Story = {
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
       defaultValues: {
-        username: "",
-        email: "",
-        password: "",
+        username: '',
+        email: '',
+        password: '',
         terms: false,
-        notifications: "all",
-        bio: "",
+        notifications: 'all',
+        bio: '',
       },
     })
 
@@ -237,9 +208,7 @@ export const WithValidation: Story = {
                 <FormControl>
                   <Input placeholder="shadcn" {...field} />
                 </FormControl>
-                <FormDescription>
-                  This is your public display name.
-                </FormDescription>
+                <FormDescription>This is your public display name.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -253,9 +222,7 @@ export const WithValidation: Story = {
                 <FormControl>
                   <Input placeholder="shadcn@example.com" {...field} />
                 </FormControl>
-                <FormDescription>
-                  We'll never share your email with anyone else.
-                </FormDescription>
+                <FormDescription>We'll never share your email with anyone else.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -272,7 +239,7 @@ export const WithSelect: Story = {
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
       defaultValues: {
-        notifications: "all",
+        notifications: 'all',
       },
     })
 
@@ -301,9 +268,7 @@ export const WithSelect: Story = {
                     <SelectItem value="none">None</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormDescription>
-                  Choose how you want to be notified.
-                </FormDescription>
+                <FormDescription>Choose how you want to be notified.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -320,8 +285,8 @@ export const WithCustomStyling: Story = {
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
       defaultValues: {
-        username: "",
-        email: "",
+        username: '',
+        email: '',
       },
     })
 
@@ -339,15 +304,9 @@ export const WithCustomStyling: Story = {
               <FormItem>
                 <FormLabel className="text-blue-800">Username</FormLabel>
                 <FormControl>
-                  <Input
-                    placeholder="shadcn"
-                    className="border-blue-200 focus:border-blue-500"
-                    {...field}
-                  />
+                  <Input placeholder="shadcn" className="border-blue-200 focus:border-blue-500" {...field} />
                 </FormControl>
-                <FormDescription className="text-blue-600">
-                  This is your public display name.
-                </FormDescription>
+                <FormDescription className="text-blue-600">This is your public display name.</FormDescription>
                 <FormMessage className="text-red-600" />
               </FormItem>
             )}
@@ -379,4 +338,4 @@ export const WithCustomStyling: Story = {
       </Form>
     )
   },
-} 
+}

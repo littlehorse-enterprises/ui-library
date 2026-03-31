@@ -1,15 +1,16 @@
-import eslint from '@eslint/js';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-import type { Linter } from 'eslint';
-import reactPlugin from 'eslint-plugin-react';
-import reactHooksPlugin from 'eslint-plugin-react-hooks';
-import globals from 'globals';
+import eslint from '@eslint/js'
+import tseslint from '@typescript-eslint/eslint-plugin'
+import tsparser from '@typescript-eslint/parser'
+import type { Linter } from 'eslint'
+import eslintConfigPrettier from 'eslint-config-prettier'
+import reactPlugin from 'eslint-plugin-react'
+import reactHooksPlugin from 'eslint-plugin-react-hooks'
+import globals from 'globals'
 
 const config: Linter.Config[] = [
   eslint.configs.recommended,
   {
-    ignores: ['dist/**', 'node_modules/**']
+    ignores: ['dist/**', 'node_modules/**'],
   },
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
@@ -19,8 +20,8 @@ const config: Linter.Config[] = [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true
-        }
+          jsx: true,
+        },
       },
       globals: {
         ...globals.browser,
@@ -29,14 +30,14 @@ const config: Linter.Config[] = [
         React: 'readonly',
         process: 'writable',
         console: 'writable',
-        __dirname: 'readonly'
-      }
+        __dirname: 'readonly',
+      },
     },
     plugins: {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       '@typescript-eslint': tseslint as any,
-      'react': reactPlugin,
-      'react-hooks': reactHooksPlugin
+      react: reactPlugin,
+      'react-hooks': reactHooksPlugin,
     },
     rules: {
       'react/react-in-jsx-scope': 'off',
@@ -44,13 +45,13 @@ const config: Linter.Config[] = [
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-undef': 'error',
-      'no-empty': 'warn'
+      'no-empty': 'warn',
     },
     settings: {
       react: {
-        version: 'detect'
-      }
-    }
+        version: 'detect',
+      },
+    },
   },
   {
     files: ['**/*.test.{ts,tsx,js,jsx}'],
@@ -60,7 +61,8 @@ const config: Linter.Config[] = [
         ...globals.jest,
       },
     },
-  }
-];
+  },
+  eslintConfigPrettier,
+]
 
-export default config; 
+export default config

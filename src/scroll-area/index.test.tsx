@@ -5,14 +5,12 @@ describe('ScrollArea', () => {
     render(
       <ScrollArea className="h-[200px] w-[350px] rounded-md border p-4">
         <div className="space-y-4">
-          <h4 className="text-sm font-medium leading-none">Tags</h4>
+          <h4 className="text-sm leading-none font-medium">Tags</h4>
           <div className="text-sm">
             {Array.from({ length: 5 }).map((_, i) => (
               <div key={i} className="mb-2">
                 <p>Item {i + 1}</p>
-                <p className="text-muted-foreground">
-                  Lorem ipsum dolor sit amet.
-                </p>
+                <p className="text-muted-foreground">Lorem ipsum dolor sit amet.</p>
               </div>
             ))}
           </div>
@@ -22,12 +20,12 @@ describe('ScrollArea', () => {
     expect(screen.getByText('Tags')).toBeInTheDocument()
     expect(screen.getByText('Item 1')).toBeInTheDocument()
     // Check for the presence of the scrollbar thumb element by its class name
-    const thumb = document.querySelector('.bg-border');
+    const thumb = document.querySelector('.bg-border')
     if (!thumb) {
       // JSDOM or Radix may not render the scrollbar in test env
-      console.warn('Scrollbar thumb not found; skipping assertion due to test environment limitations.');
+      console.warn('Scrollbar thumb not found; skipping assertion due to test environment limitations.')
     } else {
-      expect(thumb).toBeInTheDocument();
+      expect(thumb).toBeInTheDocument()
     }
   })
 
@@ -35,7 +33,7 @@ describe('ScrollArea', () => {
     render(
       <ScrollArea className="h-[200px] w-[350px] rounded-md border border-blue-200 bg-blue-50 p-4">
         <div className="space-y-4">
-          <h4 className="text-sm font-medium leading-none text-blue-800">Blue Theme</h4>
+          <h4 className="text-sm leading-none font-medium text-blue-800">Blue Theme</h4>
           <div className="text-sm">
             <p className="text-blue-800">Item 1</p>
           </div>
@@ -74,4 +72,4 @@ describe('ScrollArea', () => {
     // Check for a substring instead of exact match due to potential formatting differences
     expect(screen.getByText(/console\.log\('hello'\);/)).toBeInTheDocument()
   })
-}) 
+})

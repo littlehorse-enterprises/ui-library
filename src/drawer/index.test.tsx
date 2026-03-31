@@ -19,4 +19,4 @@ describe('Drawer', () => {
     expect(screen.getByText('Drawer Title')).toBeInTheDocument()
     expect(screen.getByText('Drawer Description')).toBeInTheDocument()
   })
-}) 
+})

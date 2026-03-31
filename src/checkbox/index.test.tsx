@@ -13,4 +13,4 @@ describe('Checkbox', () => {
     fireEvent.click(checkbox)
     expect(checkbox).not.toBeChecked()
   })
-}) 
+})

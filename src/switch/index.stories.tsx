@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Switch } from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Switch } from '.'
 
 const meta: Meta<typeof Switch> = {
-  title: "Components/Switch",
+  title: 'Components/Switch',
   component: Switch,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     checked: {
       control: 'boolean',
@@ -31,7 +31,7 @@ export const WithLabel: Story = {
       <Switch id="airplane-mode" />
       <label
         htmlFor="airplane-mode"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         Airplane Mode
       </label>
@@ -46,14 +46,12 @@ export const WithDescription: Story = {
         <Switch id="notifications" />
         <label
           htmlFor="notifications"
-          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         >
           Push Notifications
         </label>
       </div>
-      <p className="text-sm text-muted-foreground">
-        Receive notifications about new messages and mentions.
-      </p>
+      <p className="text-muted-foreground text-sm">Receive notifications about new messages and mentions.</p>
     </div>
   ),
 }
@@ -62,9 +60,7 @@ export const Disabled: Story = {
   render: () => (
     <div className="flex items-center space-x-2">
       <Switch disabled />
-      <label
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-      >
+      <label className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
         Disabled Switch
       </label>
     </div>
@@ -74,12 +70,8 @@ export const Disabled: Story = {
 export const WithCustomStyling: Story = {
   render: () => (
     <div className="flex items-center space-x-2">
-      <Switch
-        className="data-[state=checked]:bg-blue-500 data-[state=unchecked]:bg-gray-200"
-      />
-      <label className="text-sm font-medium leading-none">
-        Custom Styled Switch
-      </label>
+      <Switch className="data-[state=checked]:bg-blue-500 data-[state=unchecked]:bg-gray-200" />
+      <label className="text-sm leading-none font-medium">Custom Styled Switch</label>
     </div>
   ),
 }
@@ -87,16 +79,9 @@ export const WithCustomStyling: Story = {
 export const WithIcons: Story = {
   render: () => (
     <div className="flex items-center space-x-2">
-      <Switch
-        className="data-[state=checked]:bg-green-500 data-[state=unchecked]:bg-gray-200"
-      />
+      <Switch className="data-[state=checked]:bg-green-500 data-[state=unchecked]:bg-gray-200" />
       <div className="flex items-center space-x-2">
-        <svg
-          className="h-4 w-4 text-gray-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
+        <svg className="h-4 w-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -116,31 +101,21 @@ export const WithForm: Story = {
       <div className="space-y-2">
         <div className="flex items-center space-x-2">
           <Switch id="marketing" />
-          <label
-            htmlFor="marketing"
-            className="text-sm font-medium leading-none"
-          >
+          <label htmlFor="marketing" className="text-sm leading-none font-medium">
             Marketing Emails
           </label>
         </div>
-        <p className="text-sm text-muted-foreground">
-          Receive emails about new products, features, and more.
-        </p>
+        <p className="text-muted-foreground text-sm">Receive emails about new products, features, and more.</p>
       </div>
       <div className="space-y-2">
         <div className="flex items-center space-x-2">
           <Switch id="security" />
-          <label
-            htmlFor="security"
-            className="text-sm font-medium leading-none"
-          >
+          <label htmlFor="security" className="text-sm leading-none font-medium">
             Security Updates
           </label>
         </div>
-        <p className="text-sm text-muted-foreground">
-          Receive emails about your account security.
-        </p>
+        <p className="text-muted-foreground text-sm">Receive emails about your account security.</p>
       </div>
     </form>
   ),
-} 
+}

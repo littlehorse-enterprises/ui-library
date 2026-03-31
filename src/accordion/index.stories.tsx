@@ -1,18 +1,20 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '.'
 
 const meta: Meta<typeof Accordion> = {
-  title: "Components/Accordion",
+  title: 'Components/Accordion',
   component: Accordion,
   parameters: {
-    layout: 'centered',
+    layout: 'padded',
   },
-  tags: ["autodocs"],
+  decorators: [
+    Story => (
+      <div className="mx-auto w-full max-w-lg">
+        <Story />
+      </div>
+    ),
+  ],
+  tags: ['autodocs'],
   argTypes: {
     type: {
       control: 'select',
@@ -32,22 +34,17 @@ export const Default: Story = {
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
+        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
         <AccordionTrigger>Is it styled?</AccordionTrigger>
         <AccordionContent>
-          Yes. It comes with default styles that matches the other components&apos;
-          aesthetic.
+          Yes. It comes with default styles that matches the other components&apos; aesthetic.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
         <AccordionTrigger>Is it animated?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It&apos;s animated by default, but you can disable it if you prefer.
-        </AccordionContent>
+        <AccordionContent>Yes. It&apos;s animated by default, but you can disable it if you prefer.</AccordionContent>
       </AccordionItem>
     </Accordion>
   ),
@@ -58,21 +55,15 @@ export const Multiple: Story = {
     <Accordion type="multiple" className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>Can I open multiple items?</AccordionTrigger>
-        <AccordionContent>
-          Yes. This accordion allows multiple items to be open at the same time.
-        </AccordionContent>
+        <AccordionContent>Yes. This accordion allows multiple items to be open at the same time.</AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
         <AccordionTrigger>Is it customizable?</AccordionTrigger>
-        <AccordionContent>
-          Yes. You can customize the appearance using Tailwind CSS classes.
-        </AccordionContent>
+        <AccordionContent>Yes. You can customize the appearance using Tailwind CSS classes.</AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
         <AccordionTrigger>Is it responsive?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It works well on all screen sizes and devices.
-        </AccordionContent>
+        <AccordionContent>Yes. It works well on all screen sizes and devices.</AccordionContent>
       </AccordionItem>
     </Accordion>
   ),
@@ -82,17 +73,13 @@ export const WithCustomStyling: Story = {
   render: () => (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1" className="border-blue-200">
-        <AccordionTrigger className="text-blue-600 hover:text-blue-700">
-          Custom Styled Trigger
-        </AccordionTrigger>
+        <AccordionTrigger className="text-blue-600 hover:text-blue-700">Custom Styled Trigger</AccordionTrigger>
         <AccordionContent className="text-blue-600">
           This accordion item has custom blue styling applied to it.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2" className="border-green-200">
-        <AccordionTrigger className="text-green-600 hover:text-green-700">
-          Another Custom Style
-        </AccordionTrigger>
+        <AccordionTrigger className="text-green-600 hover:text-green-700">Another Custom Style</AccordionTrigger>
         <AccordionContent className="text-green-600">
           This accordion item has custom green styling applied to it.
         </AccordionContent>
@@ -109,8 +96,8 @@ export const WithLongContent: Story = {
         <AccordionContent>
           <div className="space-y-4">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
             </p>
             <ul className="list-disc pl-4">
               <li>First important point</li>
@@ -118,8 +105,8 @@ export const WithLongContent: Story = {
               <li>Third important point</li>
             </ul>
             <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
             </p>
           </div>
         </AccordionContent>
@@ -133,12 +120,7 @@ export const WithIcons: Story = {
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger className="flex items-center gap-2">
-          <svg
-            className="h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -148,8 +130,58 @@ export const WithIcons: Story = {
           </svg>
           Information
         </AccordionTrigger>
+        <AccordionContent>This accordion item has an icon in its trigger.</AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  ),
+}
+
+export const Bordered: Story = {
+  render: () => (
+    <Accordion type="multiple" variant="bordered" defaultValue={['item-1']} className="w-full">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Getting Started</AccordionTrigger>
         <AccordionContent>
-          This accordion item has an icon in its trigger.
+          <div className="space-y-6 pt-1">
+            <div className="border-primary space-y-3 border-l-4 pl-4">
+              <h4 className="text-base font-medium">What is this?</h4>
+              <p className="text-foreground">
+                A component library built on shadcn/ui and Radix UI primitives, providing reusable UI components for
+                frontend projects.
+              </p>
+              <p className="text-muted-foreground">
+                The library provides consistent styling and behavior across all components.
+              </p>
+            </div>
+          </div>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Configuration</AccordionTrigger>
+        <AccordionContent>
+          <div className="space-y-6 pt-1">
+            <div className="border-primary space-y-3 border-l-4 pl-4">
+              <h4 className="text-base font-medium">Setting Up</h4>
+              <p className="text-foreground">
+                Install the package and import the components you need. Each component is tree-shakeable and can be
+                imported individually.
+              </p>
+            </div>
+          </div>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Customization</AccordionTrigger>
+        <AccordionContent>
+          <div className="space-y-6 pt-1">
+            <div className="border-primary space-y-3 border-l-4 pl-4">
+              <h4 className="text-base font-medium">Theming</h4>
+              <p className="text-foreground">
+                All components use CSS custom properties for colors, making it easy to customize the theme by overriding
+                variables.
+              </p>
+            </div>
+          </div>
         </AccordionContent>
       </AccordionItem>
     </Accordion>
@@ -165,24 +197,13 @@ export const WithForm: Story = {
           <form className="space-y-4">
             <div>
               <label className="text-sm font-medium">Name</label>
-              <input
-                type="text"
-                className="mt-1 block w-full rounded-md border p-2"
-                placeholder="Enter your name"
-              />
+              <input type="text" className="mt-1 block w-full rounded-md border p-2" placeholder="Enter your name" />
             </div>
             <div>
               <label className="text-sm font-medium">Email</label>
-              <input
-                type="email"
-                className="mt-1 block w-full rounded-md border p-2"
-                placeholder="Enter your email"
-              />
+              <input type="email" className="mt-1 block w-full rounded-md border p-2" placeholder="Enter your email" />
             </div>
-            <button
-              type="submit"
-              className="rounded-md bg-primary px-4 py-2 text-primary-foreground"
-            >
+            <button type="submit" className="bg-primary text-primary-foreground rounded-md px-4 py-2">
               Submit
             </button>
           </form>
@@ -190,4 +211,4 @@ export const WithForm: Story = {
       </AccordionItem>
     </Accordion>
   ),
-} 
+}

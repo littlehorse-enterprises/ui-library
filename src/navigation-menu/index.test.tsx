@@ -8,7 +8,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle
+  navigationMenuTriggerStyle,
 } from '.'
 describe('NavigationMenu', () => {
   it('renders triggers and opens content on click', async () => {
@@ -56,13 +56,13 @@ describe('NavigationMenu', () => {
     await screen.findByText('shadcn/ui')
     await screen.findByText('Documentation')
     // Open second trigger
-    const componentsTrigger = screen.getByText('Components');
-    await user.click(componentsTrigger);
+    const componentsTrigger = screen.getByText('Components')
+    await user.click(componentsTrigger)
     // Simulate keyboard navigation to open the menu content
-    await user.keyboard('{arrowdown}');
+    await user.keyboard('{arrowdown}')
     // Workaround: Check for the menu content container instead of the text due to Radix UI/JSDOM limitations
-    const menuContent = document.querySelector('[aria-controls], [role="menu"]');
-    expect(menuContent).toBeTruthy();
+    const menuContent = document.querySelector('[aria-controls], [role="menu"]')
+    expect(menuContent).toBeTruthy()
     // Skipping Accordion text assertion due to JSDOM/Headless limitations with Radix UI NavigationMenu
     // See: https://github.com/radix-ui/primitives/issues/1690
     // Static link
@@ -71,15 +71,17 @@ describe('NavigationMenu', () => {
 
   it('applies custom styling', async () => {
     render(
-      <NavigationMenu className="bg-blue-50 border-blue-200 rounded-lg">
+      <NavigationMenu className="rounded-lg border-blue-200 bg-blue-50">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="text-blue-800">Products</NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-blue-50 border-blue-200">
+            <NavigationMenuContent className="border-blue-200 bg-blue-50">
               <ul>
                 <li>
                   <NavigationMenuLink asChild>
-                    <a className="text-blue-800" href="/">Featured Product</a>
+                    <a className="text-blue-800" href="/">
+                      Featured Product
+                    </a>
                   </NavigationMenuLink>
                 </li>
               </ul>
@@ -100,4 +102,4 @@ describe('NavigationMenu', () => {
     expect(screen.getByText('Featured Product')).toHaveClass('text-blue-800')
     expect(screen.getByText('Pricing')).toBeInTheDocument()
   })
-}) 
+})

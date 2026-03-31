@@ -1,29 +1,29 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Check, ChevronRight, Circle } from "lucide-react"
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Check, ChevronRight, Circle } from 'lucide-react'
 import {
-    DropdownMenu,
-    DropdownMenuCheckboxItem,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuRadioGroup,
-    DropdownMenuRadioItem,
-    DropdownMenuSeparator,
-    DropdownMenuShortcut,
-    DropdownMenuSub,
-    DropdownMenuSubContent,
-    DropdownMenuSubTrigger,
-    DropdownMenuTrigger,
-} from "."
-import { Button } from "../button"
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from '.'
+import { Button } from '../button'
 
 const meta: Meta<typeof DropdownMenu> = {
-  title: "Components/Dropdown Menu",
+  title: 'Components/Dropdown Menu',
   component: DropdownMenu,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -106,23 +106,13 @@ export const WithCheckboxes: Story = {
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>View Options</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuCheckboxItem checked>
-          Show Toolbar
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem checked>
-          Show Statusbar
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem>
-          Show Sidebar
-        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem checked>Show Toolbar</DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem checked>Show Statusbar</DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem>Show Sidebar</DropdownMenuCheckboxItem>
         <DropdownMenuSeparator />
         <DropdownMenuLabel>Theme</DropdownMenuLabel>
-        <DropdownMenuCheckboxItem>
-          Dark Mode
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem>
-          Compact Mode
-        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem>Dark Mode</DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem>Compact Mode</DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>
   ),
@@ -159,7 +149,7 @@ export const WithCustomStyling: Story = {
       <DropdownMenuTrigger asChild>
         <Button variant="outline">Custom Menu</Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 bg-blue-50 border-blue-200">
+      <DropdownMenuContent className="w-56 border-blue-200 bg-blue-50">
         <DropdownMenuLabel className="text-blue-800">Custom Menu</DropdownMenuLabel>
         <DropdownMenuSeparator className="bg-blue-200" />
         <DropdownMenuItem className="text-blue-800 hover:bg-blue-100">
@@ -171,9 +161,7 @@ export const WithCustomStyling: Story = {
           Circle Item
         </DropdownMenuItem>
         <DropdownMenuSeparator className="bg-blue-200" />
-        <DropdownMenuItem className="text-blue-800 hover:bg-blue-100">
-          Custom Item
-        </DropdownMenuItem>
+        <DropdownMenuItem className="text-blue-800 hover:bg-blue-100">Custom Item</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   ),
@@ -195,4 +183,4 @@ export const WithDisabledItems: Story = {
       </DropdownMenuContent>
     </DropdownMenu>
   ),
-} 
+}

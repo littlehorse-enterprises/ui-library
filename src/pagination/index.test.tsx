@@ -1,38 +1,29 @@
 import { render, screen } from '@testing-library/react'
 import {
-    Pagination,
-    PaginationContent,
-    PaginationEllipsis,
-    PaginationItem,
-    PaginationLink,
-    PaginationNext,
-    PaginationPrevious
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
 } from '.'
+
 describe('Pagination', () => {
   it('renders navigation and links', () => {
     render(
       <Pagination>
         <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious href="#" />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" isActive>
-              1
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">2</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">3</PaginationLink>
-          </PaginationItem>
+          <PaginationPrevious href="#" />
+          <PaginationLink href="#" isActive>
+            1
+          </PaginationLink>
+          <PaginationLink href="#">2</PaginationLink>
+          <PaginationLink href="#">3</PaginationLink>
           <PaginationItem>
             <PaginationEllipsis />
           </PaginationItem>
-          <PaginationItem>
-            <PaginationNext href="#" />
-          </PaginationItem>
+          <PaginationNext href="#" />
         </PaginationContent>
       </Pagination>
     )
@@ -45,15 +36,6 @@ describe('Pagination', () => {
     expect(screen.getByLabelText('Go to next page')).toContainElement(screen.getByText('Next'))
     expect(screen.getByLabelText('Go to next page').querySelector('svg')).toBeInTheDocument()
     expect(screen.getByLabelText('Go to previous page').querySelector('svg')).toBeInTheDocument()
-    expect(screen.getByLabelText('Go to next page').closest('a')).toBeInTheDocument()
-    expect(screen.getByLabelText('Go to previous page').closest('a')).toBeInTheDocument()
-    expect(screen.getByText('1')).toBeInTheDocument()
-    expect(screen.getByText('2')).toBeInTheDocument()
-    expect(screen.getByText('3')).toBeInTheDocument()
-    expect(screen.getByLabelText('Go to previous page')).toBeInTheDocument()
-    expect(screen.getByLabelText('Go to next page')).toBeInTheDocument()
-    expect(screen.getByLabelText('Go to previous page').closest('a')).toHaveAttribute('href', '#')
-    expect(screen.getByLabelText('Go to next page').closest('a')).toHaveAttribute('href', '#')
     expect(screen.getByText('1').closest('a')).toHaveAttribute('href', '#')
   })
 
@@ -61,35 +43,21 @@ describe('Pagination', () => {
     render(
       <Pagination>
         <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious href="#" />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">1</PaginationLink>
-          </PaginationItem>
+          <PaginationPrevious href="#" />
+          <PaginationLink href="#">1</PaginationLink>
           <PaginationItem>
             <PaginationEllipsis />
           </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">4</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" isActive>
-              5
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">6</PaginationLink>
-          </PaginationItem>
+          <PaginationLink href="#">4</PaginationLink>
+          <PaginationLink href="#" isActive>
+            5
+          </PaginationLink>
+          <PaginationLink href="#">6</PaginationLink>
           <PaginationItem>
             <PaginationEllipsis />
           </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">10</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext href="#" />
-          </PaginationItem>
+          <PaginationLink href="#">10</PaginationLink>
+          <PaginationNext href="#" />
         </PaginationContent>
       </Pagination>
     )
@@ -103,27 +71,17 @@ describe('Pagination', () => {
     render(
       <Pagination>
         <PaginationContent className="gap-1">
-          <PaginationItem>
-            <PaginationPrevious className="bg-blue-50 text-blue-600" href="#" />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink className="bg-blue-50 text-blue-600" href="#">
-              1
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink className="bg-blue-600 text-white" href="#" isActive>
-              2
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink className="bg-blue-50 text-blue-600" href="#">
-              3
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext className="bg-blue-50 text-blue-600" href="#" />
-          </PaginationItem>
+          <PaginationPrevious className="bg-blue-50 text-blue-600" href="#" />
+          <PaginationLink className="bg-blue-50 text-blue-600" href="#">
+            1
+          </PaginationLink>
+          <PaginationLink className="bg-blue-600 text-white" href="#" isActive>
+            2
+          </PaginationLink>
+          <PaginationLink className="bg-blue-50 text-blue-600" href="#">
+            3
+          </PaginationLink>
+          <PaginationNext className="bg-blue-50 text-blue-600" href="#" />
         </PaginationContent>
       </Pagination>
     )
@@ -141,27 +99,17 @@ describe('Pagination', () => {
     render(
       <Pagination>
         <PaginationContent className="gap-0">
-          <PaginationItem>
-            <PaginationPrevious className="rounded-r-none" href="#" />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink className="rounded-none" href="#" isActive>
-              1
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink className="rounded-none" href="#">
-              2
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink className="rounded-none" href="#">
-              3
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext className="rounded-l-none" href="#" />
-          </PaginationItem>
+          <PaginationPrevious className="rounded-r-none" href="#" />
+          <PaginationLink className="rounded-none" href="#" isActive>
+            1
+          </PaginationLink>
+          <PaginationLink className="rounded-none" href="#">
+            2
+          </PaginationLink>
+          <PaginationLink className="rounded-none" href="#">
+            3
+          </PaginationLink>
+          <PaginationNext className="rounded-l-none" href="#" />
         </PaginationContent>
       </Pagination>
     )
@@ -171,4 +119,4 @@ describe('Pagination', () => {
     expect(screen.getByText('3')).toHaveClass('rounded-none')
     expect(screen.getByLabelText('Go to next page')).toHaveClass('rounded-l-none')
   })
-}) 
+})

@@ -18,4 +18,4 @@ describe('Command', () => {
     fireEvent.change(input, { target: { value: 'Item 1' } })
     expect(input).toHaveValue('Item 1')
   })
-}) 
+})

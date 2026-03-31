@@ -48,11 +48,15 @@ describe('RadioGroup', () => {
       <RadioGroup defaultValue="option-1">
         <div>
           <RadioGroupItem value="option-1" id="option-1" className="border-blue-500 text-blue-500" />
-          <label htmlFor="option-1" className="text-blue-500">Blue Option</label>
+          <label htmlFor="option-1" className="text-blue-500">
+            Blue Option
+          </label>
         </div>
         <div>
           <RadioGroupItem value="option-2" id="option-2" className="border-green-500 text-green-500" />
-          <label htmlFor="option-2" className="text-green-500">Green Option</label>
+          <label htmlFor="option-2" className="text-green-500">
+            Green Option
+          </label>
         </div>
       </RadioGroup>
     )
@@ -80,4 +84,4 @@ describe('RadioGroup', () => {
     expect(screen.getByLabelText('Light Mode')).toBeInTheDocument()
     expect(screen.getByLabelText('Dark Mode')).toBeInTheDocument()
   })
-}) 
+})

@@ -1,24 +1,24 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import {
-    AlertDialog,
-    AlertDialogAction,
-    AlertDialogCancel,
-    AlertDialogContent,
-    AlertDialogDescription,
-    AlertDialogFooter,
-    AlertDialogHeader,
-    AlertDialogTitle,
-    AlertDialogTrigger,
-} from "."
-import { Button } from "../button"
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '.'
+import { Button } from '../button'
 
 const meta: Meta<typeof AlertDialog> = {
-  title: "Components/Alert Dialog",
+  title: 'Components/Dialogs/Alert Dialog',
   component: AlertDialog,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -34,8 +34,8 @@ export const Default: Story = {
         <AlertDialogHeader>
           <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your account
-            and remove your data from our servers.
+            This action cannot be undone. This will permanently delete your account and remove your data from our
+            servers.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -53,23 +53,16 @@ export const WithCustomStyling: Story = {
       <AlertDialogTrigger asChild>
         <Button variant="destructive">Delete Files</Button>
       </AlertDialogTrigger>
-      <AlertDialogContent className="bg-red-50 border-red-200">
+      <AlertDialogContent className="border-red-200 bg-red-50">
         <AlertDialogHeader>
-          <AlertDialogTitle className="text-red-800">
-            Delete Selected Files
-          </AlertDialogTitle>
+          <AlertDialogTitle className="text-red-800">Delete Selected Files</AlertDialogTitle>
           <AlertDialogDescription className="text-red-600">
-            This will permanently delete the selected files. This action cannot be
-            undone.
+            This will permanently delete the selected files. This action cannot be undone.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel className="border-red-200 text-red-800 hover:bg-red-100">
-            Cancel
-          </AlertDialogCancel>
-          <AlertDialogAction className="bg-red-600 hover:bg-red-700">
-            Delete
-          </AlertDialogAction>
+          <AlertDialogCancel className="border-red-200 text-red-800 hover:bg-red-100">Cancel</AlertDialogCancel>
+          <AlertDialogAction className="bg-red-600 hover:bg-red-700">Delete</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
@@ -85,23 +78,22 @@ export const WithLongContent: Story = {
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>Terms and Conditions</AlertDialogTitle>
-          <AlertDialogDescription className="max-h-[200px] overflow-y-auto">
+          <AlertDialogDescription className="max-h-50 overflow-y-auto">
             <div className="space-y-4">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
               </p>
               <p>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
               </p>
               <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
               </p>
               <p>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.
               </p>
             </div>
           </AlertDialogDescription>
@@ -128,16 +120,10 @@ export const WithCustomButtons: Story = {
             This dialog demonstrates custom button styling and multiple actions.
           </AlertDialogDescription>
         </AlertDialogHeader>
-        <AlertDialogFooter className="flex-col sm:flex-row gap-2">
-          <AlertDialogCancel className="w-full sm:w-auto">
-            Go Back
-          </AlertDialogCancel>
-          <AlertDialogAction className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700">
-            Save Draft
-          </AlertDialogAction>
-          <AlertDialogAction className="w-full sm:w-auto bg-green-600 hover:bg-green-700">
-            Publish
-          </AlertDialogAction>
+        <AlertDialogFooter className="flex-col gap-2 sm:flex-row">
+          <AlertDialogCancel className="w-full sm:w-auto">Go Back</AlertDialogCancel>
+          <AlertDialogAction className="w-full bg-blue-600 hover:bg-blue-700 sm:w-auto">Save Draft</AlertDialogAction>
+          <AlertDialogAction className="w-full bg-green-600 hover:bg-green-700 sm:w-auto">Publish</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
@@ -153,12 +139,7 @@ export const WithIcon: Story = {
       <AlertDialogContent>
         <AlertDialogHeader>
           <div className="flex items-center gap-2">
-            <svg
-              className="h-6 w-6 text-yellow-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
+            <svg className="h-6 w-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -169,8 +150,7 @@ export const WithIcon: Story = {
             <AlertDialogTitle>Warning</AlertDialogTitle>
           </div>
           <AlertDialogDescription>
-            This action will affect multiple items. Please review your selection
-            before proceeding.
+            This action will affect multiple items. Please review your selection before proceeding.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -180,4 +160,4 @@ export const WithIcon: Story = {
       </AlertDialogContent>
     </AlertDialog>
   ),
-} 
+}

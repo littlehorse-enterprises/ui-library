@@ -1,22 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import {
-    Table,
-    TableBody,
-    TableCaption,
-    TableCell,
-    TableFooter,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "."
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from '.'
 
 const meta: Meta<typeof Table> = {
-  title: "Components/Table",
+  title: 'Components/Table',
   component: Table,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -205,4 +196,4 @@ export const WithCustomStyling: Story = {
       </TableBody>
     </Table>
   ),
-} 
+}

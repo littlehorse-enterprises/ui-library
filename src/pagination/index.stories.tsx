@@ -1,21 +1,21 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import {
-    Pagination,
-    PaginationContent,
-    PaginationEllipsis,
-    PaginationItem,
-    PaginationLink,
-    PaginationNext,
-    PaginationPrevious,
-} from "."
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '.'
 
 const meta: Meta<typeof Pagination> = {
-  title: "Components/Pagination",
+  title: 'Components/Pagination',
   component: Pagination,
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -93,41 +93,25 @@ export const WithCustomStyling: Story = {
     <Pagination>
       <PaginationContent className="gap-1">
         <PaginationItem>
-          <PaginationPrevious
-            href="#"
-            className="bg-blue-50 text-blue-600 hover:bg-blue-100"
-          />
+          <PaginationPrevious href="#" className="bg-blue-50 text-blue-600 hover:bg-blue-100" />
         </PaginationItem>
         <PaginationItem>
-          <PaginationLink
-            href="#"
-            className="bg-blue-50 text-blue-600 hover:bg-blue-100"
-          >
+          <PaginationLink href="#" className="bg-blue-50 text-blue-600 hover:bg-blue-100">
             1
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
-          <PaginationLink
-            href="#"
-            isActive
-            className="bg-blue-600 text-white hover:bg-blue-700"
-          >
+          <PaginationLink href="#" isActive className="bg-blue-600 text-white hover:bg-blue-700">
             2
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
-          <PaginationLink
-            href="#"
-            className="bg-blue-50 text-blue-600 hover:bg-blue-100"
-          >
+          <PaginationLink href="#" className="bg-blue-50 text-blue-600 hover:bg-blue-100">
             3
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
-          <PaginationNext
-            href="#"
-            className="bg-blue-50 text-blue-600 hover:bg-blue-100"
-          />
+          <PaginationNext href="#" className="bg-blue-50 text-blue-600 hover:bg-blue-100" />
         </PaginationItem>
       </PaginationContent>
     </Pagination>
@@ -162,4 +146,4 @@ export const Compact: Story = {
       </PaginationContent>
     </Pagination>
   ),
-} 
+}

@@ -19,4 +19,4 @@ describe('Carousel', () => {
     expect(screen.getByRole('button', { name: 'Previous slide' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Next slide' })).toBeInTheDocument()
   })
-}) 
+})

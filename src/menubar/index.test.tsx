@@ -1,20 +1,20 @@
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {
-    Menubar,
-    MenubarCheckboxItem,
-    MenubarContent,
-    MenubarItem,
-    MenubarLabel,
-    MenubarMenu,
-    MenubarRadioGroup,
-    MenubarRadioItem,
-    MenubarSeparator,
-    MenubarShortcut,
-    MenubarSub,
-    MenubarSubContent,
-    MenubarSubTrigger,
-    MenubarTrigger
+  Menubar,
+  MenubarCheckboxItem,
+  MenubarContent,
+  MenubarItem,
+  MenubarLabel,
+  MenubarMenu,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarTrigger,
 } from '.'
 describe('Menubar', () => {
   it('renders triggers and opens content on click', async () => {
@@ -110,10 +110,10 @@ describe('Menubar', () => {
 
   it('renders shortcuts and custom styling', async () => {
     render(
-      <Menubar className="bg-blue-50 border-blue-200">
+      <Menubar className="border-blue-200 bg-blue-50">
         <MenubarMenu>
           <MenubarTrigger className="text-blue-800">File</MenubarTrigger>
-          <MenubarContent className="bg-blue-50 border-blue-200">
+          <MenubarContent className="border-blue-200 bg-blue-50">
             <MenubarItem className="text-blue-800">
               New Tab <MenubarShortcut>⌘T</MenubarShortcut>
             </MenubarItem>
@@ -128,4 +128,4 @@ describe('Menubar', () => {
     expect(screen.getByText('File')).toHaveClass('text-blue-800')
     expect(screen.getByText('New Tab')).toHaveClass('text-blue-800')
   })
-}) 
+})

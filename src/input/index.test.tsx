@@ -12,4 +12,4 @@ describe('Input', () => {
     await user.type(input, 'hello')
     expect(input).toHaveValue('hello')
   })
-}) 
+})
