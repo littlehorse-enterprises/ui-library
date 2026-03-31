@@ -2,7 +2,7 @@ import { create } from 'storybook/theming'
 
 const branding = {
   brandTitle: 'LittleHorse UI Library',
-  brandImage: '/logo.svg',
+  brandImage: '/logo.png',
 }
 
 export const lightTheme = create({
