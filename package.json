@@ -1,7 +1,7 @@
 {
   "name": "@littlehorse-enterprises/ui-library",
   "description": "LittleHorse's UI component library",
-  "license": "UNLICENSED",
+  "license": "AGPL-3.0-only",
   "repository": {
     "type": "git",
     "url": "https://github.com/littlehorse-enterprises/ui-library.git"
