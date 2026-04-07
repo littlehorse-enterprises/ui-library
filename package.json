@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/littlehorse-enterprises/ui-library.git"
   },
-  "version": "1.0.6",
+  "version": "1.0.7",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
