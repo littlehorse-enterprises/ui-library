@@ -10,6 +10,7 @@ This package is hosted on [GitHub Packages](https://docs.github.com/en/packages)
 
 ```
 @littlehorse-enterprises:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
 ```
 
 **2. Authenticate:**
