@@ -4,27 +4,6 @@ Shared React component library for LittleHorse frontend projects, built on [shad
 
 ## Installation
 
-This package is hosted on [GitHub Packages](https://docs.github.com/en/packages), which requires authentication even for public packages.
-
-**1. Configure the scoped registry** by adding an `.npmrc` file to your project root:
-
-```
-@littlehorse-enterprises:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
-```
-
-**2. Authenticate:**
-
-- **Locally** — run `npm login --registry=https://npm.pkg.github.com` using a [personal access token](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token) with `read:packages` scope.
-- **GitHub Actions** — set the `NODE_AUTH_TOKEN` environment variable:
-  ```yaml
-  env:
-    NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  ```
-  `GITHUB_TOKEN` is provided automatically by GitHub Actions — no manual secret setup required.
-
-**3. Install:**
-
 ```bash
 npm install @littlehorse-enterprises/ui-library
 ```
