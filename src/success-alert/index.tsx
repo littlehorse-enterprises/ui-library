@@ -102,7 +102,7 @@ export function SuccessAlert({
       <Alert className="mb-4 border-green-200 bg-green-50 text-green-800">
         <AlertTitle className={cn('ml-6 leading-snug', onDismiss && 'pr-6')}>{message}</AlertTitle>
       </Alert>
-      <CheckCircle2 className="absolute top-[1.15rem] left-4 h-4 w-4" />
+      <CheckCircle2 className="absolute top-[1.2rem] left-4 h-4 w-4" />
       {onDismiss && (
         <>
           {autoDismiss && (
