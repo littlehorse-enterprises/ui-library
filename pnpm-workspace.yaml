@@ -1,3 +1,7 @@
 minimumReleaseAge: 4320
+
 minimumReleaseAgeExclude:
   - '@littlehorse-enterprises/*'
+
+onlyBuiltDependencies:
+  - esbuild
