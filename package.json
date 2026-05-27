@@ -7,6 +7,7 @@
     "url": "https://github.com/littlehorse-enterprises/ui-library.git"
   },
   "version": "1.0.9",
+  "packageManager": "pnpm@10.19.0",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },

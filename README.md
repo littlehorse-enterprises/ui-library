@@ -5,7 +5,7 @@ Shared React component library for LittleHorse frontend projects, built on [shad
 ## Installation
 
 ```bash
-npm install @littlehorse-enterprises/ui-library
+pnpm add @littlehorse-enterprises/ui-library
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ Every component is exported as a separate entry point (e.g. `/button`, `/dialog`
 ## Development
 
 ```bash
-npm install
+pnpm install
 
 # Install pre-commit (if not already installed)
 macOS:  brew install pre-commit
@@ -42,20 +42,20 @@ Windows: pip install pre-commit
 pre-commit install --config .pre-commit-config-front.yaml
 
 # Start Storybook + Vite dev server
-npm run dev
+pnpm dev
 ```
 
 ### Scripts
 
-| Command                 | Description                                       |
-| ----------------------- | ------------------------------------------------- |
-| `npm run dev`           | Start Storybook and Vite dev server concurrently  |
-| `npm run build`         | Build library and regenerate package.json exports |
-| `npm run lint`          | Run ESLint and Prettier checks                    |
-| `npm run lint:fix`      | Auto-fix lint and formatting issues               |
-| `npm run test`          | Run unit tests                                    |
-| `npm run test:coverage` | Run tests with coverage report                    |
-| `npm run test:ui`       | Run tests with Vitest UI dashboard                |
+| Command              | Description                                       |
+| -------------------- | ------------------------------------------------- |
+| `pnpm dev`           | Start Storybook and Vite dev server concurrently  |
+| `pnpm build`         | Build library and regenerate package.json exports |
+| `pnpm lint`          | Run ESLint and Prettier checks                    |
+| `pnpm lint:fix`      | Auto-fix lint and formatting issues               |
+| `pnpm test`          | Run unit tests                                    |
+| `pnpm test:coverage` | Run tests with coverage report                    |
+| `pnpm test:ui`       | Run tests with Vitest UI dashboard                |
 
 The pre-commit hook runs lint:fix, test, and build. Commit messages must follow the [Conventional Commits](https://www.conventionalcommits.org) format.
 
@@ -78,4 +78,4 @@ scripts/
 
 1. Create `src/[component-name]/index.tsx`
 2. Add colocated `.stories.tsx` and `.test.tsx` files
-3. Run `npm run build` to register the new export in `package.json`
+3. Run `pnpm build` to register the new export in `package.json`
