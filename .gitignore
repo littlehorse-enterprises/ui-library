@@ -10,3 +10,7 @@ dist
 
 # Test
 coverage
+
+# ignore lockfiles other than pnpm's
+package-lock.json
+yarn.lock
