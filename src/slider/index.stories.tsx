@@ -43,7 +43,7 @@ export const WithLabel: Story = {
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <label className="text-sm font-medium">Volume</label>
-        <span className="text-muted-foreground text-sm">50%</span>
+        <span className="text-muted-foreground text-sm">&nbsp;50%</span>
       </div>
       <Slider defaultValue={[50]} max={100} step={1} />
     </div>
@@ -79,7 +79,7 @@ export const Disabled: Story = {
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <label className="text-sm font-medium">Disabled Slider</label>
-        <span className="text-muted-foreground text-sm">50%</span>
+        <span className="text-muted-foreground text-sm">&nbsp;50%</span>
       </div>
       <Slider defaultValue={[50]} max={100} step={1} disabled />
     </div>
@@ -91,7 +91,7 @@ export const WithCustomStyling: Story = {
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <label className="text-sm font-medium">Custom Styled</label>
-        <span className="text-muted-foreground text-sm">50%</span>
+        <span className="text-muted-foreground text-sm">&nbsp;50%</span>
       </div>
       <Slider
         defaultValue={[50]}
@@ -108,7 +108,7 @@ export const WithCustomColors: Story = {
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <label className="text-sm font-medium">Blue Slider</label>
-        <span className="text-muted-foreground text-sm">50%</span>
+        <span className="text-muted-foreground text-sm">&nbsp;50%</span>
       </div>
       <Slider
         defaultValue={[50]}
