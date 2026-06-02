@@ -24,7 +24,7 @@ type Story = StoryObj<typeof Tabs>
 
 export const Default: Story = {
   render: args => (
-    <Tabs {...args} defaultValue="account" className="w-[400px]">
+    <Tabs {...args} defaultValue="account" className="w-100">
       <TabsList>
         <TabsTrigger value="account">Account</TabsTrigger>
         <TabsTrigger value="password">Password</TabsTrigger>
@@ -47,7 +47,7 @@ export const Default: Story = {
 
 export const WithIcons: Story = {
   render: args => (
-    <Tabs {...args} defaultValue="music" className="w-[400px]">
+    <Tabs {...args} defaultValue="music" className="w-100">
       <TabsList>
         <TabsTrigger value="music" className="flex items-center gap-2">
           <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -93,7 +93,7 @@ export const Vertical: Story = {
     orientation: 'vertical',
   },
   render: args => (
-    <Tabs {...args} defaultValue="account" className="w-[500px]">
+    <Tabs {...args} defaultValue="account" className="w-125">
       <TabsList>
         <TabsTrigger value="account">Account</TabsTrigger>
         <TabsTrigger value="password">Password</TabsTrigger>
@@ -123,7 +123,7 @@ export const Vertical: Story = {
 
 export const Disabled: Story = {
   render: args => (
-    <Tabs {...args} defaultValue="active" className="w-[400px]">
+    <Tabs {...args} defaultValue="active" className="w-100">
       <TabsList>
         <TabsTrigger value="active">Active</TabsTrigger>
         <TabsTrigger value="disabled" disabled>
@@ -148,7 +148,7 @@ export const Disabled: Story = {
 
 export const WithCustomStyling: Story = {
   render: args => (
-    <Tabs {...args} defaultValue="tab1" className="w-[400px]">
+    <Tabs {...args} defaultValue="tab1" className="w-100">
       <TabsList className="bg-blue-100">
         <TabsTrigger value="tab1" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white">
           Tab 1

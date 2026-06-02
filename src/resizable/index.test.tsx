@@ -4,7 +4,7 @@ import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '.'
 describe('Resizable', () => {
   it('renders horizontal panel group with handle', () => {
     render(
-      <ResizablePanelGroup direction="horizontal" className="min-h-[200px] w-full rounded-lg border">
+      <ResizablePanelGroup direction="horizontal" className="min-h-50 w-full rounded-lg border">
         <ResizablePanel defaultSize={25}>
           <div className="flex h-full items-center justify-center p-6">
             <span className="font-semibold">Sidebar</span>
@@ -26,7 +26,7 @@ describe('Resizable', () => {
 
   it('renders vertical panel group', () => {
     render(
-      <ResizablePanelGroup direction="vertical" className="min-h-[200px] w-full rounded-lg border">
+      <ResizablePanelGroup direction="vertical" className="min-h-50 w-full rounded-lg border">
         <ResizablePanel defaultSize={25}>
           <div className="flex h-full items-center justify-center p-6">
             <span className="font-semibold">Header</span>
@@ -47,7 +47,7 @@ describe('Resizable', () => {
 
   it('renders multiple panels and handles', () => {
     render(
-      <ResizablePanelGroup direction="horizontal" className="min-h-[200px] w-full rounded-lg border">
+      <ResizablePanelGroup direction="horizontal" className="min-h-50 w-full rounded-lg border">
         <ResizablePanel defaultSize={20}>
           <div className="flex h-full items-center justify-center p-6">
             <span className="font-semibold">Sidebar</span>

@@ -62,7 +62,7 @@ export const WithCustomBackground: Story = {
   render: () => (
     <Avatar>
       <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-      <AvatarFallback className="bg-gradient-to-br from-purple-500 to-pink-500 text-white">CN</AvatarFallback>
+      <AvatarFallback className="bg-linear-to-br from-purple-500 to-pink-500 text-white">CN</AvatarFallback>
     </Avatar>
   ),
 }

@@ -107,7 +107,7 @@ export const WithImage: Story = {
       <DialogTrigger asChild>
         <Button>View Image</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-106.25">
         <DialogHeader>
           <DialogTitle>Image Preview</DialogTitle>
           <DialogDescription>View the full size image here.</DialogDescription>
@@ -134,7 +134,7 @@ export const WithCustomWidth: Story = {
       <DialogTrigger asChild>
         <Button>Open Wide Dialog</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[800px]">
+      <DialogContent className="sm:max-w-200">
         <DialogHeader>
           <DialogTitle>Wide Dialog</DialogTitle>
           <DialogDescription>This dialog has a custom width to accommodate more content.</DialogDescription>

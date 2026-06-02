@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Collapsible>
 
 export const Default: Story = {
   render: () => (
-    <Collapsible className="w-[350px] space-y-2">
+    <Collapsible className="w-87.5 space-y-2">
       <div className="flex items-center justify-between space-x-4">
         <h4 className="text-sm font-semibold">@peduarte starred 3 repositories</h4>
         <CollapsibleTrigger className="hover:bg-muted rounded-md border p-2">
@@ -35,7 +35,7 @@ export const Default: Story = {
 
 export const WithCustomTrigger: Story = {
   render: () => (
-    <Collapsible className="w-[350px] space-y-2">
+    <Collapsible className="w-87.5 space-y-2">
       <CollapsibleTrigger className="hover:bg-muted flex w-full items-center justify-between rounded-md border p-4">
         <span className="text-sm font-semibold">Click to expand</span>
         <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
@@ -51,7 +51,7 @@ export const WithCustomTrigger: Story = {
 
 export const WithNestedCollapsibles: Story = {
   render: () => (
-    <Collapsible className="w-[350px] space-y-2">
+    <Collapsible className="w-87.5 space-y-2">
       <CollapsibleTrigger className="hover:bg-muted flex w-full items-center justify-between rounded-md border p-4">
         <span className="text-sm font-semibold">Parent Section</span>
         <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
@@ -82,7 +82,7 @@ export const WithNestedCollapsibles: Story = {
 
 export const WithCustomStyling: Story = {
   render: () => (
-    <Collapsible className="w-[350px] space-y-2">
+    <Collapsible className="w-87.5 space-y-2">
       <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-blue-500 p-4 text-white hover:bg-blue-600">
         <span className="text-sm font-semibold">Blue Theme</span>
         <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
@@ -96,7 +96,7 @@ export const WithCustomStyling: Story = {
 
 export const WithForm: Story = {
   render: () => (
-    <Collapsible className="w-[350px] space-y-2">
+    <Collapsible className="w-87.5 space-y-2">
       <CollapsibleTrigger className="hover:bg-muted flex w-full items-center justify-between rounded-md border p-4">
         <span className="text-sm font-semibold">Additional Information</span>
         <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
@@ -117,7 +117,7 @@ export const WithForm: Story = {
 
 export const WithAnimation: Story = {
   render: () => (
-    <Collapsible className="w-[350px] space-y-2">
+    <Collapsible className="w-87.5 space-y-2">
       <CollapsibleTrigger className="hover:bg-muted flex w-full items-center justify-between rounded-md border p-4">
         <span className="text-sm font-semibold">Animated Content</span>
         <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />

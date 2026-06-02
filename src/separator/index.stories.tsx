@@ -47,7 +47,7 @@ export const Default: Story = {
 
 export const Vertical: Story = {
   render: () => (
-    <div className="flex h-[200px] items-center space-x-4">
+    <div className="flex h-50 items-center space-x-4">
       <div>
         <h4 className="text-sm font-medium">Left</h4>
         <p className="text-muted-foreground text-sm">Content on the left</p>
@@ -72,11 +72,11 @@ export const WithCustomStyling: Story = {
               The separator can be styled with custom colors and thickness.
             </p>
           </div>
-          <Separator className="h-[2px] bg-blue-200" />
+          <Separator className="h-0.5 bg-blue-200" />
           <div>
             <p className="text-muted-foreground text-sm">It can also be used with different background colors.</p>
           </div>
-          <Separator className="h-[4px] bg-blue-100" />
+          <Separator className="h-1 bg-blue-100" />
         </div>
       </div>
     </div>

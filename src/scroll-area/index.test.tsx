@@ -3,7 +3,7 @@ import { ScrollArea } from '.'
 describe('ScrollArea', () => {
   it('renders with content and scrollbar', () => {
     render(
-      <ScrollArea className="h-[200px] w-[350px] rounded-md border p-4">
+      <ScrollArea className="h-50 w-87.5 rounded-md border p-4">
         <div className="space-y-4">
           <h4 className="text-sm leading-none font-medium">Tags</h4>
           <div className="text-sm">
@@ -31,7 +31,7 @@ describe('ScrollArea', () => {
 
   it('renders with custom styling', () => {
     render(
-      <ScrollArea className="h-[200px] w-[350px] rounded-md border border-blue-200 bg-blue-50 p-4">
+      <ScrollArea className="h-50 w-87.5 rounded-md border border-blue-200 bg-blue-50 p-4">
         <div className="space-y-4">
           <h4 className="text-sm leading-none font-medium text-blue-800">Blue Theme</h4>
           <div className="text-sm">
@@ -48,7 +48,7 @@ describe('ScrollArea', () => {
 
   it('renders a list inside scroll area', () => {
     render(
-      <ScrollArea className="h-[200px] w-[350px] rounded-md border p-4">
+      <ScrollArea className="h-50 w-87.5 rounded-md border p-4">
         <div>
           <p>List Item 1</p>
           <p>List Item 2</p>
@@ -61,7 +61,7 @@ describe('ScrollArea', () => {
 
   it('renders code block inside scroll area', () => {
     render(
-      <ScrollArea className="h-[200px] w-[350px] rounded-md border p-4">
+      <ScrollArea className="h-50 w-87.5 rounded-md border p-4">
         <pre>
           {`function example() {
   console.log('hello');

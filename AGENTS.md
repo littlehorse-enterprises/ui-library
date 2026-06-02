@@ -48,7 +48,7 @@ Each component lives in `src/[component-name]/` with three colocated files:
 
 **Forms:** `react-hook-form` + Zod via `@hookform/resolvers`. The `form/` component exposes `FormProvider`, `FormField`, `FormItem`, `FormLabel`, `FormControl`, `FormDescription`, and `FormMessage`.
 
-**Style conventions:** Prefer `outline-hidden` over `outline-none`, `type` over `interface`, `h-px` over `h-[1px]`.
+**Style conventions:** Prefer `outline-hidden` over `outline-none`, `type` over `interface`, `h-px` over `h-[1px]` (canonical Tailwind classes).
 
 **Path alias:** `@/*` resolves to `src/*`.
 

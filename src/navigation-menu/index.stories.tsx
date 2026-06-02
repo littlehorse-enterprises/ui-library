@@ -35,11 +35,11 @@ export const Default: Story = {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Getting Started</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+            <ul className="grid gap-3 p-6 md:w-100 lg:w-125 lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none select-none focus:shadow-md"
+                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-none select-none focus:shadow-md"
                     href="/"
                   >
                     <div className="mt-4 mb-2 text-lg font-medium">shadcn/ui</div>
@@ -81,7 +81,7 @@ export const Default: Story = {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Components</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+            <ul className="grid w-100 gap-3 p-4 md:w-125 md:grid-cols-2 lg:w-150">
               <li>
                 <NavigationMenuLink asChild>
                   <a
@@ -128,11 +128,11 @@ export const WithCustomStyling: Story = {
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-blue-800 hover:bg-blue-100">Products</NavigationMenuTrigger>
           <NavigationMenuContent className="border-blue-200 bg-blue-50">
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+            <ul className="grid gap-3 p-6 md:w-100 lg:w-125 lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b from-blue-100 to-blue-50 p-6 no-underline outline-none select-none focus:shadow-md"
+                    className="flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b from-blue-100 to-blue-50 p-6 no-underline outline-none select-none focus:shadow-md"
                     href="/"
                   >
                     <div className="mt-4 mb-2 text-lg font-medium text-blue-800">Featured Product</div>
@@ -176,7 +176,7 @@ export const WithMultipleLevels: Story = {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Products</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+            <ul className="grid w-100 gap-3 p-4 md:w-125 md:grid-cols-2 lg:w-150">
               <li>
                 <NavigationMenuLink asChild>
                   <a
@@ -205,7 +205,7 @@ export const WithMultipleLevels: Story = {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+            <ul className="grid w-100 gap-3 p-4 md:w-125 md:grid-cols-2 lg:w-150">
               <li>
                 <NavigationMenuLink asChild>
                   <a

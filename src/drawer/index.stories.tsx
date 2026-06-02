@@ -118,7 +118,7 @@ export const WithLongContent: Story = {
           <DrawerTitle>Detailed Information</DrawerTitle>
           <DrawerDescription>Scroll through the content below to view all details.</DrawerDescription>
         </DrawerHeader>
-        <div className="max-h-[400px] space-y-4 overflow-y-auto p-4">
+        <div className="max-h-100 space-y-4 overflow-y-auto p-4">
           {Array.from({ length: 10 }).map((_, i) => (
             <div key={i} className="rounded-lg border p-4">
               <h3 className="font-semibold">Section {i + 1}</h3>

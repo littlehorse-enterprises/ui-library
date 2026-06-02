@@ -10,7 +10,7 @@ const meta: Meta<typeof Slider> = {
   tags: ['autodocs'],
   argTypes: {
     defaultValue: {
-      control: { type: 'array' },
+      control: { type: 'object' },
     },
     min: {
       control: 'number',
@@ -97,7 +97,7 @@ export const WithCustomStyling: Story = {
         defaultValue={[50]}
         max={100}
         step={1}
-        className="[&_[role=slider]]:h-4 [&_[role=slider]]:w-4 [&_[role=track]]:h-2"
+        className="**:[[role=slider]]:h-4 **:[[role=slider]]:w-4 **:[[role=track]]:h-2"
       />
     </div>
   ),
@@ -114,7 +114,7 @@ export const WithCustomColors: Story = {
         defaultValue={[50]}
         max={100}
         step={1}
-        className="[&_[role=range]]:bg-blue-500 [&_[role=slider]]:border-blue-500 [&_[role=track]]:bg-blue-100"
+        className="**:[[role=range]]:bg-blue-500 **:[[role=slider]]:border-blue-500 **:[[role=track]]:bg-blue-100"
       />
     </div>
   ),

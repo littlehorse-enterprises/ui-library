@@ -90,7 +90,7 @@ export const WithCustomStyling: Story = {
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
-              <div className="flex aspect-square items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 p-6 text-white">
+              <div className="flex aspect-square items-center justify-center rounded-lg bg-linear-to-br from-purple-500 to-pink-500 p-6 text-white">
                 <span className="text-3xl font-semibold">{index + 1}</span>
               </div>
             </div>
