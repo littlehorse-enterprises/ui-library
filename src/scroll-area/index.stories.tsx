@@ -15,7 +15,7 @@ type Story = StoryObj<typeof ScrollArea>
 
 export const Default: Story = {
   render: () => (
-    <ScrollArea className="h-[200px] w-[350px] rounded-md border p-4">
+    <ScrollArea className="h-50 w-87.5 rounded-md border p-4">
       <div className="space-y-4">
         <h4 className="text-sm leading-none font-medium">Tags</h4>
         <div className="text-sm">
@@ -33,7 +33,7 @@ export const Default: Story = {
 
 export const WithCustomStyling: Story = {
   render: () => (
-    <ScrollArea className="h-[200px] w-[350px] rounded-md border border-blue-200 bg-blue-50 p-4">
+    <ScrollArea className="h-50 w-87.5 rounded-md border border-blue-200 bg-blue-50 p-4">
       <div className="space-y-4">
         <h4 className="text-sm leading-none font-medium text-blue-800">Blue Theme</h4>
         <div className="text-sm">
@@ -51,7 +51,7 @@ export const WithCustomStyling: Story = {
 
 export const WithList: Story = {
   render: () => (
-    <ScrollArea className="h-[200px] w-[350px] rounded-md border p-4">
+    <ScrollArea className="h-50 w-87.5 rounded-md border p-4">
       <div className="space-y-4">
         <h4 className="text-sm leading-none font-medium">Notifications</h4>
         <div className="space-y-2">
@@ -73,13 +73,13 @@ export const WithList: Story = {
 
 export const WithCode: Story = {
   render: () => (
-    <ScrollArea className="h-[200px] w-[350px] rounded-md border p-4">
+    <ScrollArea className="h-50 w-87.5 rounded-md border p-4">
       <div className="space-y-4">
         <h4 className="text-sm leading-none font-medium">Code Example</h4>
         <pre className="text-sm">
           {`function example() {
   const items = [1, 2, 3, 4, 5];
-  
+
   return items.map(item => {
     return (
       <div key={item}>

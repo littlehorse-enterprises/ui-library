@@ -15,7 +15,7 @@ type Story = StoryObj<typeof AspectRatio>
 
 export const Default: Story = {
   render: () => (
-    <div className="w-[450px]">
+    <div className="w-112.5">
       <AspectRatio ratio={16 / 9}>
         <img
           src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
@@ -29,7 +29,7 @@ export const Default: Story = {
 
 export const Square: Story = {
   render: () => (
-    <div className="w-[300px]">
+    <div className="w-75">
       <AspectRatio ratio={1}>
         <img
           src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&dpr=2&q=80"
@@ -43,7 +43,7 @@ export const Square: Story = {
 
 export const Portrait: Story = {
   render: () => (
-    <div className="w-[200px]">
+    <div className="w-50">
       <AspectRatio ratio={3 / 4}>
         <img
           src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&dpr=2&q=80"
@@ -57,7 +57,7 @@ export const Portrait: Story = {
 
 export const Video: Story = {
   render: () => (
-    <div className="w-[450px]">
+    <div className="w-112.5">
       <AspectRatio ratio={16 / 9}>
         <iframe
           src="https://www.youtube.com/embed/4uVQGOoO4ko"
@@ -73,9 +73,9 @@ export const Video: Story = {
 
 export const WithBackground: Story = {
   render: () => (
-    <div className="w-[450px]">
+    <div className="w-112.5">
       <AspectRatio ratio={16 / 9}>
-        <div className="flex h-full w-full items-center justify-center rounded-md bg-gradient-to-br from-purple-500 to-pink-500 text-white">
+        <div className="flex h-full w-full items-center justify-center rounded-md bg-linear-to-br from-purple-500 to-pink-500 text-white">
           <span className="text-2xl font-bold">Gradient Background</span>
         </div>
       </AspectRatio>
@@ -85,7 +85,7 @@ export const WithBackground: Story = {
 
 export const WithOverlay: Story = {
   render: () => (
-    <div className="w-[450px]">
+    <div className="w-112.5">
       <AspectRatio ratio={16 / 9}>
         <div className="relative">
           <img
@@ -104,7 +104,7 @@ export const WithOverlay: Story = {
 
 export const WithCustomRatio: Story = {
   render: () => (
-    <div className="w-[450px]">
+    <div className="w-112.5">
       <AspectRatio ratio={21 / 9}>
         <img
           src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"

@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Card>
 
 export const Default: Story = {
   render: () => (
-    <Card className="w-[350px]">
+    <Card className="w-87.5">
       <CardHeader>
         <CardTitle>Create project</CardTitle>
         <CardDescription>Deploy your new project in one-click.</CardDescription>
@@ -50,12 +50,12 @@ export const Default: Story = {
 
 export const WithImage: Story = {
   render: () => (
-    <Card className="w-[350px]">
+    <Card className="w-87.5">
       <CardHeader>
         <img
           src="https://images.unsplash.com/photo-1522252234503-e356532cafd5"
           alt="Card cover"
-          className="h-[200px] w-full object-cover"
+          className="h-50 w-full object-cover"
         />
       </CardHeader>
       <CardContent>
@@ -73,7 +73,7 @@ export const WithImage: Story = {
 
 export const Simple: Story = {
   render: () => (
-    <Card className="w-[350px]">
+    <Card className="w-87.5">
       <CardHeader>
         <CardTitle>Notifications</CardTitle>
         <CardDescription>You have 3 unread messages.</CardDescription>
@@ -87,7 +87,7 @@ export const Simple: Story = {
 
 export const Interactive: Story = {
   render: () => (
-    <Card className="w-[350px] transition-shadow hover:shadow-lg">
+    <Card className="w-87.5 transition-shadow hover:shadow-lg">
       <CardHeader>
         <CardTitle>Interactive Card</CardTitle>
         <CardDescription>Hover over me to see the effect.</CardDescription>
@@ -106,7 +106,7 @@ export const Interactive: Story = {
 
 export const WithAction: Story = {
   render: () => (
-    <Card className="w-[350px]">
+    <Card className="w-87.5">
       <CardHeader>
         <CardTitle>Project Settings</CardTitle>
         <CardDescription>Manage your project configuration.</CardDescription>
@@ -125,7 +125,7 @@ export const WithAction: Story = {
 
 export const WithStats: Story = {
   render: () => (
-    <Card className="w-[350px]">
+    <Card className="w-87.5">
       <CardHeader>
         <CardTitle>Statistics</CardTitle>
         <CardDescription>Monthly overview</CardDescription>

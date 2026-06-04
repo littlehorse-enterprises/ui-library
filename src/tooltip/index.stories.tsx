@@ -83,7 +83,7 @@ export const WithLongContent: Story = {
             Help
           </Button>
         </TooltipTrigger>
-        <TooltipContent className="max-w-[200px]">
+        <TooltipContent className="max-w-50">
           <p>This is a longer tooltip that explains more detailed information about the feature or action.</p>
         </TooltipContent>
       </Tooltip>

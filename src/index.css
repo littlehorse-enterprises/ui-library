@@ -1,7 +1,7 @@
 /*
  * This file is exported as source CSS (not compiled) so the consumer's
  * Tailwind build processes it. The @import 'tailwindcss' directive triggers
- * the consumer's PostCSS/Tailwind pipeline, which scans the consumer's own
+ * the consumer's Tailwind-capable build pipeline, which scans the consumer's own
  * source files and generates all needed utility classes (e.g. w-[19%], truncate).
  */
 @import 'tailwindcss';

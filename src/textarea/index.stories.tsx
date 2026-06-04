@@ -68,7 +68,7 @@ export const WithError: Story = {
 }
 
 export const WithCustomSize: Story = {
-  render: () => <Textarea placeholder="Type your message here." className="min-h-[200px]" />,
+  render: () => <Textarea placeholder="Type your message here." className="min-h-50" />,
 }
 
 export const WithMaxLength: Story = {

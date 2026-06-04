@@ -1,8 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import type * as React from 'react'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '.'
 import { Button } from '../button'
 
-const meta: Meta<typeof Sheet> = {
+type SheetStoryProps = React.ComponentProps<typeof Sheet> & Pick<React.ComponentProps<typeof SheetContent>, 'side'>
+
+const meta: Meta<SheetStoryProps> = {
   title: 'Components/Sheet',
   component: Sheet,
   parameters: {
@@ -18,15 +21,18 @@ const meta: Meta<typeof Sheet> = {
 }
 
 export default meta
-type Story = StoryObj<typeof Sheet>
+type Story = StoryObj<SheetStoryProps>
 
 export const Default: Story = {
-  render: () => (
+  args: {
+    side: 'right',
+  },
+  render: ({ side }) => (
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="outline">Open Sheet</Button>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent side={side}>
         <SheetHeader>
           <SheetTitle>Sheet Title</SheetTitle>
           <SheetDescription>This is a sheet description. You can add any content here.</SheetDescription>
@@ -40,12 +46,15 @@ export const Default: Story = {
 }
 
 export const WithForm: Story = {
-  render: () => (
+  args: {
+    side: 'right',
+  },
+  render: ({ side }) => (
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="outline">Edit Profile</Button>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent side={side}>
         <SheetHeader>
           <SheetTitle>Edit Profile</SheetTitle>
           <SheetDescription>Make changes to your profile here. Click save when you're done.</SheetDescription>
@@ -67,14 +76,17 @@ export const WithForm: Story = {
 }
 
 export const WithCustomStyling: Story = {
-  render: () => (
+  args: {
+    side: 'right',
+  },
+  render: ({ side }) => (
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="outline" className="bg-blue-50 text-blue-600 hover:bg-blue-100">
           Custom Styled Sheet
         </Button>
       </SheetTrigger>
-      <SheetContent className="border-blue-200 bg-blue-50">
+      <SheetContent side={side} className="border-blue-200 bg-blue-50">
         <SheetHeader>
           <SheetTitle className="text-blue-800">Custom Styled Title</SheetTitle>
           <SheetDescription className="text-blue-600">This sheet has custom styling applied to it.</SheetDescription>
@@ -89,12 +101,15 @@ export const WithCustomStyling: Story = {
 }
 
 export const WithList: Story = {
-  render: () => (
+  args: {
+    side: 'right',
+  },
+  render: ({ side }) => (
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="outline">View Notifications</Button>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent side={side}>
         <SheetHeader>
           <SheetTitle>Notifications</SheetTitle>
           <SheetDescription>You have 3 new notifications.</SheetDescription>

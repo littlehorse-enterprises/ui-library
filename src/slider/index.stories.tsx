@@ -10,7 +10,7 @@ const meta: Meta<typeof Slider> = {
   tags: ['autodocs'],
   argTypes: {
     defaultValue: {
-      control: { type: 'array' },
+      control: { type: 'object' },
     },
     min: {
       control: 'number',
@@ -43,7 +43,7 @@ export const WithLabel: Story = {
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <label className="text-sm font-medium">Volume</label>
-        <span className="text-muted-foreground text-sm">50%</span>
+        <span className="text-muted-foreground text-sm">&nbsp;50%</span>
       </div>
       <Slider defaultValue={[50]} max={100} step={1} />
     </div>
@@ -79,7 +79,7 @@ export const Disabled: Story = {
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <label className="text-sm font-medium">Disabled Slider</label>
-        <span className="text-muted-foreground text-sm">50%</span>
+        <span className="text-muted-foreground text-sm">&nbsp;50%</span>
       </div>
       <Slider defaultValue={[50]} max={100} step={1} disabled />
     </div>
@@ -91,13 +91,13 @@ export const WithCustomStyling: Story = {
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <label className="text-sm font-medium">Custom Styled</label>
-        <span className="text-muted-foreground text-sm">50%</span>
+        <span className="text-muted-foreground text-sm">&nbsp;50%</span>
       </div>
       <Slider
         defaultValue={[50]}
         max={100}
         step={1}
-        className="[&_[role=slider]]:h-4 [&_[role=slider]]:w-4 [&_[role=track]]:h-2"
+        className="**:[[role=slider]]:h-4 **:[[role=slider]]:w-4 **:[[role=track]]:h-2"
       />
     </div>
   ),
@@ -108,13 +108,13 @@ export const WithCustomColors: Story = {
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <label className="text-sm font-medium">Blue Slider</label>
-        <span className="text-muted-foreground text-sm">50%</span>
+        <span className="text-muted-foreground text-sm">&nbsp;50%</span>
       </div>
       <Slider
         defaultValue={[50]}
         max={100}
         step={1}
-        className="[&_[role=range]]:bg-blue-500 [&_[role=slider]]:border-blue-500 [&_[role=track]]:bg-blue-100"
+        className="**:[[role=range]]:bg-blue-500 **:[[role=slider]]:border-blue-500 **:[[role=track]]:bg-blue-100"
       />
     </div>
   ),
