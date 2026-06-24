@@ -32,9 +32,3 @@ export const WithDismiss: Story = {
     onDismiss: () => alert('Dismissed!'),
   },
 }
-
-export const NoMessage: Story = {
-  args: {
-    message: null,
-  },
-}
