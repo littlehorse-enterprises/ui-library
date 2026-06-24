@@ -12,7 +12,7 @@ export function ErrorAlert({ message, onDismiss }: ErrorAlertProps) {
   return (
     <div
       role="alert"
-      className="border-destructive/50 bg-destructive/10 text-destructive mb-4 flex items-start gap-2 rounded-lg border p-4 text-sm leading-snug font-medium"
+      className="border-destructive/50 bg-destructive/10 text-destructive flex items-start gap-2 rounded-lg border p-4 text-sm leading-snug font-medium"
     >
       <span className="flex h-lh shrink-0 items-center" aria-hidden="true">
         <AlertCircle className="size-4" />
