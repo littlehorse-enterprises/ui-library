@@ -98,7 +98,7 @@ export function SuccessAlert({
   return (
     <div
       role="status"
-      className="mb-4 flex items-start gap-2 rounded-lg border border-green-200 bg-green-50 p-4 text-sm leading-snug font-medium text-green-800"
+      className="flex items-start gap-2 rounded-lg border border-green-200 bg-green-50 p-4 text-sm leading-snug font-medium text-green-800"
     >
       <span className="flex h-lh shrink-0 items-center" aria-hidden="true">
         <CheckCircle2 className="size-4" />
