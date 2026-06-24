@@ -1,5 +1,4 @@
 import { AlertCircle, X } from 'lucide-react'
-import { Alert, AlertTitle } from '../alert'
 import { Button } from '../button'
 
 type ErrorAlertProps = {
@@ -11,21 +10,26 @@ export function ErrorAlert({ message, onDismiss }: ErrorAlertProps) {
   if (!message) return null
 
   return (
-    <div className="relative">
-      <Alert variant="destructive" className="bg-destructive/10 mb-4 flex gap-2 leading-snug">
-        <AlertCircle className="h-4 w-4 -translate-y-px" />
-        <AlertTitle className={onDismiss ? 'pr-6' : undefined}>{message}</AlertTitle>
-      </Alert>
+    <div
+      role="alert"
+      className="border-destructive/50 bg-destructive/10 text-destructive mb-4 flex items-start gap-2 rounded-lg border p-4 text-sm leading-snug font-medium"
+    >
+      <span className="flex h-lh shrink-0 items-center" aria-hidden="true">
+        <AlertCircle className="size-4" />
+      </span>
+      <p className="min-w-0 flex-1">{message}</p>
       {onDismiss && (
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={onDismiss}
-          aria-label="Dismiss error message"
-          className="text-destructive absolute top-3.5 right-4 h-6 w-6 p-0 hover:bg-red-200"
-        >
-          <X className="h-4 w-4 text-red-500" />
-        </Button>
+        <span className="flex h-lh shrink-0 items-center">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={onDismiss}
+            aria-label="Dismiss error message"
+            className="hover:bg-destructive/20 size-6 p-0"
+          >
+            <X className="size-4" />
+          </Button>
+        </span>
       )}
     </div>
   )

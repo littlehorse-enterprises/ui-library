@@ -2,9 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { CheckCircle2, X } from 'lucide-react'
-import { Alert, AlertTitle } from '../alert'
 import { Button } from '../button'
-import { cn } from '@/lib/utils'
 
 const DEFAULT_DISMISS_MS = 8000
 
@@ -98,26 +96,29 @@ export function SuccessAlert({
   if (!message) return null
 
   return (
-    <div className="relative text-green-800">
-      <Alert className="mb-4 border-green-200 bg-green-50 text-green-800">
-        <AlertTitle className={cn('ml-6 leading-snug', onDismiss && 'pr-6')}>{message}</AlertTitle>
-      </Alert>
-      <CheckCircle2 className="absolute top-[1.2rem] left-4 h-4 w-4" />
+    <div
+      role="status"
+      className="mb-4 flex items-start gap-2 rounded-lg border border-green-200 bg-green-50 p-4 text-sm leading-snug font-medium text-green-800"
+    >
+      <span className="flex h-lh shrink-0 items-center" aria-hidden="true">
+        <CheckCircle2 className="size-4" />
+      </span>
+      <p className="min-w-0 flex-1">{message}</p>
       {onDismiss && (
-        <>
+        <span className="relative flex h-lh shrink-0 items-center">
           {autoDismiss && (
-            <CountdownCircle remainingMs={remainingMs} durationMs={autoDismissMs} className="absolute top-4 right-4" />
+            <CountdownCircle remainingMs={remainingMs} durationMs={autoDismissMs} className="absolute inset-0 m-auto" />
           )}
           <Button
             variant="ghost"
             size="sm"
             onClick={handleDismiss}
             aria-label="Dismiss success message"
-            className="absolute top-4 right-4 h-6 w-6 p-0 hover:bg-green-200"
+            className="size-6 p-0 hover:bg-green-200"
           >
-            <X className="h-4 w-4" />
+            <X className="size-4" />
           </Button>
-        </>
+        </span>
       )}
     </div>
   )
