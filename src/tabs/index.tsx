@@ -18,11 +18,12 @@ function Tabs({ className, orientation, ...props }: React.ComponentProps<typeof 
 }
 
 const tabsListVariants = cva(
-  'rounded-lg p-[3px] group-data-[orientation=horizontal]/tabs:h-8 data-[variant=line]:rounded-none group/tabs-list inline-flex w-fit items-center justify-center text-muted-foreground group-data-[orientation=vertical]/tabs:h-fit group-data-[orientation=vertical]/tabs:flex-col',
+  'rounded-lg group-data-[orientation=horizontal]/tabs:h-10 data-[variant=line]:rounded-none group/tabs-list inline-flex w-fit items-center justify-center text-muted-foreground group-data-[orientation=vertical]/tabs:h-fit group-data-[orientation=vertical]/tabs:flex-col',
   {
     variants: {
       variant: {
-        default: 'bg-muted',
+        default:
+          'bg-muted group-data-[orientation=horizontal]/tabs:grid group-data-[orientation=horizontal]/tabs:w-full group-data-[orientation=horizontal]/tabs:grid-cols-[repeat(auto-fit,minmax(0,1fr))]',
         line: 'gap-1 bg-transparent',
       },
     },
@@ -54,7 +55,7 @@ function TabsTrigger({ className, ...props }: React.ComponentProps<typeof TabsPr
       className={cn(
         "text-foreground/60 hover:text-foreground focus-visible:border-ring focus-visible:outline-ring focus-visible:ring-ring/50 dark:text-muted-foreground dark:hover:text-foreground **:svg:pointer-events-none **:svg:shrink-0 **:svg:not-[[class*='size-']]:size-4 relative inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-1.5 py-0.5 text-sm font-medium whitespace-nowrap transition-all group-data-[orientation=vertical]/tabs:w-full group-data-[orientation=vertical]/tabs:justify-start focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:cursor-default data-[state=active]:group-data-[variant=default]/tabs-list:shadow-xs data-[state=active]:group-data-[variant=line]/tabs-list:shadow-none",
         'group-data-[variant=line]/tabs-list:bg-transparent data-[state=active]:group-data-[variant=line]/tabs-list:bg-transparent dark:data-[state=active]:group-data-[variant=line]/tabs-list:border-transparent dark:data-[state=active]:group-data-[variant=line]/tabs-list:bg-transparent',
-        'data-[state=active]:bg-background data-[state=active]:text-foreground dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 dark:data-[state=active]:text-foreground',
+        'data-[state=active]:bg-primary data-[state=active]:text-primary-foreground dark:data-[state=active]:bg-primary dark:data-[state=active]:text-primary-foreground',
         'after:bg-foreground after:absolute after:opacity-0 after:transition-opacity group-data-[orientation=horizontal]/tabs:after:inset-x-0 group-data-[orientation=horizontal]/tabs:after:-bottom-1.25 group-data-[orientation=horizontal]/tabs:after:h-0.5 group-data-[orientation=vertical]/tabs:after:inset-y-0 group-data-[orientation=vertical]/tabs:after:-right-1 group-data-[orientation=vertical]/tabs:after:w-0.5 data-[state=active]:group-data-[variant=line]/tabs-list:after:opacity-100',
         className
       )}
