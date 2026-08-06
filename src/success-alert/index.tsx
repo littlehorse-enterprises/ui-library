@@ -98,7 +98,7 @@ export function SuccessAlert({
   return (
     <div
       role="status"
-      className="flex items-start gap-2 rounded-lg border border-green-200 bg-green-50 p-4 text-sm leading-snug font-medium text-green-800"
+      className="border-success/30 bg-success/10 text-success flex items-start gap-2 rounded-lg border p-4 text-sm leading-snug font-medium"
     >
       <span className="flex h-lh shrink-0 items-center" aria-hidden="true">
         <CheckCircle2 className="size-4" />
@@ -114,7 +114,7 @@ export function SuccessAlert({
             size="sm"
             onClick={handleDismiss}
             aria-label="Dismiss success message"
-            className="size-6 p-0 hover:bg-green-200"
+            className="hover:bg-success/20 size-6 p-0"
           >
             <X className="size-4" />
           </Button>

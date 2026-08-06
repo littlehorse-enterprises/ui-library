@@ -56,6 +56,61 @@
   --sidebar-border: oklch(0.9232 0.0026 48.72);
   --sidebar-ring: oklch(0.7048 0.1868 47.6);
   --radius: 0.5rem;
+
+  /* Soft "ready/success" state — composed as bg-success/10 text-success border-success/30 */
+  --success: oklch(57.71% 0.18 145);
+
+  /* Soft "provisioning/warning" state — same soft composition as --success */
+  --warning: oklch(66% 0.19 80);
+
+  /*
+   * Decorative categorical palette — hues used to visually tell same-shaped items apart. There is
+   * no semantic meaning, unlike success/warning above. Named "tint", not "accent", because a
+   * single semantic --accent/--accent-foreground pair already exists — this is a
+   * same-purpose-but-different-shape token family, not a replacement for it.
+   *
+   * Values track Tailwind's palette by reference, except where this file shadows a palette name
+   * below (--color-amber-600, --color-slate-500 are re-bound to brand values that invert in dark
+   * mode); those few are pinned to Tailwind's literals instead.
+   */
+  --tint-sky-fg: var(--color-sky-600);
+  --tint-violet-bg: var(--color-violet-50);
+  --tint-violet-fg: var(--color-violet-600);
+  --tint-amber-bg: var(--color-amber-50);
+  --tint-amber-fg: oklch(66.6% 0.179 58.318); /* amber-600 — shadowed below */
+  --tint-teal-bg: var(--color-teal-50);
+  --tint-teal-fg: var(--color-teal-600);
+  --tint-rose-bg: var(--color-rose-50);
+  --tint-rose-fg: var(--color-rose-600);
+  --tint-emerald-bg: var(--color-emerald-50);
+  --tint-emerald-fg: var(--color-emerald-600);
+  --tint-blue-bg: var(--color-blue-50);
+  --tint-blue-fg: var(--color-blue-600);
+  --tint-pink-fg: var(--color-pink-600);
+  --tint-orange-bg: var(--color-orange-50);
+  --tint-orange-fg: var(--color-orange-600);
+  --tint-purple-bg: var(--color-purple-50);
+  --tint-purple-fg: var(--color-purple-600);
+
+  /* Derived shapes — for a soft surface that needs a border or a solid icon-chip fill. */
+  --tint-violet-border: var(--color-violet-100);
+  --tint-violet-solid: var(--color-violet-500);
+  --tint-amber-border: var(--color-amber-100);
+  --tint-amber-solid: var(--color-amber-500);
+  --tint-teal-border: var(--color-teal-100);
+  --tint-teal-solid: var(--color-teal-500);
+  --tint-slate-solid: oklch(55.4% 0.046 257.417); /* slate-500 — shadowed below */
+  --tint-rose-border: var(--color-rose-100);
+  --tint-rose-solid: var(--color-rose-500);
+  --tint-emerald-border: var(--color-emerald-100);
+  --tint-emerald-solid: var(--color-emerald-500);
+  --tint-blue-border: var(--color-blue-100);
+  --tint-blue-solid: var(--color-blue-500);
+  --tint-orange-border: var(--color-orange-100);
+  --tint-orange-solid: var(--color-orange-500);
+  --tint-purple-border: var(--color-purple-100);
+  --tint-purple-solid: var(--color-purple-500);
+
   /* colors  */
   --gray-300: oklch(85.92% 0.005 253.57);
   --amber-600: oklch(62.65% 0.165 67.29);
@@ -102,6 +157,47 @@
   --sidebar-accent-foreground: oklch(0.9845 0.0013 106.42);
   --sidebar-border: oklch(0.2685 0.0063 34.3);
   --sidebar-ring: oklch(0.6455 0.1943 41.08);
+
+  --success: oklch(63.68% 0.18 145);
+  --warning: oklch(71% 0.19 80);
+
+  --tint-sky-fg: var(--color-sky-400);
+  --tint-violet-bg: color-mix(in oklch, var(--color-violet-950) 60%, transparent);
+  --tint-violet-fg: var(--color-violet-400);
+  --tint-amber-bg: color-mix(in oklch, var(--color-amber-950) 60%, transparent);
+  --tint-amber-fg: oklch(82.8% 0.189 84.429); /* amber-400 — shadowed below */
+  --tint-teal-bg: color-mix(in oklch, var(--color-teal-950) 60%, transparent);
+  --tint-teal-fg: var(--color-teal-400);
+  --tint-rose-bg: color-mix(in oklch, var(--color-rose-950) 60%, transparent);
+  --tint-rose-fg: var(--color-rose-400);
+  --tint-emerald-bg: color-mix(in oklch, var(--color-emerald-950) 60%, transparent);
+  --tint-emerald-fg: var(--color-emerald-400);
+  --tint-blue-bg: color-mix(in oklch, var(--color-blue-950) 60%, transparent);
+  --tint-blue-fg: var(--color-blue-400);
+  --tint-pink-fg: var(--color-pink-400);
+  --tint-orange-bg: color-mix(in oklch, var(--color-orange-950) 60%, transparent);
+  --tint-orange-fg: var(--color-orange-400);
+  --tint-purple-bg: color-mix(in oklch, var(--color-purple-950) 60%, transparent);
+  --tint-purple-fg: var(--color-purple-400);
+
+  --tint-violet-border: var(--color-violet-800);
+  --tint-violet-solid: var(--color-violet-500);
+  --tint-amber-border: var(--color-amber-800);
+  --tint-amber-solid: var(--color-amber-500);
+  --tint-teal-border: var(--color-teal-800);
+  --tint-teal-solid: var(--color-teal-500);
+  --tint-slate-solid: oklch(55.4% 0.046 257.417); /* slate-500 — shadowed below */
+  --tint-rose-border: var(--color-rose-800);
+  --tint-rose-solid: var(--color-rose-500);
+  --tint-emerald-border: var(--color-emerald-800);
+  --tint-emerald-solid: var(--color-emerald-500);
+  --tint-blue-border: var(--color-blue-800);
+  --tint-blue-solid: var(--color-blue-500);
+  --tint-orange-border: var(--color-orange-800);
+  --tint-orange-solid: var(--color-orange-500);
+  --tint-purple-border: var(--color-purple-800);
+  --tint-purple-solid: var(--color-purple-500);
+
   /* colors */
   --amber-600: oklch(80.08% 0.155 72.84);
   --slate-100: oklch(27.41% 0.031 256.85);
@@ -175,8 +271,47 @@
       height: 0;
     }
   }
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+
+  --color-tint-sky-fg: var(--tint-sky-fg);
+  --color-tint-violet-bg: var(--tint-violet-bg);
+  --color-tint-violet-fg: var(--tint-violet-fg);
+  --color-tint-amber-bg: var(--tint-amber-bg);
+  --color-tint-amber-fg: var(--tint-amber-fg);
+  --color-tint-teal-bg: var(--tint-teal-bg);
+  --color-tint-teal-fg: var(--tint-teal-fg);
+  --color-tint-rose-bg: var(--tint-rose-bg);
+  --color-tint-rose-fg: var(--tint-rose-fg);
+  --color-tint-emerald-bg: var(--tint-emerald-bg);
+  --color-tint-emerald-fg: var(--tint-emerald-fg);
+  --color-tint-blue-bg: var(--tint-blue-bg);
+  --color-tint-blue-fg: var(--tint-blue-fg);
+  --color-tint-pink-fg: var(--tint-pink-fg);
+  --color-tint-orange-bg: var(--tint-orange-bg);
+  --color-tint-orange-fg: var(--tint-orange-fg);
+  --color-tint-purple-bg: var(--tint-purple-bg);
+  --color-tint-purple-fg: var(--tint-purple-fg);
+
+  --color-tint-violet-border: var(--tint-violet-border);
+  --color-tint-violet-solid: var(--tint-violet-solid);
+  --color-tint-amber-border: var(--tint-amber-border);
+  --color-tint-amber-solid: var(--tint-amber-solid);
+  --color-tint-teal-border: var(--tint-teal-border);
+  --color-tint-teal-solid: var(--tint-teal-solid);
+  --color-tint-slate-solid: var(--tint-slate-solid);
+  --color-tint-rose-border: var(--tint-rose-border);
+  --color-tint-rose-solid: var(--tint-rose-solid);
+  --color-tint-emerald-border: var(--tint-emerald-border);
+  --color-tint-emerald-solid: var(--tint-emerald-solid);
+  --color-tint-blue-border: var(--tint-blue-border);
+  --color-tint-blue-solid: var(--tint-blue-solid);
+  --color-tint-orange-border: var(--tint-orange-border);
+  --color-tint-orange-solid: var(--tint-orange-solid);
+  --color-tint-purple-border: var(--tint-purple-border);
+  --color-tint-purple-solid: var(--tint-purple-solid);
+
   --color-gray-300: var(--gray-300);
-  --color-amber-400: var(--amber-400);
   --color-amber-600: var(--amber-600);
   --color-slate-100: var(--slate-100);
   --color-slate-700: var(--slate-700);
