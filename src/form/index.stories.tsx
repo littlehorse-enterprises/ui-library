@@ -36,7 +36,7 @@ const formSchema = z.object({
     message: 'You must accept the terms and conditions.',
   }),
   notifications: z.enum(['all', 'important', 'none'], {
-    required_error: 'Please select a notification preference.',
+    error: 'Please select a notification preference.',
   }),
   bio: z.string().max(160, {
     message: 'Bio must not be longer than 160 characters.',
