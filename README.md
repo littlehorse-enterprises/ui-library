@@ -28,6 +28,8 @@ export default function App() {
 
 Every component is exported as a separate entry point (e.g. `/button`, `/dialog`, `/form`)
 
+Use components as shipped. To change a look, change it here so every app gets it.
+
 ## Development
 
 ```bash

@@ -46,6 +46,8 @@ Each component lives in `src/[component-name]/` with three colocated files:
 
 **Components:** Radix UI primitives (imported from the unified `radix-ui` package) underpin most interactive components. The `asChild` prop (via `Slot` from `radix-ui`) enables polymorphic rendering. All components use plain functions with `data-slot` attributes and `React.ComponentProps` — do not use `React.forwardRef`, `ElementRef`, `ComponentPropsWithoutRef`, or `displayName`.
 
+**Consumers:** LittleHorse apps use a component as shipped and never re-skin it, so a look change lands here and reaches every app on its next upgrade. `Select` matches the library's other parts: its trigger has `Input`'s height and radius in `Button`'s outline look, `size="sm"` is the 32px trigger for dense panels, and its menu opens below on `DropdownMenuContent`'s bordered surface, marking the choice with `DropdownMenuRadioItem`'s dot.
+
 **Forms:** `react-hook-form` + Zod via `@hookform/resolvers`. The `form/` component exposes `FormProvider`, `FormField`, `FormItem`, `FormLabel`, `FormControl`, `FormDescription`, and `FormMessage`.
 
 **Style conventions:** Prefer `outline-hidden` over `outline-none`, `type` over `interface`, `h-px` over `h-[1px]` (canonical Tailwind classes).
