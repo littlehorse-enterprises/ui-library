@@ -40,6 +40,31 @@ export const Default: Story = {
   ),
 }
 
+export const Sizes: Story = {
+  render: () => (
+    <div className="flex items-center gap-4">
+      <Select>
+        <SelectTrigger size="sm" className="w-45">
+          <SelectValue placeholder="Small" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="apple">Apple</SelectItem>
+          <SelectItem value="banana">Banana</SelectItem>
+        </SelectContent>
+      </Select>
+      <Select>
+        <SelectTrigger size="default" className="w-45">
+          <SelectValue placeholder="Default" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="apple">Apple</SelectItem>
+          <SelectItem value="banana">Banana</SelectItem>
+        </SelectContent>
+      </Select>
+    </div>
+  ),
+}
+
 export const WithLabel: Story = {
   render: () => (
     <div className="grid w-full max-w-sm items-center gap-1.5">
